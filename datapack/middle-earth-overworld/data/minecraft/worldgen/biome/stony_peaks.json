@@ -136,7 +136,8 @@
       "minecraft:glow_lichen"
     ],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:freeze_top_layer",
+      "me_overworld:chunk_flag"
     ]
   ],
   "has_precipitation": true,

@@ -1,0 +1,24 @@
+{
+  "feature": "me_overworld:chunk_flag",
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:constant",
+        "value": {
+          "absolute": -64
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:bedrock"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

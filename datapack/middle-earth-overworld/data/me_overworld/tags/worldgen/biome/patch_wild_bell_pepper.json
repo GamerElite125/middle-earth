@@ -1,0 +1,24 @@
+{
+  "values": [
+    "minecraft:badlands",
+    "minecraft:bamboo_jungle",
+    "minecraft:birch_forest",
+    "minecraft:cherry_grove",
+    "minecraft:dark_forest",
+    "minecraft:desert",
+    "minecraft:eroded_badlands",
+    "minecraft:flower_forest",
+    "minecraft:forest",
+    "minecraft:jungle",
+    "minecraft:meadow",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:plains",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:sparse_jungle",
+    "minecraft:sunflower_plains",
+    "minecraft:windswept_forest",
+    "minecraft:windswept_savanna",
+    "minecraft:wooded_badlands"
+  ]
+}

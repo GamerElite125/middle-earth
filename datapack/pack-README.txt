@@ -9,8 +9,9 @@ Install
 -------
 New world: Create New World -> More -> Data Packs -> drag in
            middle-earth-overworld.zip and move it to the "Selected" side.
-Existing world: put the zip in  saves/<world>/datapacks/  and restart.
-           Only NEW chunks get the new ores/plants (explore new areas).
+Existing world: put the zip in  saves/<world>/datapacks/  and restart
+           (or run /reload). Old chunks are converted automatically too,
+           see "Existing chunks" below.
 Server:    put the zip in  world/datapacks/  before the world is created.
 
 What is added
@@ -48,6 +49,29 @@ Surface:
 Mining the ores gives the mod's raw materials (raw tin, raw lead, raw
 silver, raw mithril, ...) that you process with the mod's own smelting,
 alloying and forging recipes.
+
+Existing chunks
+---------------
+New chunks get everything while they generate. Chunks that existed before
+the pack was added are converted automatically as players get near them
+(within 4 chunks, about 4 chunks per second per player, Overworld only).
+The same rocks, ores, pockets and plants are added to each old chunk once.
+
+How it tracks this: the bottom bedrock block at each chunk's corner
+(x0, Y=-64, z0) is replaced with reinforced deepslate as a "done" flag.
+You will never see it unless you dig to the very bottom of the world.
+
+Notes for old chunks:
+  * Underground blobs replace natural stone/deepslate/granite/diorite/
+    andesite below Y=16, so a build made of those blocks down there could
+    get some patches. Cobblestone, bricks, planks etc. are never touched.
+  * Plants only go on grass/dirt with air above, so they can show up on
+    lawns near your base.
+  * Animals already use the new spawn lists in old chunks.
+
+Turn conversion off/on (op only):
+  /function me_overworld:retrofit/stop
+  /function me_overworld:retrofit/start
 
 Compatibility
 -------------

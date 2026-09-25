@@ -361,6 +361,105 @@ ANIMALS = [
     ("broadhoof_goat", 4, 1, 3, HILLS + ["stony_peaks", "jagged_peaks", "frozen_peaks", "snowy_slopes"]),
 ]
 
+
+# ---------------------------------------------------------------------------
+# 6. Chunk flag + retrofit for chunks that existed before the pack was added.
+#
+#    New chunks: world generation adds everything above, then replaces the
+#    bedrock at the chunk's corner (x0, -64, z0) with reinforced deepslate as
+#    a "done" flag.
+#    Old chunks: still have bedrock there. A function loop finds them around
+#    players, runs the same features with /place feature, then sets the flag.
+#    So every chunk gets the content exactly once.
+# ---------------------------------------------------------------------------
+TOP_LAYER_MODIFICATION = 10
+FLAG_BLOCK = "minecraft:reinforced_deepslate"
+RETRO_RADIUS = 4        # chunks around each player that get checked
+RETRO_BUDGET = 2        # old chunks converted per player per run
+RETRO_INTERVAL = "10t"  # how often the loop runs
+
+configured["chunk_flag"] = {"type": "minecraft:simple_block", "config": {
+    "to_place": {"type": "minecraft:simple_state_provider", "state": {"Name": FLAG_BLOCK}}}}
+placed["chunk_flag"] = {"feature": f"{NS}:chunk_flag", "placement": [
+    {"type": "minecraft:height_range",
+     "height": {"type": "minecraft:constant", "value": {"absolute": -64}}},
+    {"type": "minecraft:block_predicate_filter",
+     "predicate": {"type": "minecraft:matching_blocks", "blocks": "minecraft:bedrock"}},
+    {"type": "minecraft:biome"},
+]}
+
+# /place feature only takes configured features, and a nested placed feature
+# cannot use the "biome" modifier. So each retrofit feature is a
+# random_selector whose default is the same placed feature minus that
+# modifier; the biome check is done in the function with biome tags.
+retro_configured = {}
+for name in underground_order + vegetation_order:
+    mods = [m for m in placed[name]["placement"] if m["type"] != "minecraft:biome"]
+    retro_configured[f"retro_{name}"] = {"type": "minecraft:random_selector", "config": {
+        "features": [], "default": {"feature": f"{NS}:{name}", "placement": mods}}}
+configured.update(retro_configured)
+
+
+def functions():
+    f = {}
+    f["load"] = [
+        "scoreboard objectives add me_ow dummy",
+        "scoreboard players set #16 me_ow 16",
+        "execute unless score #enabled me_ow matches 0..1 run scoreboard players set #enabled me_ow 1",
+        f"schedule function {NS}:retrofit/loop {RETRO_INTERVAL} replace",
+    ]
+    f["retrofit/loop"] = [
+        f"schedule function {NS}:retrofit/loop {RETRO_INTERVAL} replace",
+        "execute unless score #enabled me_ow matches 1 run return 0",
+        f"execute as @a[gamemode=!spectator] at @s if dimension minecraft:overworld run function {NS}:retrofit/player",
+    ]
+    offsets = sorted(((dx, dz) for dx in range(-RETRO_RADIUS, RETRO_RADIUS + 1)
+                      for dz in range(-RETRO_RADIUS, RETRO_RADIUS + 1)),
+                     key=lambda o: (o[0] ** 2 + o[1] ** 2, o))
+    player = [
+        "execute store result score #px me_ow run data get entity @s Pos[0]",
+        "execute store result score #pz me_ow run data get entity @s Pos[2]",
+        "scoreboard players operation #px me_ow /= #16 me_ow",
+        "scoreboard players operation #pz me_ow /= #16 me_ow",
+        f"scoreboard players set #budget me_ow {RETRO_BUDGET}",
+    ]
+    for dx, dz in offsets:
+        player += [f"execute if score #budget me_ow matches 1.. run scoreboard players set #dx me_ow {dx}",
+                   f"execute if score #budget me_ow matches 1.. run scoreboard players set #dz me_ow {dz}",
+                   f"execute if score #budget me_ow matches 1.. run function {NS}:retrofit/try"]
+    f["retrofit/player"] = player
+    tr = []
+    for axis in ("x", "z"):
+        tr += [f"scoreboard players operation #c{axis} me_ow = #p{axis} me_ow",
+               f"scoreboard players operation #c{axis} me_ow += #d{axis} me_ow",
+               f"scoreboard players operation #c{axis} me_ow *= #16 me_ow",
+               f"execute store result storage {NS}:tmp c.{axis} int 1 run scoreboard players get #c{axis} me_ow",
+               f"execute store result storage {NS}:tmp c.{axis}m int 1 run scoreboard players remove #c{axis} me_ow 16",
+               f"execute store result storage {NS}:tmp c.{axis}p int 1 run scoreboard players add #c{axis} me_ow 32"]
+    tr.append(f"function {NS}:retrofit/check with storage {NS}:tmp c")
+    f["retrofit/try"] = tr
+    f["retrofit/check"] = [
+        "# Only chunks from before the pack (bedrock still at the corner).",
+        "$execute unless loaded $(x) 0 $(z) run return 0",
+        "$execute unless loaded $(xm) 0 $(zm) run return 0",
+        "$execute unless loaded $(xp) 0 $(zp) run return 0",
+        "$execute unless loaded $(xm) 0 $(zp) run return 0",
+        "$execute unless loaded $(xp) 0 $(zm) run return 0",
+        f"$execute unless block $(x) -64 $(z) minecraft:bedrock run return 0",
+        f"$execute positioned $(x) 0 $(z) run function {NS}:retrofit/generate",
+        f"$setblock $(x) -64 $(z) {FLAG_BLOCK}",
+        "scoreboard players remove #budget me_ow 1",
+    ]
+    gen = [f"place feature {NS}:retro_{n} ~ ~ ~" for n in underground_order]
+    for n in vegetation_order:
+        gen.append(f"execute if biome ~8 ~64 ~8 #{NS}:{n} run place feature {NS}:retro_{n} ~ ~ ~")
+    f["retrofit/generate"] = gen
+    f["retrofit/stop"] = ["scoreboard players set #enabled me_ow 0",
+                          'tellraw @s {"text":"Middle-earth Overworld: converting old chunks is OFF","color":"yellow"}']
+    f["retrofit/start"] = ["scoreboard players set #enabled me_ow 1",
+                           'tellraw @s {"text":"Middle-earth Overworld: converting old chunks is ON","color":"green"}']
+    return f
+
 # ---------------------------------------------------------------------------
 # Write the pack
 # ---------------------------------------------------------------------------
@@ -392,17 +491,29 @@ def main():
         with open(os.path.join(VANILLA, fname)) as f:
             data = json.load(f)
         features = data["features"]
-        while len(features) <= VEGETAL_DECORATION:
+        while len(features) <= TOP_LAYER_MODIFICATION:
             features.append([])
         features[UNDERGROUND_ORES] += [f"{NS}:{n}" for n in underground_order]
         features[VEGETAL_DECORATION] += [f"{NS}:{n}" for n in vegetation_order
                                          if biome in plant_biomes[n]]
+        features[TOP_LAYER_MODIFICATION].append(f"{NS}:chunk_flag")
         creatures = data.setdefault("spawners", {}).setdefault("creature", [])
         for entity, weight, lo, hi, biomes in ANIMALS:
             if biome in biomes:
                 creatures.append({"type": me(entity), "weight": weight,
                                   "minCount": lo, "maxCount": hi})
         dump(os.path.join(OUT, "data", "minecraft", "worldgen", "biome", fname), data)
+
+    for name, lines in functions().items():
+        path = os.path.join(OUT, "data", NS, "function", name + ".mcfunction")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w") as f:
+            f.write("\n".join(lines) + "\n")
+    dump(os.path.join(OUT, "data", "minecraft", "tags", "function", "load.json"),
+         {"values": [f"{NS}:load"]})
+    for n in vegetation_order:
+        dump(os.path.join(OUT, "data", NS, "tags", "worldgen", "biome", n + ".json"),
+             {"values": [f"minecraft:{b}" for b in sorted(plant_biomes[n])]})
 
     zpath = OUT + ".zip"
     if os.path.exists(zpath):

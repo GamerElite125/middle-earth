@@ -145,7 +145,8 @@
       "me_overworld:patch_tall_cattails"
     ],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:freeze_top_layer",
+      "me_overworld:chunk_flag"
     ]
   ],
   "has_precipitation": true,
