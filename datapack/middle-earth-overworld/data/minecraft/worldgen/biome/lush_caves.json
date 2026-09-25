@@ -1,0 +1,245 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.5,
+  "effects": {
+    "fog_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.lush_caves"
+    },
+    "sky_color": 8103167,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "features": [
+    [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
+    ],
+    [],
+    [],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_tuff",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_gold_lower",
+      "minecraft:ore_redstone",
+      "minecraft:ore_redstone_lower",
+      "minecraft:ore_diamond",
+      "minecraft:ore_diamond_medium",
+      "minecraft:ore_diamond_large",
+      "minecraft:ore_diamond_buried",
+      "minecraft:ore_lapis",
+      "minecraft:ore_lapis_buried",
+      "minecraft:ore_copper",
+      "minecraft:underwater_magma",
+      "minecraft:ore_clay",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "me_overworld:rock_limestone",
+      "me_overworld:rock_dolomite",
+      "me_overworld:rock_gonluin",
+      "me_overworld:rock_blue_tuff",
+      "me_overworld:rock_green_tuff",
+      "me_overworld:rock_galonn",
+      "me_overworld:rock_izheraban",
+      "me_overworld:rock_zigilaban",
+      "me_overworld:rock_schist",
+      "me_overworld:rock_gneiss",
+      "me_overworld:rock_gabbro",
+      "me_overworld:rock_slate",
+      "me_overworld:rock_ironstone",
+      "me_overworld:rock_hematite",
+      "me_overworld:rock_ashen_stone",
+      "me_overworld:rock_pumice",
+      "me_overworld:rock_gilded_green_tuff",
+      "me_overworld:rock_old_limestone",
+      "me_overworld:rock_old_dolomite",
+      "me_overworld:rock_old_galonn",
+      "me_overworld:rock_old_izheraban",
+      "me_overworld:rock_nurgon",
+      "me_overworld:rock_medgon",
+      "me_overworld:nurgon_tuff",
+      "me_overworld:nurgon_smooth_basalt",
+      "me_overworld:medgon_blackstone",
+      "me_overworld:pocket_ash_block",
+      "me_overworld:pocket_ashen_dirt",
+      "me_overworld:pocket_ashen_gravel",
+      "me_overworld:pocket_ashen_sand",
+      "me_overworld:pocket_black_sand",
+      "me_overworld:pocket_white_sand",
+      "me_overworld:pocket_river_sand",
+      "me_overworld:pocket_dry_dirt",
+      "me_overworld:pocket_mire",
+      "me_overworld:pocket_turf",
+      "me_overworld:pocket_dirty_roots",
+      "me_overworld:pocket_grassy_dirt",
+      "me_overworld:pocket_snowy_dirt",
+      "me_overworld:pocket_old_podzol",
+      "me_overworld:pocket_lorien_podzol",
+      "me_overworld:pocket_forest_moss_block",
+      "me_overworld:pocket_corrupted_moss_block",
+      "me_overworld:ore_coal",
+      "me_overworld:ore_copper",
+      "me_overworld:ore_tin",
+      "me_overworld:ore_quartzite",
+      "me_overworld:ore_lead",
+      "me_overworld:ore_iron",
+      "me_overworld:ore_silver",
+      "me_overworld:ore_gold",
+      "me_overworld:ore_jade",
+      "me_overworld:ore_mithril"
+    ],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:glow_lichen",
+      "minecraft:patch_tall_grass_2",
+      "minecraft:lush_caves_ceiling_vegetation",
+      "minecraft:cave_vines",
+      "minecraft:lush_caves_clay",
+      "minecraft:lush_caves_vegetation",
+      "minecraft:rooted_azalea_tree",
+      "minecraft:spore_blossom",
+      "minecraft:classic_vines_cave_feature"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [
+      {
+        "type": "minecraft:axolotl",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "creature": [
+      {
+        "type": "me:snail",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:zombie",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 95
+      },
+      {
+        "type": "minecraft:zombie_villager",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      },
+      {
+        "type": "minecraft:skeleton",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:creeper",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:witch",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:tropical_fish",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 25
+      }
+    ],
+    "water_creature": []
+  },
+  "temperature": 0.5
+}

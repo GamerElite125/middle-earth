@@ -1,0 +1,108 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 17,
+    "discard_chance_on_air_exposure": 0.0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:gonluin"
+        },
+        "state": {
+          "Name": "me:gonluin_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:limestone"
+        },
+        "state": {
+          "Name": "me:limestone_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:galonn"
+        },
+        "state": {
+          "Name": "me:limestone_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:izheraban"
+        },
+        "state": {
+          "Name": "me:limestone_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:ashen_stone"
+        },
+        "state": {
+          "Name": "me:ashen_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:ironstone"
+        },
+        "state": {
+          "Name": "me:ironstone_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:hematite"
+        },
+        "state": {
+          "Name": "me:ironstone_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:slate"
+        },
+        "state": {
+          "Name": "me:slate_coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:dolomite"
+        },
+        "state": {
+          "Name": "minecraft:coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "me:green_tuff"
+        },
+        "state": {
+          "Name": "minecraft:coal_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:calcite"
+        },
+        "state": {
+          "Name": "me:calcite_coal_ore"
+        }
+      }
+    ]
+  }
+}
