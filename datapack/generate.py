@@ -19,7 +19,7 @@ Two packs per version:
 Both need the Middle-earth Fabric mod for the same Minecraft version.
 
 Usage:  python3 generate.py
-Output: build/<pack>/  and  build/<pack>.zip
+Output: dist/<pack>/  and  dist/<pack>.zip
 """
 import json
 import os
@@ -27,7 +27,7 @@ import shutil
 import zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-BUILD = os.path.join(HERE, "build")
+BUILD = os.path.join(HERE, "dist")
 NS = "me_overworld"   # namespace of these datapacks
 
 UNDERGROUND_ORES = 6       # GenerationStep.Feature indexes
