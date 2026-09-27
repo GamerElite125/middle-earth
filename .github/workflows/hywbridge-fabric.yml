@@ -1,0 +1,63 @@
+name: build-hywbridge-fabric
+run-name: Building HYW Bridge (Fabric 1.21.1)
+
+on:
+  push:
+    paths:
+      - 'hywbridge-fabric/**'
+      - '.github/workflows/hywbridge-fabric.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hywbridge-fabric
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup jdk 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'microsoft'
+
+      - name: inspect CustomNPCs-Unofficial API
+        continue-on-error: true
+        run: |
+          mkdir -p ../probe && cd ../probe
+          curl -sSf 'https://api.modrinth.com/v2/project/customnpcs-unofficial/version?loaders=%5B%22fabric%22%5D&game_versions=%5B%221.21.1%22%5D' -o versions.json
+          python3 -c "import json;[print('VERSION',v['version_number'],v['date_published'],v['files'][0]['url']) for v in json.load(open('versions.json'))]"
+          url=$(python3 -c "import json;print(json.load(open('versions.json'))[0]['files'][0]['url'])")
+          curl -sSfL "$url" -o cnpc.jar
+          mkdir x && cd x && unzip -q ../cnpc.jar
+          echo "=== fabric.mod.json"; cat fabric.mod.json; echo
+          for c in noppes/npcs/entity/EntityNPCInterface noppes/npcs/ai/selector/NPCAttackSelector \
+                   noppes/npcs/controllers/FactionController noppes/npcs/controllers/data/Faction \
+                   noppes/npcs/controllers/data/PlayerData noppes/npcs/controllers/data/PlayerFactionData \
+                   noppes/npcs/entity/data/DataAI noppes/npcs/entity/data/DataStats noppes/npcs/entity/data/DataAdvanced; do
+            echo "=== $c"
+            if [ -f $c.class ]; then javap -p -cp . $c | grep -v 'lambda\$'; else echo MISSING; find . -name "$(basename $c).class"; fi
+          done
+
+      - name: resolve fabric versions for 1.21.1
+        id: versions
+        run: |
+          api=$(curl -sSf https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/maven-metadata.xml | grep -o '<version>[^<]*+1\.21\.1</version>' | tail -1 | sed 's/<[^>]*>//g')
+          loader=$(curl -sSf https://maven.fabricmc.net/net/fabricmc/fabric-loader/maven-metadata.xml | grep -o '<release>[^<]*</release>' | sed 's/<[^>]*>//g')
+          echo "fabric api: $api, loader: $loader"
+          echo "api=$api" >> "$GITHUB_OUTPUT"
+          echo "loader=$loader" >> "$GITHUB_OUTPUT"
+
+      - name: build
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build --stacktrace -Pfabric_version='${{ steps.versions.outputs.api }}' -Ploader_version='${{ steps.versions.outputs.loader }}'
+
+      - name: upload mod jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: hywbridge-fabric-1.21.1
+          path: hywbridge-fabric/build/libs/

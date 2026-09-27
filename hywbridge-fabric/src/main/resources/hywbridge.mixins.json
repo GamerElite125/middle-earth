@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.hywbridge.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MoveCommandPacketAccessor",
+    "MoveCommandPacketMixin",
+    "NPCAttackSelectorMixin",
+    "NPCMovementMixin",
+    "SelectionPacketAccessor",
+    "SelectionSystemMixin",
+    "ServerRelationHelperMixin",
+    "TargetUpdatePacketAccessor",
+    "TargetUpdatePacketMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

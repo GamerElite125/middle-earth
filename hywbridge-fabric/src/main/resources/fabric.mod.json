@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "hywbridge",
+  "version": "${version}",
+  "name": "HYW Bridge",
+  "description": "Bridge mod between Hundred Years Warfare and CustomNPCs",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.hywbridge.HYWBridge"],
+    "client": ["com.hywbridge.client.HYWBridgeClient"]
+  },
+  "mixins": [
+    "hywbridge.mixins.json",
+    {
+      "config": "hywbridge.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "hundred_years_war": "*",
+    "customnpcs": "*"
+  }
+}

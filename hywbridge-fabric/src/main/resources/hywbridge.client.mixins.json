@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.hywbridge.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "EntityRenderDispatcherBridgeMixin",
+    "FreecamTargetRendererMixin",
+    "SelectionHandlerMixin",
+    "SelectionHUDMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
