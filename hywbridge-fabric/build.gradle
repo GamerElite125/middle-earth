@@ -40,6 +40,9 @@ dependencies {
     // The two mods this bridge links together. Neither is bundled; players install them separately.
     modCompileOnly "curse.maven:hundred-years-warfare-${project.hyw_curse_project}:${project.hyw_curse_file}"
     modCompileOnly "maven.modrinth:customnpcs-unofficial:${project.cnpc_version}"
+    // Also on the dev runtime so runClient/runServer launch with both mods present
+    modLocalRuntime "curse.maven:hundred-years-warfare-${project.hyw_curse_project}:${project.hyw_curse_file}"
+    modLocalRuntime "maven.modrinth:customnpcs-unofficial:${project.cnpc_version}"
     // Local jars (e.g. when a dependency cannot be fetched from a maven) can be dropped in libs/
     modCompileOnly fileTree(dir: 'libs', include: ['*.jar'])
 }
@@ -58,4 +61,14 @@ tasks.withType(JavaCompile).configureEach {
 java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
+}
+
+loom {
+    runs {
+        server {
+            if (project.hasProperty('hywbridge_audit')) {
+                vmArg '-Dhywbridge.audit=true'
+            }
+        }
+    }
 }
