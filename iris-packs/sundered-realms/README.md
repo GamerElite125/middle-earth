@@ -45,7 +45,7 @@ named relics, for example *Fang of Kukul-Vaan*, *Skullsplitter*, *Hag's Sickle*,
 *Old Faithful*, *Tome of the First Bloom* and *Grief, Blade of the Hollow King*.
 
 ### Monsters
-Each realm has its own spawners: Ashfang Orcs, Brutes, Skirmishers and Wargs; Bog Wights, Mire Hags
+Each realm has its own spawners: Ashfang Orcs, Brutes, Skirmishers and Direwolves; Bog Wights, Mire Hags
 and Fen-Drowned; Desperados and Dust Revenants; Jade Sentinels and Sunken Buccaneers; Fallen
 Soldiers and Oathbreaker Deserters; Grave Knights and Hollow Revenants. Friendlier realms get
 Will-o'-Wisps, Fae Foxes, Travelling Merchants and Crown Sentries.

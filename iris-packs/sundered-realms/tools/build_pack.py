@@ -327,7 +327,7 @@ def write_monsters():
                    hand="stone_axe")
     E["orc_brute"] = ent("ashfang-brute", "vindicator", "&4Ashfang Brute", {"type": "iron_helmet"}, hand="iron_axe")
     E["orc_archer"] = ent("ashfang-skirmisher", "pillager", "&6Ashfang Skirmisher", dyed("leather_helmet", "#5C1A1A"))
-    E["warg"] = ent("warg", "wolf", "&8Warg", extra={"attributes": [{"attribute": "max_health", "name": "sundered-warg-health", "operation": "ADD_NUMBER", "minAmount": 10, "maxAmount": 14, "chance": 1}]})
+    E["direwolf"] = ent("ashfang-direwolf", "wolf", "&8Ashfang Direwolf", extra={"attributes": [{"attribute": "max_health", "name": "sundered-direwolf-health", "operation": "ADD_NUMBER", "minAmount": 10, "maxAmount": 14, "chance": 1}]})
     E["bog_wight"] = ent("bog-wight", "bogged", "&2Bog Wight")
     E["mire_hag"] = ent("mire-hag", "witch", "&aMire Hag")
     E["drowned"] = ent("fen-drowned", "drowned", "&3Fen-Drowned", surface="WATER")
@@ -356,7 +356,7 @@ def write_monsters():
                                 ("standard/neutral/spider", 4, 1, 1)], night=True),
         "tropical/water", "tropical/beach"]
     S["ashfang"] = [spawner("ashfang-warbands", [(E["orc"], 1, 2, 4), (E["orc_brute"], 4, 1, 1), (E["orc_archer"], 3, 1, 2),
-                                                  (E["warg"], 5, 1, 2)], per_chunk=4, rate=8)]
+                                                  (E["direwolf"], 5, 1, 2)], per_chunk=4, rate=8)]
     S["dreadmire"] = [spawner("dreadmire-haunts", [(E["bog_wight"], 1, 1, 3), (E["mire_hag"], 5, 1, 1), ("standard/hostile/slime", 2, 1, 3),
                                                     (E["drowned"], 3, 1, 2)], per_chunk=3),
                       "swamp/passive", "swamp/water"]

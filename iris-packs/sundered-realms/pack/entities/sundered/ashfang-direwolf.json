@@ -3,11 +3,11 @@
   "reason": "NATURAL",
   "removable": true,
   "surface": "LAND",
-  "customName": "&8Warg",
+  "customName": "&8Ashfang Direwolf",
   "attributes": [
     {
       "attribute": "max_health",
-      "name": "sundered-warg-health",
+      "name": "sundered-direwolf-health",
       "operation": "ADD_NUMBER",
       "minAmount": 10,
       "maxAmount": 14,
