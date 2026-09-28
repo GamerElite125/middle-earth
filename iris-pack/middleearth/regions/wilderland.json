@@ -1,0 +1,28 @@
+{
+  "name": "Wilderland (Rhovanion)",
+  "color": "#3E7A3A",
+  "rarity": 1,
+  "landBiomes": [
+    "wilderland/mirkwood",
+    "wilderland/mirkwood-edge",
+    "wilderland/anduin-vale",
+    "wilderland/dale",
+    "wilderland/lonely-mountain"
+  ],
+  "seaBiomes": [
+    "sea/sea-of-rhun"
+  ],
+  "shoreBiomes": [
+    "shore/beach",
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

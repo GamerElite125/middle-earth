@@ -1,0 +1,187 @@
+{
+  "name": "Bree-land",
+  "color": "#6EA84A",
+  "rarity": 1,
+  "derivative": "minecraft:forest",
+  "vanillaDerivative": "minecraft:forest",
+  "customDerivitives": [
+    {
+      "id": "bree_land",
+      "category": "forest",
+      "temperature": 0.7,
+      "humidity": 0.6,
+      "downfallType": "rain",
+      "skyColor": "#7AA6F0",
+      "fogColor": "#BCD2F0",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "grassColor": "#6DAA4E",
+      "foliageColor": "#58A036"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 4,
+      "max": 18
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.4,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.04,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "bree-oak",
+        "chance": 0.25,
+        "density": 1,
+        "variants": 6,
+        "seed": 2011,
+        "trunk": "minecraft:oak_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 9,
+        "heightMax": 15,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        },
+        "trunkForks": 2,
+        "forkHeight": 0.45,
+        "forkAngle": 24
+      },
+      {
+        "name": "bree-birch",
+        "chance": 0.12,
+        "density": 1,
+        "variants": 6,
+        "seed": 2012,
+        "trunk": "minecraft:birch_log",
+        "leaves": "minecraft:birch_leaves",
+        "profile": "BIRCH",
+        "heightMin": 10,
+        "heightMax": 14,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ]
+  }
+}

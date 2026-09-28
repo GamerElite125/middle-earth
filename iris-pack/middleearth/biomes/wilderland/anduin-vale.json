@@ -1,0 +1,167 @@
+{
+  "name": "Vales of Anduin",
+  "color": "#7CC25A",
+  "rarity": 1,
+  "derivative": "minecraft:meadow",
+  "vanillaDerivative": "minecraft:meadow",
+  "customDerivitives": [
+    {
+      "id": "anduin_vale",
+      "category": "plains",
+      "temperature": 0.7,
+      "humidity": 0.7,
+      "downfallType": "rain",
+      "skyColor": "#78A7FF",
+      "fogColor": "#C0D8FF",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "grassColor": "#83C860",
+      "foliageColor": "#66B83E"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "lowland",
+      "min": 2,
+      "max": 10
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.5,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.08,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "vale-poplar",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 6,
+        "seed": 2321,
+        "trunk": "minecraft:birch_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "POPLAR",
+        "heightMin": 12,
+        "heightMax": 18,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ]
+  }
+}

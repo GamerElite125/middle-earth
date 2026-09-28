@@ -1,0 +1,57 @@
+{
+  "name": "Belegaer, the Great Sea",
+  "color": "#1F4E8C",
+  "rarity": 1,
+  "derivative": "minecraft:deep_ocean",
+  "vanillaDerivative": "minecraft:deep_ocean",
+  "customDerivitives": [
+    {
+      "id": "belegaer",
+      "category": "ocean",
+      "temperature": 0.5,
+      "humidity": 0.5,
+      "downfallType": "rain",
+      "skyColor": "#7BA4D9",
+      "fogColor": "#9EB8D6",
+      "waterColor": "#2B5DA8",
+      "waterFogColor": "#0B2447",
+      "grassColor": "#6FA35A",
+      "foliageColor": "#5E9A48"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "ocean",
+      "min": -34,
+      "max": -14
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:clay"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.5
+      }
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ]
+}

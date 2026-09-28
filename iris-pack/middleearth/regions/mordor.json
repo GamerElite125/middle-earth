@@ -1,0 +1,26 @@
+{
+  "name": "Mordor",
+  "color": "#3A2E2A",
+  "rarity": 2,
+  "landBiomes": [
+    "mordor/gorgoroth",
+    "mordor/ephel-duath",
+    "mordor/orodruin",
+    "mordor/dead-marshes"
+  ],
+  "seaBiomes": [
+    "sea/belegaer"
+  ],
+  "shoreBiomes": [
+    "shore/ash-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

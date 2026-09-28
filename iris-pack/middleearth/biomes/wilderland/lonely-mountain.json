@@ -1,0 +1,88 @@
+{
+  "name": "Erebor, the Lonely Mountain",
+  "color": "#8A8478",
+  "rarity": 6,
+  "derivative": "minecraft:stony_peaks",
+  "vanillaDerivative": "minecraft:stony_peaks",
+  "customDerivitives": [
+    {
+      "id": "erebor",
+      "category": "extreme_hills",
+      "temperature": 0.3,
+      "humidity": 0.4,
+      "downfallType": "rain",
+      "skyColor": "#7898C0",
+      "fogColor": "#A8B8C8",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "grassColor": "#7A9070",
+      "foliageColor": "#62806A"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "peaks",
+      "min": 60,
+      "max": 150
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:deepslate"
+        }
+      ]
+    }
+  ]
+}

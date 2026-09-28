@@ -1,0 +1,88 @@
+{
+  "name": "Orodruin, Mount Doom",
+  "color": "#7A2A10",
+  "rarity": 6,
+  "derivative": "minecraft:basalt_deltas",
+  "vanillaDerivative": "minecraft:basalt_deltas",
+  "customDerivitives": [
+    {
+      "id": "orodruin",
+      "category": "desert",
+      "temperature": 2.0,
+      "humidity": 0.0,
+      "downfallType": "none",
+      "skyColor": "#5A1A08",
+      "fogColor": "#4A1206",
+      "waterColor": "#3A2A1A",
+      "waterFogColor": "#120A06",
+      "grassColor": "#4A3020",
+      "foliageColor": "#3A2418",
+      "ambientParticle": {
+        "particle": "minecraft:lava",
+        "rarity": 40
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "peaks",
+      "min": 60,
+      "max": 130
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:basalt",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_blackstone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_polished_blackstone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:magma_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:magma_block"
+        }
+      ]
+    }
+  ]
+}

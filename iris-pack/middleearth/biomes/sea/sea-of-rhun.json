@@ -1,0 +1,51 @@
+{
+  "name": "Sea of Rh\u00fbn",
+  "color": "#2F6E8E",
+  "rarity": 1,
+  "derivative": "minecraft:ocean",
+  "vanillaDerivative": "minecraft:ocean",
+  "customDerivitives": [
+    {
+      "id": "sea_of_rhun",
+      "category": "ocean",
+      "temperature": 0.6,
+      "humidity": 0.5,
+      "downfallType": "rain",
+      "skyColor": "#8FB3D1",
+      "fogColor": "#A8C0D4",
+      "waterColor": "#3A7CA0",
+      "waterFogColor": "#123A52",
+      "grassColor": "#7FA35C",
+      "foliageColor": "#6A9A4A"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "ocean",
+      "min": -20,
+      "max": -8
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sand",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:gravel"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ]
+}

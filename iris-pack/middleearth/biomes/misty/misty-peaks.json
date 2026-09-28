@@ -1,0 +1,93 @@
+{
+  "name": "Misty Mountains",
+  "color": "#B8C0CC",
+  "rarity": 1,
+  "derivative": "minecraft:frozen_peaks",
+  "vanillaDerivative": "minecraft:frozen_peaks",
+  "customDerivitives": [
+    {
+      "id": "misty_mountains",
+      "category": "extreme_hills",
+      "temperature": -0.5,
+      "humidity": 0.6,
+      "downfallType": "snow",
+      "skyColor": "#A8B8CC",
+      "fogColor": "#D0D8E0",
+      "waterColor": "#3D57D6",
+      "waterFogColor": "#050533",
+      "grassColor": "#80A08A",
+      "foliageColor": "#60907A",
+      "ambientParticle": {
+        "particle": "minecraft:snowflake",
+        "rarity": 15
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "peaks",
+      "min": 50,
+      "max": 140
+    },
+    {
+      "generator": "mountain",
+      "min": 0,
+      "max": 20
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:snow_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:mossy_cobblestone",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    }
+  ]
+}

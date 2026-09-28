@@ -1,0 +1,231 @@
+{
+  "name": "The Ettenmoors",
+  "color": "#7B7A5A",
+  "rarity": 1,
+  "derivative": "minecraft:windswept_hills",
+  "vanillaDerivative": "minecraft:windswept_hills",
+  "customDerivitives": [
+    {
+      "id": "ettenmoors",
+      "category": "extreme_hills",
+      "temperature": 0.2,
+      "humidity": 0.3,
+      "downfallType": "rain",
+      "skyColor": "#7888A0",
+      "fogColor": "#98A0A8",
+      "waterColor": "#3A5A7A",
+      "waterFogColor": "#0A1628",
+      "grassColor": "#7E8A5A",
+      "foliageColor": "#6A7A4A"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 12,
+      "max": 34
+    },
+    {
+      "generator": "jagged",
+      "min": 0,
+      "max": 8
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.3,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "etten-boulder",
+        "chance": 0.08,
+        "density": 1,
+        "variants": 6,
+        "seed": 2121,
+        "mode": "PAINT",
+        "form": "BOULDER",
+        "block": "minecraft:stone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone"
+            },
+            {
+              "block": "minecraft:andesite"
+            },
+            {
+              "block": "minecraft:cobblestone"
+            }
+          ],
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.4
+          }
+        },
+        "translate": {
+          "y": -2
+        },
+        "heightMin": 3,
+        "heightMax": 8,
+        "baseWidthMin": 2,
+        "baseWidthMax": 5,
+        "roughness": 0.4,
+        "jitter": 0.4,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "rhudaur-wall",
+        "chance": 0.015,
+        "density": 1,
+        "variants": 5,
+        "seed": 2122,
+        "form": "WALL",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:cobblestone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:cobblestone"
+            },
+            {
+              "block": "minecraft:stone_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:mossy_cobblestone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.4,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 2,
+        "heightMax": 5,
+        "widthMin": 4,
+        "widthMax": 8,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

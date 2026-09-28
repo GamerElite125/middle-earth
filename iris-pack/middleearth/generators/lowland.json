@@ -1,0 +1,21 @@
+{
+  "interpolator": {
+    "function": "BILINEAR_STARCAST_9",
+    "horizontalScale": 12
+  },
+  "seed": 7708,
+  "composite": [
+    {
+      "style": {
+        "style": "IRIS_DOUBLE",
+        "zoom": 0.9,
+        "fracture": {
+          "style": "NOWHERE",
+          "zoom": 0.2,
+          "multiplier": 18
+        }
+      },
+      "seed": 1101
+    }
+  ]
+}

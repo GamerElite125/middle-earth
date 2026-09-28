@@ -1,0 +1,84 @@
+{
+  "name": "Ered Nimrais, the White Mountains",
+  "color": "#E4E4DC",
+  "rarity": 1,
+  "derivative": "minecraft:snowy_slopes",
+  "vanillaDerivative": "minecraft:snowy_slopes",
+  "customDerivitives": [
+    {
+      "id": "white_mountains",
+      "category": "extreme_hills",
+      "temperature": -0.3,
+      "humidity": 0.5,
+      "downfallType": "snow",
+      "skyColor": "#A8C0E0",
+      "fogColor": "#D8E0E8",
+      "waterColor": "#3D57D6",
+      "waterFogColor": "#050533",
+      "grassColor": "#80A890",
+      "foliageColor": "#60987A"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "peaks",
+      "min": 45,
+      "max": 120
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:snow_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_andesite",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ]
+}

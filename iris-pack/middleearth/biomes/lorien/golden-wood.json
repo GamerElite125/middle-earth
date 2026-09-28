@@ -1,0 +1,223 @@
+{
+  "name": "Lothl\u00f3rien, the Golden Wood",
+  "color": "#E3C23A",
+  "rarity": 1,
+  "derivative": "minecraft:forest",
+  "vanillaDerivative": "minecraft:forest",
+  "customDerivitives": [
+    {
+      "id": "lothlorien",
+      "category": "forest",
+      "temperature": 0.8,
+      "humidity": 0.8,
+      "downfallType": "rain",
+      "skyColor": "#A6C8FF",
+      "fogColor": "#F2E6B0",
+      "waterColor": "#5AB0E0",
+      "waterFogColor": "#103A50",
+      "grassColor": "#C8C850",
+      "foliageColor": "#F0C030",
+      "ambientParticle": {
+        "particle": "minecraft:spore_blossom_air",
+        "rarity": 30
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 3,
+      "max": 14
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:moss_block",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:mossy_stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.4,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.1,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:lily_of_the_valley"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "mallorn",
+        "chance": 0.35,
+        "density": 1,
+        "variants": 6,
+        "seed": 2401,
+        "trunk": "minecraft:birch_wood",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 28,
+        "heightMax": 42,
+        "trunkWidth": 3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "CLUMPED",
+          "leafDensity": 0.9
+        },
+        "trunkForks": 3,
+        "forkHeight": 0.45,
+        "forkAngle": 24,
+        "trunkPalette": {
+          "palette": [
+            {
+              "block": "minecraft:birch_wood",
+              "weight": 3
+            },
+            {
+              "block": "minecraft:stripped_birch_wood",
+              "weight": 2
+            }
+          ],
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.4
+          }
+        },
+        "roots": true
+      },
+      {
+        "name": "young-mallorn",
+        "chance": 0.2,
+        "density": 1,
+        "variants": 6,
+        "seed": 2402,
+        "trunk": "minecraft:birch_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "POPLAR",
+        "heightMin": 14,
+        "heightMax": 22,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ]
+  }
+}

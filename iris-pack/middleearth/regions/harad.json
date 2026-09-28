@@ -1,0 +1,25 @@
+{
+  "name": "Harad",
+  "color": "#E0C070",
+  "rarity": 2,
+  "landBiomes": [
+    "harad/harad-desert",
+    "harad/near-harad"
+  ],
+  "seaBiomes": [
+    "sea/belegaer"
+  ],
+  "shoreBiomes": [
+    "shore/beach",
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

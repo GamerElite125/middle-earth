@@ -1,0 +1,25 @@
+{
+  "name": "Angmar",
+  "color": "#6C6E78",
+  "rarity": 2,
+  "landBiomes": [
+    "angmar/angmar-wastes",
+    "angmar/carn-dum-peaks",
+    "angmar/ettenmoors"
+  ],
+  "seaBiomes": [
+    "sea/icebay-forochel"
+  ],
+  "shoreBiomes": [
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

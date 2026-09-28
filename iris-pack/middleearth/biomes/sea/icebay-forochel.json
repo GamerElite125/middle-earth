@@ -1,0 +1,51 @@
+{
+  "name": "Ice-bay of Forochel",
+  "color": "#A9D6F2",
+  "rarity": 1,
+  "derivative": "minecraft:frozen_ocean",
+  "vanillaDerivative": "minecraft:frozen_ocean",
+  "customDerivitives": [
+    {
+      "id": "forochel",
+      "category": "icy",
+      "temperature": 0.0,
+      "humidity": 0.5,
+      "downfallType": "snow",
+      "skyColor": "#C4D6E8",
+      "fogColor": "#D8E4EE",
+      "waterColor": "#3D57D6",
+      "waterFogColor": "#050533",
+      "grassColor": "#80B497",
+      "foliageColor": "#60A17B"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "ocean",
+      "min": -24,
+      "max": -10
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ]
+}

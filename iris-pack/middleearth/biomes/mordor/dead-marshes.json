@@ -1,0 +1,177 @@
+{
+  "name": "The Dead Marshes",
+  "color": "#4A5238",
+  "rarity": 1,
+  "derivative": "minecraft:swamp",
+  "vanillaDerivative": "minecraft:swamp",
+  "customDerivitives": [
+    {
+      "id": "dead_marshes",
+      "category": "swamp",
+      "temperature": 0.8,
+      "humidity": 0.9,
+      "downfallType": "rain",
+      "skyColor": "#5A6050",
+      "fogColor": "#4A5040",
+      "waterColor": "#3A4A2A",
+      "waterFogColor": "#10180A",
+      "grassColor": "#5A6A38",
+      "foliageColor": "#4A5A2E",
+      "ambientParticle": {
+        "particle": "minecraft:mycelium",
+        "rarity": 20
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": -2,
+      "max": 2
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:mud",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:mud",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:packed_mud",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:mud_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:mud"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:mud"
+        },
+        {
+          "block": "minecraft:clay"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        },
+        {
+          "block": "minecraft:mud"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        },
+        {
+          "block": "minecraft:mud"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.04,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        },
+        {
+          "block": "minecraft:mud"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "marsh-willow",
+        "chance": 0.05,
+        "density": 1,
+        "variants": 6,
+        "seed": 2721,
+        "trunk": "minecraft:mangrove_log",
+        "leaves": "minecraft:mangrove_leaves",
+        "profile": "WILLOW",
+        "heightMin": 6,
+        "heightMax": 10,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "TATTERED",
+          "leafDensity": 0.4
+        }
+      }
+    ]
+  }
+}

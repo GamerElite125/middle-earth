@@ -1,0 +1,26 @@
+{
+  "name": "Gondor",
+  "color": "#8CC254",
+  "rarity": 1,
+  "landBiomes": [
+    "gondor/gondor-fields",
+    "gondor/ithilien",
+    "gondor/white-mountains"
+  ],
+  "seaBiomes": [
+    "sea/belegaer"
+  ],
+  "shoreBiomes": [
+    "shore/beach",
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

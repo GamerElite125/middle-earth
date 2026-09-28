@@ -1,0 +1,141 @@
+{
+  "name": "Peaks of Carn D\u00fbm",
+  "color": "#9CA0AA",
+  "rarity": 2,
+  "derivative": "minecraft:jagged_peaks",
+  "vanillaDerivative": "minecraft:jagged_peaks",
+  "customDerivitives": [
+    {
+      "id": "carn_dum",
+      "category": "extreme_hills",
+      "temperature": -0.6,
+      "humidity": 0.4,
+      "downfallType": "snow",
+      "skyColor": "#4A4E5E",
+      "fogColor": "#5A5E6A",
+      "waterColor": "#26324A",
+      "waterFogColor": "#080C18",
+      "grassColor": "#5E6E5E",
+      "foliageColor": "#465646",
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 20
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "peaks",
+      "min": 40,
+      "max": 110
+    },
+    {
+      "generator": "jagged",
+      "min": 0,
+      "max": 20
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:snow_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:mossy_cobblestone",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:deepslate"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "carn-dum-spire",
+        "chance": 0.05,
+        "density": 1,
+        "variants": 6,
+        "seed": 2111,
+        "mode": "PAINT",
+        "form": "SPIRE",
+        "block": "minecraft:deepslate",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:deepslate"
+            },
+            {
+              "block": "minecraft:blackstone"
+            },
+            {
+              "block": "minecraft:basalt"
+            }
+          ],
+          "style": {
+            "style": "SIMPLEX",
+            "zoom": 0.6
+          }
+        },
+        "heightMin": 12,
+        "heightMax": 26,
+        "baseWidthMin": 3,
+        "baseWidthMax": 6,
+        "topWidth": 1,
+        "profile": "TAPER",
+        "roughness": 0.35,
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "The Misty Mountains",
+  "color": "#B8C0CC",
+  "rarity": 2,
+  "landBiomes": [
+    "misty/misty-peaks",
+    "misty/misty-foothills",
+    "misty/high-pass"
+  ],
+  "seaBiomes": [
+    "sea/belegaer"
+  ],
+  "shoreBiomes": [
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

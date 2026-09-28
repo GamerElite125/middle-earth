@@ -1,0 +1,203 @@
+{
+  "name": "Deserts of Harad",
+  "color": "#E0C070",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:desert",
+  "customDerivitives": [
+    {
+      "id": "harad",
+      "category": "desert",
+      "temperature": 2.0,
+      "humidity": 0.0,
+      "downfallType": "none",
+      "skyColor": "#8AB0F0",
+      "fogColor": "#E8D8B0",
+      "waterColor": "#3FA0C4",
+      "waterFogColor": "#08303A",
+      "grassColor": "#BFB755",
+      "foliageColor": "#AEA42A"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "dunes",
+      "min": 2,
+      "max": 18
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:sand",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:sandstone",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.02,
+      "whitelist": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:red_sand"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.005,
+      "whitelist": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:red_sand"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:cactus"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "harad-palm",
+        "chance": 0.01,
+        "density": 1,
+        "variants": 6,
+        "seed": 2801,
+        "trunk": "minecraft:jungle_log",
+        "leaves": "minecraft:jungle_leaves",
+        "profile": "PALM",
+        "heightMin": 7,
+        "heightMax": 11,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "harad-obelisk",
+        "chance": 0.01,
+        "density": 1,
+        "variants": 5,
+        "seed": 2802,
+        "form": "PILLAR",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:sandstone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:sandstone"
+            },
+            {
+              "block": "minecraft:cut_sandstone"
+            },
+            {
+              "block": "minecraft:chiseled_sandstone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:smooth_sandstone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.0,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 8,
+        "heightMax": 14,
+        "widthMin": 1,
+        "widthMax": 2,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

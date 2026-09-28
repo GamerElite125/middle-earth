@@ -1,0 +1,77 @@
+{
+  "name": "Middle-earth",
+  "version": 1,
+  "environment": "NORMAL",
+  "fluidHeight": 63,
+  "dimensionHeight": {
+    "min": -64,
+    "max": 320
+  },
+  "landChance": 0.7,
+  "continentZoom": 1.4,
+  "continentalStyle": {
+    "style": "NOWHERE_CELLULAR",
+    "zoom": 6,
+    "fracture": {
+      "style": "FRACTAL_SMOKE",
+      "multiplier": 1
+    }
+  },
+  "regionZoom": 12,
+  "regionStyle": {
+    "style": "CELLULAR_IRIS_DOUBLE",
+    "fracture": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.15,
+      "multiplier": 9
+    }
+  },
+  "landBiomeStyle": {
+    "style": "NOWHERE_CELLULAR",
+    "fracture": {
+      "style": "NOWHERE",
+      "zoom": 0.15,
+      "multiplier": 55
+    }
+  },
+  "seaBiomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "shoreBiomeStyle": {
+    "style": "NOWHERE_CELLULAR"
+  },
+  "caveBiomeStyle": {
+    "style": "SIMPLEX",
+    "zoom": 2.6
+  },
+  "coordFractureZoom": 0.15,
+  "regions": [
+    "eriador",
+    "angmar",
+    "misty-mountains",
+    "wilderland",
+    "lothlorien",
+    "rohan",
+    "gondor",
+    "mordor",
+    "harad"
+  ],
+  "rockPalette": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "fluidPalette": {
+    "palette": [
+      {
+        "block": "minecraft:water"
+      }
+    ]
+  },
+  "preventLeafDecay": true,
+  "useMantle": true,
+  "carvingEnabled": true,
+  "decorate": true
+}

@@ -1,0 +1,207 @@
+{
+  "name": "The Trollshaws",
+  "color": "#4F7A48",
+  "rarity": 2,
+  "derivative": "minecraft:old_growth_spruce_taiga",
+  "vanillaDerivative": "minecraft:old_growth_spruce_taiga",
+  "customDerivitives": [
+    {
+      "id": "trollshaws",
+      "category": "taiga",
+      "temperature": 0.4,
+      "humidity": 0.7,
+      "downfallType": "rain",
+      "skyColor": "#7C98B8",
+      "fogColor": "#A8B4C0",
+      "waterColor": "#3D6A9A",
+      "waterFogColor": "#0A1A30",
+      "grassColor": "#5E8A4E",
+      "foliageColor": "#4A7A3C"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 10,
+      "max": 30
+    },
+    {
+      "generator": "mountain",
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.35,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:sweet_berry_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "troll-spruce",
+        "chance": 0.3,
+        "density": 1,
+        "variants": 6,
+        "seed": 2041,
+        "trunk": "minecraft:spruce_log",
+        "leaves": "minecraft:spruce_leaves",
+        "profile": "SPRUCE",
+        "heightMin": 14,
+        "heightMax": 22,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ],
+    "formations": [
+      {
+        "name": "troll-stone",
+        "chance": 0.06,
+        "density": 1,
+        "variants": 6,
+        "seed": 2042,
+        "mode": "PAINT",
+        "form": "BOULDER",
+        "block": "minecraft:stone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone"
+            },
+            {
+              "block": "minecraft:mossy_cobblestone"
+            },
+            {
+              "block": "minecraft:andesite"
+            }
+          ],
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.4
+          }
+        },
+        "translate": {
+          "y": -2
+        },
+        "heightMin": 3,
+        "heightMax": 7,
+        "baseWidthMin": 2,
+        "baseWidthMax": 5,
+        "roughness": 0.4,
+        "jitter": 0.4,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

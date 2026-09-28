@@ -1,0 +1,85 @@
+{
+  "name": "Ashen Shore",
+  "color": "#3A3030",
+  "rarity": 1,
+  "derivative": "minecraft:basalt_deltas",
+  "vanillaDerivative": "minecraft:stony_shore",
+  "customDerivitives": [
+    {
+      "id": "ashen_shore",
+      "category": "beach",
+      "temperature": 1.2,
+      "humidity": 0.0,
+      "downfallType": "none",
+      "skyColor": "#4A2A22",
+      "fogColor": "#3A2A26",
+      "waterColor": "#3D3A2E",
+      "waterFogColor": "#1A1612",
+      "grassColor": "#6B6048",
+      "foliageColor": "#5A5040",
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 20
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "lowland",
+      "min": -3,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:blackstone",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_blackstone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_polished_blackstone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    }
+  ]
+}

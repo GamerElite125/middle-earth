@@ -1,0 +1,242 @@
+{
+  "name": "Mirkwood",
+  "color": "#1E3A1E",
+  "rarity": 1,
+  "derivative": "minecraft:dark_forest",
+  "vanillaDerivative": "minecraft:dark_forest",
+  "customDerivitives": [
+    {
+      "id": "mirkwood",
+      "category": "forest",
+      "temperature": 0.6,
+      "humidity": 0.9,
+      "downfallType": "rain",
+      "skyColor": "#2E3A2E",
+      "fogColor": "#1E2A1E",
+      "waterColor": "#2A3A2A",
+      "waterFogColor": "#050A05",
+      "grassColor": "#2E4A22",
+      "foliageColor": "#1E3A16",
+      "ambientParticle": {
+        "particle": "minecraft:mycelium",
+        "rarity": 10
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 2,
+      "max": 14
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:podzol",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.25,
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.06,
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:cobweb"
+        }
+      ]
+    },
+    {
+      "chance": 0.04,
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "mirkwood-giant",
+        "chance": 0.45,
+        "density": 1,
+        "variants": 6,
+        "seed": 2301,
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:dark_oak_leaves",
+        "profile": "DARK_OAK_FLAT_WIDE",
+        "heightMin": 18,
+        "heightMax": 30,
+        "trunkWidth": 3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "CLUMPED",
+          "leafDensity": 0.95
+        },
+        "trunkForks": 3,
+        "forkHeight": 0.45,
+        "forkAngle": 24,
+        "roots": true
+      },
+      {
+        "name": "mirkwood-dark",
+        "chance": 0.4,
+        "density": 1,
+        "variants": 6,
+        "seed": 2302,
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:dark_oak_leaves",
+        "profile": "DARK_OAK",
+        "heightMin": 12,
+        "heightMax": 20,
+        "trunkWidth": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        },
+        "roots": true
+      }
+    ]
+  }
+}

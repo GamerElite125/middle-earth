@@ -1,0 +1,81 @@
+{
+  "name": "Grey Havens Shore",
+  "color": "#E8DCA0",
+  "rarity": 1,
+  "derivative": "minecraft:beach",
+  "vanillaDerivative": "minecraft:beach",
+  "customDerivitives": [
+    {
+      "id": "grey_havens_shore",
+      "category": "beach",
+      "temperature": 0.7,
+      "humidity": 0.4,
+      "downfallType": "rain",
+      "skyColor": "#9DC2E8",
+      "fogColor": "#C8D8E8",
+      "waterColor": "#4C8DC9",
+      "waterFogColor": "#123A6B",
+      "grassColor": "#8DB86A",
+      "foliageColor": "#77AB56"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "lowland",
+      "min": -4,
+      "max": 2
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:sand",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:sandstone",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ]
+}

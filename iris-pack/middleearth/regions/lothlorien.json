@@ -1,0 +1,25 @@
+{
+  "name": "Lothl\u00f3rien",
+  "color": "#E3C23A",
+  "rarity": 3,
+  "landBiomes": [
+    "lorien/golden-wood",
+    "lorien/cerin-amroth"
+  ],
+  "seaBiomes": [
+    "sea/belegaer"
+  ],
+  "shoreBiomes": [
+    "shore/beach",
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

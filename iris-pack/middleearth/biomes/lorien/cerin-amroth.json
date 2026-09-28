@@ -1,0 +1,172 @@
+{
+  "name": "Cerin Amroth",
+  "color": "#F0DC6A",
+  "rarity": 3,
+  "derivative": "minecraft:meadow",
+  "vanillaDerivative": "minecraft:meadow",
+  "customDerivitives": [
+    {
+      "id": "cerin_amroth",
+      "category": "plains",
+      "temperature": 0.8,
+      "humidity": 0.7,
+      "downfallType": "rain",
+      "skyColor": "#A6C8FF",
+      "fogColor": "#F6ECC0",
+      "waterColor": "#5AB0E0",
+      "waterFogColor": "#103A50",
+      "grassColor": "#B8D060",
+      "foliageColor": "#F0C830",
+      "ambientParticle": {
+        "particle": "minecraft:spore_blossom_air",
+        "rarity": 20
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 10,
+      "max": 22
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:moss_block",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:mossy_stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.5,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.25,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "amroth-mallorn",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 6,
+        "seed": 2411,
+        "trunk": "minecraft:birch_wood",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 32,
+        "heightMax": 46,
+        "trunkWidth": 3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "CLUMPED",
+          "leafDensity": 0.85
+        },
+        "trunkForks": 4,
+        "forkHeight": 0.45,
+        "forkAngle": 24,
+        "trunkPalette": {
+          "palette": [
+            {
+              "block": "minecraft:birch_wood",
+              "weight": 3
+            },
+            {
+              "block": "minecraft:stripped_birch_wood",
+              "weight": 2
+            }
+          ],
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.4
+          }
+        },
+        "roots": true
+      }
+    ]
+  }
+}

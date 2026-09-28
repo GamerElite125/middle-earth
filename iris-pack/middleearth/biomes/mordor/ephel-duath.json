@@ -1,0 +1,141 @@
+{
+  "name": "Ephel D\u00faath, the Mountains of Shadow",
+  "color": "#1E1A1C",
+  "rarity": 1,
+  "derivative": "minecraft:jagged_peaks",
+  "vanillaDerivative": "minecraft:jagged_peaks",
+  "customDerivitives": [
+    {
+      "id": "ephel_duath",
+      "category": "extreme_hills",
+      "temperature": 1.0,
+      "humidity": 0.0,
+      "downfallType": "none",
+      "skyColor": "#2A1210",
+      "fogColor": "#1E0E0C",
+      "waterColor": "#3A2A1A",
+      "waterFogColor": "#120A06",
+      "grassColor": "#4A3A28",
+      "foliageColor": "#3A2A20",
+      "ambientParticle": {
+        "particle": "minecraft:ash",
+        "rarity": 6
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "jagged",
+      "min": 30,
+      "max": 80
+    },
+    {
+      "generator": "peaks",
+      "min": 0,
+      "max": 40
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:blackstone",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_blackstone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_polished_blackstone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:deepslate"
+        },
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "shadow-fang",
+        "chance": 0.08,
+        "density": 1,
+        "variants": 6,
+        "seed": 2711,
+        "mode": "PAINT",
+        "form": "SPIRE",
+        "block": "minecraft:blackstone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:blackstone"
+            },
+            {
+              "block": "minecraft:deepslate"
+            },
+            {
+              "block": "minecraft:basalt"
+            }
+          ],
+          "style": {
+            "style": "SIMPLEX",
+            "zoom": 0.6
+          }
+        },
+        "heightMin": 14,
+        "heightMax": 30,
+        "baseWidthMin": 3,
+        "baseWidthMax": 6,
+        "topWidth": 1,
+        "profile": "TAPER",
+        "roughness": 0.35,
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

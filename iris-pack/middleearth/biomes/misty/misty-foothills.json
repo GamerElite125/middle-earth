@@ -1,0 +1,180 @@
+{
+  "name": "Misty Foothills",
+  "color": "#7C9A7A",
+  "rarity": 1,
+  "derivative": "minecraft:grove",
+  "vanillaDerivative": "minecraft:grove",
+  "customDerivitives": [
+    {
+      "id": "misty_foothills",
+      "category": "taiga",
+      "temperature": 0.1,
+      "humidity": 0.6,
+      "downfallType": "rain",
+      "skyColor": "#8AA4C4",
+      "fogColor": "#B8C4D0",
+      "waterColor": "#3D6AA0",
+      "waterFogColor": "#0A1A30",
+      "grassColor": "#6E9A6A",
+      "foliageColor": "#5A8A56"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "min": 18,
+      "max": 52
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.3,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:fern"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "misty-pine",
+        "chance": 0.2,
+        "density": 1,
+        "variants": 6,
+        "seed": 2201,
+        "trunk": "minecraft:spruce_log",
+        "leaves": "minecraft:spruce_leaves",
+        "profile": "SPRUCE",
+        "heightMin": 12,
+        "heightMax": 20,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ],
+    "formations": [
+      {
+        "name": "misty-boulder",
+        "chance": 0.05,
+        "density": 1,
+        "variants": 6,
+        "seed": 2202,
+        "mode": "PAINT",
+        "form": "BOULDER",
+        "block": "minecraft:stone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone"
+            },
+            {
+              "block": "minecraft:andesite"
+            },
+            {
+              "block": "minecraft:diorite"
+            }
+          ],
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.4
+          }
+        },
+        "translate": {
+          "y": -2
+        },
+        "heightMin": 3,
+        "heightMax": 6,
+        "baseWidthMin": 2,
+        "baseWidthMax": 5,
+        "roughness": 0.4,
+        "jitter": 0.4,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

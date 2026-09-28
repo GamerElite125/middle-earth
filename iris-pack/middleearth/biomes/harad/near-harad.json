@@ -1,0 +1,142 @@
+{
+  "name": "Near Harad Savanna",
+  "color": "#B8B050",
+  "rarity": 1,
+  "derivative": "minecraft:savanna",
+  "vanillaDerivative": "minecraft:savanna",
+  "customDerivitives": [
+    {
+      "id": "near_harad",
+      "category": "savanna",
+      "temperature": 1.6,
+      "humidity": 0.1,
+      "downfallType": "none",
+      "skyColor": "#80A8F0",
+      "fogColor": "#D8D0B0",
+      "waterColor": "#3F90C4",
+      "waterFogColor": "#08283A",
+      "grassColor": "#BFB755",
+      "foliageColor": "#AEA42A"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 3,
+      "max": 14
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:sandstone",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.5,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "harad-acacia",
+        "chance": 0.04,
+        "density": 1,
+        "variants": 6,
+        "seed": 2811,
+        "trunk": "minecraft:acacia_log",
+        "leaves": "minecraft:acacia_leaves",
+        "profile": "ACACIA",
+        "heightMin": 7,
+        "heightMax": 11,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "name": "Fangorn Forest",
+  "color": "#2E5030",
+  "rarity": 2,
+  "derivative": "minecraft:old_growth_pine_taiga",
+  "vanillaDerivative": "minecraft:old_growth_pine_taiga",
+  "customDerivitives": [
+    {
+      "id": "fangorn",
+      "category": "forest",
+      "temperature": 0.5,
+      "humidity": 0.9,
+      "downfallType": "rain",
+      "skyColor": "#6A8A8A",
+      "fogColor": "#7A9080",
+      "waterColor": "#2E5A4A",
+      "waterFogColor": "#081A12",
+      "grassColor": "#4A7036",
+      "foliageColor": "#38602A",
+      "ambientParticle": {
+        "particle": "minecraft:spore_blossom_air",
+        "rarity": 50
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 6,
+      "max": 24
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:podzol",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.35,
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:moss_block"
+        },
+        {
+          "block": "minecraft:rooted_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:large_fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:moss_block"
+        },
+        {
+          "block": "minecraft:rooted_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom"
+        }
+      ]
+    },
+    {
+      "chance": 0.04,
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:moss_block"
+        },
+        {
+          "block": "minecraft:rooted_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:moss_carpet"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "ent-tree",
+        "chance": 0.35,
+        "density": 1,
+        "variants": 6,
+        "seed": 2511,
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:dark_oak_leaves",
+        "profile": "DARK_OAK",
+        "heightMin": 20,
+        "heightMax": 32,
+        "trunkWidth": 3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "CLUMPED",
+          "leafDensity": 0.85
+        },
+        "trunkForks": 4,
+        "forkHeight": 0.45,
+        "forkAngle": 24,
+        "roots": true
+      },
+      {
+        "name": "fangorn-spruce",
+        "chance": 0.25,
+        "density": 1,
+        "variants": 6,
+        "seed": 2512,
+        "trunk": "minecraft:spruce_log",
+        "leaves": "minecraft:spruce_leaves",
+        "profile": "SPRUCE",
+        "heightMin": 18,
+        "heightMax": 28,
+        "trunkWidth": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        },
+        "roots": true
+      }
+    ]
+  }
+}

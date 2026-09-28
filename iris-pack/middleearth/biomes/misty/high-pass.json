@@ -1,0 +1,133 @@
+{
+  "name": "The High Pass",
+  "color": "#9AA09A",
+  "rarity": 2,
+  "derivative": "minecraft:windswept_gravelly_hills",
+  "vanillaDerivative": "minecraft:windswept_gravelly_hills",
+  "customDerivitives": [
+    {
+      "id": "high_pass",
+      "category": "extreme_hills",
+      "temperature": -0.2,
+      "humidity": 0.5,
+      "downfallType": "snow",
+      "skyColor": "#98A8BC",
+      "fogColor": "#C0C8D0",
+      "waterColor": "#3D57D6",
+      "waterFogColor": "#050533",
+      "grassColor": "#7A9A80",
+      "foliageColor": "#5E8A68"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "min": 30,
+      "max": 70
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "goblin-crag",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 6,
+        "seed": 2211,
+        "mode": "PAINT",
+        "form": "SPIRE",
+        "block": "minecraft:stone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone"
+            },
+            {
+              "block": "minecraft:andesite"
+            },
+            {
+              "block": "minecraft:tuff"
+            }
+          ],
+          "style": {
+            "style": "SIMPLEX",
+            "zoom": 0.6
+          }
+        },
+        "heightMin": 8,
+        "heightMax": 16,
+        "baseWidthMin": 3,
+        "baseWidthMax": 6,
+        "topWidth": 1,
+        "profile": "TAPER",
+        "roughness": 0.35,
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

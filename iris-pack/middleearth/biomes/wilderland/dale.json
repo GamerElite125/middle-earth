@@ -1,0 +1,204 @@
+{
+  "name": "Dale & the Long Lake",
+  "color": "#8FB85A",
+  "rarity": 1,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "dale",
+      "category": "plains",
+      "temperature": 0.6,
+      "humidity": 0.5,
+      "downfallType": "rain",
+      "skyColor": "#80A8E8",
+      "fogColor": "#C0D0E8",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "grassColor": "#86B45A",
+      "foliageColor": "#6AA042"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 4,
+      "max": 16
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.4,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.04,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "dale-oak",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 6,
+        "seed": 2331,
+        "trunk": "minecraft:oak_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 8,
+        "heightMax": 12,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "dale-ruin",
+        "chance": 0.02,
+        "density": 1,
+        "variants": 5,
+        "seed": 2332,
+        "form": "WALL",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:stone_bricks",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone_bricks"
+            },
+            {
+              "block": "minecraft:cobblestone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:mossy_stone_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.4,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 2,
+        "heightMax": 6,
+        "widthMin": 3,
+        "widthMax": 7,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

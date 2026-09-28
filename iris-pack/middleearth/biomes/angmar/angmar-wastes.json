@@ -1,0 +1,338 @@
+{
+  "name": "Wastes of Angmar",
+  "color": "#6C6E78",
+  "rarity": 1,
+  "derivative": "minecraft:snowy_taiga",
+  "vanillaDerivative": "minecraft:snowy_taiga",
+  "customDerivitives": [
+    {
+      "id": "angmar",
+      "category": "icy",
+      "temperature": -0.3,
+      "humidity": 0.4,
+      "downfallType": "snow",
+      "skyColor": "#5A6070",
+      "fogColor": "#6A6E7A",
+      "waterColor": "#2E3A52",
+      "waterFogColor": "#0A0E1A",
+      "grassColor": "#6A7A6A",
+      "foliageColor": "#4E5E4E",
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 25
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 8,
+      "max": 26
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:snow_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:mossy_cobblestone",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:deepslate"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.08,
+      "whitelist": [
+        {
+          "block": "minecraft:snow_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "whitelist": [
+        {
+          "block": "minecraft:snow_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "angmar-dead-spruce",
+        "chance": 0.06,
+        "density": 1,
+        "variants": 6,
+        "seed": 2101,
+        "trunk": "minecraft:spruce_log",
+        "leaves": "minecraft:spruce_leaves",
+        "profile": "SPRUCE",
+        "heightMin": 8,
+        "heightMax": 14,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "TATTERED",
+          "leafDensity": 0.35
+        }
+      },
+      {
+        "name": "angmar-snag",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 6,
+        "seed": 2102,
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:spruce_leaves",
+        "profile": "COLUMNAR",
+        "heightMin": 5,
+        "heightMax": 9,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "TATTERED",
+          "leafDensity": 0.1
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "carn-dum-tower",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 5,
+        "seed": 2103,
+        "form": "PILLAR",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:polished_blackstone_bricks",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:polished_blackstone_bricks"
+            },
+            {
+              "block": "minecraft:cracked_polished_blackstone_bricks"
+            },
+            {
+              "block": "minecraft:deepslate_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:cracked_deepslate_bricks"
+            },
+            {
+              "block": "minecraft:blackstone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.0,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 8,
+        "heightMax": 18,
+        "widthMin": 2,
+        "widthMax": 3,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      },
+      {
+        "name": "angmar-arch",
+        "chance": 0.015,
+        "density": 1,
+        "variants": 5,
+        "seed": 2104,
+        "form": "ARCH",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:deepslate_bricks",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:deepslate_bricks"
+            },
+            {
+              "block": "minecraft:polished_blackstone_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:cracked_deepslate_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.0,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 5,
+        "heightMax": 9,
+        "widthMin": 3,
+        "widthMax": 5,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ],
+    "formations": [
+      {
+        "name": "angmar-spike",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 6,
+        "seed": 2105,
+        "mode": "PAINT",
+        "form": "SPIRE",
+        "block": "minecraft:deepslate",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:deepslate"
+            },
+            {
+              "block": "minecraft:blackstone"
+            },
+            {
+              "block": "minecraft:tuff"
+            }
+          ],
+          "style": {
+            "style": "SIMPLEX",
+            "zoom": 0.6
+          }
+        },
+        "heightMin": 8,
+        "heightMax": 16,
+        "baseWidthMin": 3,
+        "baseWidthMax": 6,
+        "topWidth": 1,
+        "profile": "TAPER",
+        "roughness": 0.35,
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Rohan & Fangorn",
+  "color": "#A4C04A",
+  "rarity": 1,
+  "landBiomes": [
+    "rohan/rohan-plains",
+    "rohan/fangorn",
+    "rohan/emyn-muil"
+  ],
+  "seaBiomes": [
+    "sea/belegaer"
+  ],
+  "shoreBiomes": [
+    "shore/beach",
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

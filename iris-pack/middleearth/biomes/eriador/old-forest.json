@@ -1,0 +1,195 @@
+{
+  "name": "The Old Forest",
+  "color": "#2F5A2A",
+  "rarity": 2,
+  "derivative": "minecraft:dark_forest",
+  "vanillaDerivative": "minecraft:dark_forest",
+  "customDerivitives": [
+    {
+      "id": "old_forest",
+      "category": "forest",
+      "temperature": 0.6,
+      "humidity": 0.9,
+      "downfallType": "rain",
+      "skyColor": "#6A8A9A",
+      "fogColor": "#8AA090",
+      "waterColor": "#3A6A5A",
+      "waterFogColor": "#0A201A",
+      "grassColor": "#4E7A34",
+      "foliageColor": "#3A6A28",
+      "ambientParticle": {
+        "particle": "minecraft:spore_blossom_air",
+        "rarity": 60
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 2,
+      "max": 12
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.3,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "old-willow",
+        "chance": 0.25,
+        "density": 1,
+        "variants": 6,
+        "seed": 2031,
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:dark_oak_leaves",
+        "profile": "WILLOW",
+        "heightMin": 12,
+        "heightMax": 18,
+        "trunkWidth": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        },
+        "roots": true
+      },
+      {
+        "name": "old-oak",
+        "chance": 0.35,
+        "density": 1,
+        "variants": 6,
+        "seed": 2032,
+        "trunk": "minecraft:oak_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "DARK_OAK",
+        "heightMin": 14,
+        "heightMax": 22,
+        "trunkWidth": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        },
+        "trunkForks": 3,
+        "forkHeight": 0.45,
+        "forkAngle": 24,
+        "roots": true
+      }
+    ]
+  }
+}

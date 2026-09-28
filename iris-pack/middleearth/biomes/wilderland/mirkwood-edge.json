@@ -1,0 +1,177 @@
+{
+  "name": "Eaves of Mirkwood",
+  "color": "#35583A",
+  "rarity": 1,
+  "derivative": "minecraft:forest",
+  "vanillaDerivative": "minecraft:forest",
+  "customDerivitives": [
+    {
+      "id": "mirkwood_eaves",
+      "category": "forest",
+      "temperature": 0.6,
+      "humidity": 0.8,
+      "downfallType": "rain",
+      "skyColor": "#5E7A8A",
+      "fogColor": "#6E8A7A",
+      "waterColor": "#2E5A4A",
+      "waterFogColor": "#081A12",
+      "grassColor": "#3E6A2E",
+      "foliageColor": "#2E5A22"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 3,
+      "max": 14
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:dirt_path",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.35,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:cobweb"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "eaves-oak",
+        "chance": 0.25,
+        "density": 1,
+        "variants": 6,
+        "seed": 2311,
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:dark_oak_leaves",
+        "profile": "DARK_OAK",
+        "heightMin": 12,
+        "heightMax": 18,
+        "trunkWidth": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      },
+      {
+        "name": "eaves-birch",
+        "chance": 0.1,
+        "density": 1,
+        "variants": 6,
+        "seed": 2312,
+        "trunk": "minecraft:birch_log",
+        "leaves": "minecraft:birch_leaves",
+        "profile": "BIRCH",
+        "heightMin": 10,
+        "heightMax": 14,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ]
+  }
+}

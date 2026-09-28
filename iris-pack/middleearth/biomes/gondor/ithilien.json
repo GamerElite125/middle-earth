@@ -1,0 +1,276 @@
+{
+  "name": "Ithilien",
+  "color": "#4E9C3A",
+  "rarity": 1,
+  "derivative": "minecraft:flower_forest",
+  "vanillaDerivative": "minecraft:flower_forest",
+  "customDerivitives": [
+    {
+      "id": "ithilien",
+      "category": "forest",
+      "temperature": 0.9,
+      "humidity": 0.7,
+      "downfallType": "rain",
+      "skyColor": "#78A7FF",
+      "fogColor": "#C0D8F0",
+      "waterColor": "#3F8AE4",
+      "waterFogColor": "#05203A",
+      "grassColor": "#5EB040",
+      "foliageColor": "#48A02C"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 4,
+      "max": 18
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_andesite",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.4,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.12,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:lilac"
+        },
+        {
+          "block": "minecraft:rose_bush"
+        },
+        {
+          "block": "minecraft:peony"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:poppy"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "ithilien-oak",
+        "chance": 0.15,
+        "density": 1,
+        "variants": 6,
+        "seed": 2611,
+        "trunk": "minecraft:oak_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 10,
+        "heightMax": 16,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        },
+        "trunkForks": 2,
+        "forkHeight": 0.45,
+        "forkAngle": 24
+      },
+      {
+        "name": "ithilien-cedar",
+        "chance": 0.06,
+        "density": 1,
+        "variants": 6,
+        "seed": 2612,
+        "trunk": "minecraft:spruce_log",
+        "leaves": "minecraft:spruce_leaves",
+        "profile": "COLUMNAR",
+        "heightMin": 10,
+        "heightMax": 16,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      },
+      {
+        "name": "ithilien-cherry",
+        "chance": 0.04,
+        "density": 1,
+        "variants": 6,
+        "seed": 2613,
+        "trunk": "minecraft:cherry_log",
+        "leaves": "minecraft:cherry_leaves",
+        "profile": "CHERRY",
+        "heightMin": 7,
+        "heightMax": 11,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "ithilien-arch",
+        "chance": 0.01,
+        "density": 1,
+        "variants": 5,
+        "seed": 2614,
+        "form": "ARCH",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:stone_bricks",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone_bricks"
+            },
+            {
+              "block": "minecraft:polished_andesite"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:mossy_stone_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.4,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 5,
+        "heightMax": 8,
+        "widthMin": 3,
+        "widthMax": 5,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

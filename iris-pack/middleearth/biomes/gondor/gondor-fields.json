@@ -1,0 +1,209 @@
+{
+  "name": "Fields of Gondor",
+  "color": "#8CC254",
+  "rarity": 1,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "gondor",
+      "category": "plains",
+      "temperature": 0.8,
+      "humidity": 0.5,
+      "downfallType": "rain",
+      "skyColor": "#78A7FF",
+      "fogColor": "#C8DCFF",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "grassColor": "#8CC254",
+      "foliageColor": "#6EAE3C"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "lowland",
+      "min": 3,
+      "max": 12
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_andesite",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.5,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.04,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "gondor-oak",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 6,
+        "seed": 2601,
+        "trunk": "minecraft:oak_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 8,
+        "heightMax": 12,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "numenor-pillar",
+        "chance": 0.015,
+        "density": 1,
+        "variants": 5,
+        "seed": 2602,
+        "form": "PILLAR",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:quartz_pillar",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:quartz_pillar"
+            },
+            {
+              "block": "minecraft:smooth_quartz"
+            },
+            {
+              "block": "minecraft:calcite"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:calcite"
+            },
+            {
+              "block": "minecraft:diorite"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.1,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 5,
+        "heightMax": 10,
+        "widthMin": 1,
+        "widthMax": 2,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "name": "The Lone-lands",
+  "color": "#9DA86A",
+  "rarity": 1,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "lone_lands",
+      "category": "plains",
+      "temperature": 0.6,
+      "humidity": 0.3,
+      "downfallType": "rain",
+      "skyColor": "#8AA2C8",
+      "fogColor": "#B8C4CC",
+      "waterColor": "#4E7AB0",
+      "waterFogColor": "#10223A",
+      "grassColor": "#9AA862",
+      "foliageColor": "#8A9A52"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 6,
+      "max": 24
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_stone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.35,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "lone-oak",
+        "chance": 0.02,
+        "density": 1,
+        "variants": 6,
+        "seed": 2021,
+        "trunk": "minecraft:oak_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 6,
+        "heightMax": 10,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "FILLED",
+          "leafDensity": 0.85
+        }
+      }
+    ],
+    "formations": [
+      {
+        "name": "lone-boulder",
+        "chance": 0.04,
+        "density": 1,
+        "variants": 6,
+        "seed": 2022,
+        "mode": "PAINT",
+        "form": "BOULDER",
+        "block": "minecraft:stone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone"
+            },
+            {
+              "block": "minecraft:andesite"
+            },
+            {
+              "block": "minecraft:mossy_cobblestone"
+            }
+          ],
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.4
+          }
+        },
+        "translate": {
+          "y": -2
+        },
+        "heightMin": 2,
+        "heightMax": 5,
+        "baseWidthMin": 2,
+        "baseWidthMax": 5,
+        "roughness": 0.4,
+        "jitter": 0.4,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "arnor-watchtower",
+        "chance": 0.02,
+        "density": 1,
+        "variants": 5,
+        "seed": 2023,
+        "form": "PILLAR",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:stone_bricks",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:stone_bricks"
+            },
+            {
+              "block": "minecraft:cracked_stone_bricks"
+            },
+            {
+              "block": "minecraft:cobblestone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:mossy_stone_bricks"
+            },
+            {
+              "block": "minecraft:mossy_cobblestone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.4,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 6,
+        "heightMax": 14,
+        "widthMin": 2,
+        "widthMax": 3,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      },
+      {
+        "name": "arnor-wall",
+        "chance": 0.02,
+        "density": 1,
+        "variants": 5,
+        "seed": 2024,
+        "form": "WALL",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:cobblestone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:cobblestone"
+            },
+            {
+              "block": "minecraft:stone_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:mossy_cobblestone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.4,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 2,
+        "heightMax": 5,
+        "widthMin": 4,
+        "widthMax": 9,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ]
+  }
+}

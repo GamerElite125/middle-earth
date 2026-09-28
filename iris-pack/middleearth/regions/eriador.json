@@ -1,0 +1,28 @@
+{
+  "name": "Eriador",
+  "color": "#6DBB4F",
+  "rarity": 1,
+  "landBiomes": [
+    "eriador/the-shire",
+    "eriador/bree-land",
+    "eriador/lone-lands",
+    "eriador/old-forest",
+    "eriador/trollshaws"
+  ],
+  "seaBiomes": [
+    "sea/belegaer"
+  ],
+  "shoreBiomes": [
+    "shore/beach",
+    "shore/stony-shore"
+  ],
+  "caveBiomes": [
+    "caves/deep-halls"
+  ],
+  "landBiomeZoom": 2.5,
+  "seaBiomeZoom": 4,
+  "shoreBiomeZoom": 2,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2
+}

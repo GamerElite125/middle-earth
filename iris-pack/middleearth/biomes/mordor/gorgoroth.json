@@ -1,0 +1,284 @@
+{
+  "name": "Plateau of Gorgoroth",
+  "color": "#3A2E2A",
+  "rarity": 1,
+  "derivative": "minecraft:basalt_deltas",
+  "vanillaDerivative": "minecraft:basalt_deltas",
+  "customDerivitives": [
+    {
+      "id": "gorgoroth",
+      "category": "desert",
+      "temperature": 1.4,
+      "humidity": 0.0,
+      "downfallType": "none",
+      "skyColor": "#3A1A12",
+      "fogColor": "#2A1410",
+      "waterColor": "#3A2A1A",
+      "waterFogColor": "#120A06",
+      "grassColor": "#5A4A30",
+      "foliageColor": "#4A3A28",
+      "ambientParticle": {
+        "particle": "minecraft:ash",
+        "rarity": 8
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "hills",
+      "min": 8,
+      "max": 22
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "zoom": 1,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 4.0,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.4,
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:blackstone",
+          "weight": 397
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_blackstone_bricks",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:cracked_polished_blackstone_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:basalt"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.04,
+      "whitelist": [
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:gravel"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "mordor-spire",
+        "chance": 0.04,
+        "density": 1,
+        "variants": 6,
+        "seed": 2701,
+        "mode": "PAINT",
+        "form": "SPIRE",
+        "block": "minecraft:blackstone",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:blackstone"
+            },
+            {
+              "block": "minecraft:basalt"
+            },
+            {
+              "block": "minecraft:tuff"
+            }
+          ],
+          "style": {
+            "style": "SIMPLEX",
+            "zoom": 0.6
+          }
+        },
+        "heightMin": 8,
+        "heightMax": 18,
+        "baseWidthMin": 3,
+        "baseWidthMax": 6,
+        "topWidth": 1,
+        "profile": "TAPER",
+        "roughness": 0.35,
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      },
+      {
+        "name": "basalt-column",
+        "chance": 0.05,
+        "density": 1,
+        "variants": 6,
+        "seed": 2702,
+        "mode": "PAINT",
+        "form": "BASALT_COLUMN",
+        "block": "minecraft:basalt",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:basalt"
+            },
+            {
+              "block": "minecraft:smooth_basalt"
+            }
+          ],
+          "style": {
+            "style": "SIMPLEX",
+            "zoom": 0.6
+          }
+        },
+        "heightMin": 4,
+        "heightMax": 10,
+        "baseWidthMin": 3,
+        "baseWidthMax": 6,
+        "topWidth": 1,
+        "profile": "TAPER",
+        "roughness": 0.35,
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "orc-watchtower",
+        "chance": 0.02,
+        "density": 1,
+        "variants": 5,
+        "seed": 2703,
+        "form": "PILLAR",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:polished_blackstone_bricks",
+        "blockPalette": {
+          "palette": [
+            {
+              "block": "minecraft:polished_blackstone_bricks"
+            },
+            {
+              "block": "minecraft:blackstone"
+            },
+            {
+              "block": "minecraft:cracked_polished_blackstone_bricks"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "weatheringPalette": {
+          "palette": [
+            {
+              "block": "minecraft:gilded_blackstone"
+            },
+            {
+              "block": "minecraft:blackstone"
+            }
+          ],
+          "style": {
+            "style": "STATIC",
+            "zoom": 1
+          }
+        },
+        "mossiness": 0.0,
+        "erosion": 0.35,
+        "buriedFraction": 0.2,
+        "heightMin": 10,
+        "heightMax": 20,
+        "widthMin": 2,
+        "widthMax": 3,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ],
+    "trees": [
+      {
+        "name": "mordor-snag",
+        "chance": 0.02,
+        "density": 1,
+        "variants": 6,
+        "seed": 2704,
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:dark_oak_leaves",
+        "profile": "COLUMNAR",
+        "heightMin": 4,
+        "heightMax": 7,
+        "trunkWidth": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "canopy": {
+          "mode": "TATTERED",
+          "leafDensity": 0.02
+        }
+      }
+    ]
+  }
+}
