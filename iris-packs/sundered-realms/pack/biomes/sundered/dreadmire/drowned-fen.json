@@ -59,10 +59,41 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
-    "snippet/object-placer/trees/pale-oak-creaking-c0-1-d1",
+    {
+      "chance": 0.1,
+      "density": 1,
+      "place": [
+        "vanilla/trees/pale_oak_creaking",
+        "vanilla/trees/pale_oak_creaking_2",
+        "vanilla/trees/pale_oak_creaking_3"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      }
+    },
     {
       "place": [
         "sundered/dreadmire/sunken-crypt"

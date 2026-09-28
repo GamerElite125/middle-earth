@@ -55,10 +55,43 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
-    "snippet/object-placer/trees/acacia-savannad-c0-07",
+    {
+      "place": [
+        "trees/acacia/savana1",
+        "trees/acacia/savana2",
+        "trees/acacia/savana3",
+        "trees/acacia/savana4",
+        "trees/acacia/savana5"
+      ],
+      "chance": 0.07,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      }
+    },
     {
       "place": [
         "sundered/frontier/frontier-town"
@@ -128,12 +161,100 @@
       },
       "mode": "CENTER_STILT"
     },
-    "snippet/object-placer/clutter/savrock-c0-1"
+    {
+      "chance": 0.1,
+      "place": [
+        "clutter/savrock1",
+        "clutter/savrock2",
+        "clutter/savrock3",
+        "clutter/savrock4",
+        "clutter/savrock5",
+        "clutter/savrock6",
+        "clutter/savrock7",
+        "clutter/savrock8"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      }
+    }
   ],
   "decorators": [
-    "snippet/decorator/grass/arid-mix-c0-018",
-    "snippet/decorator/grass/dry-grass",
-    "snippet/decorator/shrubs/bush",
+    {
+      "absoluteMaxStack": 1,
+      "chance": 0.018,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:short_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:air",
+          "weight": 3
+        }
+      ],
+      "slopeCondition": {
+        "maximumSlope": 5
+      },
+      "style": {
+        "exponent": 1.5,
+        "fracture": {
+          "fracture": {
+            "multiplier": 18,
+            "style": "STATIC"
+          },
+          "multiplier": 55,
+          "style": "NOWHERE",
+          "zoom": 0.15
+        },
+        "style": "CELLULAR",
+        "zoom": 0.3
+      }
+    },
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:bush",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:air",
+          "weight": 4
+        }
+      ],
+      "slopeCondition": {
+        "maximumSlope": 5
+      },
+      "style": {
+        "exponent": 2.5,
+        "style": "CLOVER_HERMITE",
+        "zoom": 0.52
+      }
+    },
     {
       "chance": 0.1,
       "palette": [

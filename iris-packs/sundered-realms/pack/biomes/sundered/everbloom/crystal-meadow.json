@@ -67,7 +67,21 @@
         "style": "SIMPLEX"
       }
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -146,8 +160,149 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/flowers/wildflowers",
-    "snippet/decorator/flowers/allium-mix-c0-03",
+    {
+      "chance": 0.025,
+      "palette": [
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "north",
+            "flower_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "south",
+            "flower_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "east",
+            "flower_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "west",
+            "flower_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "north",
+            "flower_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "south",
+            "flower_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "east",
+            "flower_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "west",
+            "flower_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "north",
+            "flower_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "south",
+            "flower_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "east",
+            "flower_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "west",
+            "flower_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "north",
+            "flower_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "south",
+            "flower_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "east",
+            "flower_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:wildflowers",
+          "data": {
+            "facing": "west",
+            "flower_amount": 4
+          }
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    },
     {
       "chance": 0.006,
       "palette": [

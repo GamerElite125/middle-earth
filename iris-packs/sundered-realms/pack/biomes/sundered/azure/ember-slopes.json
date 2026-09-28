@@ -64,10 +64,43 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
-    "snippet/object-placer/trees/acacia-savannas-c0-04",
+    {
+      "place": [
+        "trees/acacia/savana1",
+        "trees/acacia/savana2",
+        "trees/acacia/savana3",
+        "trees/acacia/savana4",
+        "trees/acacia/savana5"
+      ],
+      "chance": 0.04,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      }
+    },
     {
       "place": [
         "sundered/azure/ember-temple"
@@ -118,7 +151,40 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/grass/dry-grass",
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:short_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:air",
+          "weight": 3
+        }
+      ],
+      "slopeCondition": {
+        "maximumSlope": 5
+      },
+      "style": {
+        "exponent": 1.5,
+        "fracture": {
+          "fracture": {
+            "multiplier": 18,
+            "style": "STATIC"
+          },
+          "multiplier": 55,
+          "style": "NOWHERE",
+          "zoom": 0.15
+        },
+        "style": "CELLULAR",
+        "zoom": 0.3
+      }
+    },
     {
       "chance": 0.03,
       "palette": [
@@ -159,7 +225,6 @@
       }
     ]
   },
-  "terrain3D": "snippet/terrain-3d/rugged/amp30-perlin-crack448",
   "entitySpawners": [
     "sundered/azure-wildlife",
     "sundered/azure-night",

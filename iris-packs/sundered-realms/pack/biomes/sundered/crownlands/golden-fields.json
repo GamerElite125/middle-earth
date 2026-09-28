@@ -43,7 +43,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -94,7 +108,26 @@
       ],
       "overrideGlobalLoot": true
     },
-    "snippet/object-placer/trees/oak-generic-c0-07"
+    {
+      "chance": 0.07,
+      "place": [
+        "trees/oak/generic1",
+        "trees/oak/generic2",
+        "trees/oak/generic3",
+        "trees/oak/generic4",
+        "trees/oak/generic5",
+        "trees/oak/generic6"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 360,
+          "min": 0
+        }
+      }
+    }
   ],
   "decorators": [
     {
@@ -109,9 +142,101 @@
         "zoom": 0.08
       }
     },
-    "snippet/decorator/flowers/meadow-mix-grass-c0-3",
-    "snippet/decorator/crops/carrots-c0-01",
-    "snippet/decorator/crops/potatoes-c0-01",
+    {
+      "chance": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ],
+      "style": {
+        "fracture": {
+          "multiplier": 8,
+          "style": "STATIC"
+        },
+        "style": "SIMPLEX",
+        "zoom": 0.3
+      },
+      "variance": {
+        "fracture": {
+          "multiplier": 10,
+          "style": "SIMPLEX",
+          "zoom": 0.2
+        },
+        "style": "CELLULAR",
+        "zoom": 0.3
+      }
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:carrots",
+          "data": {
+            "age": 7
+          }
+        }
+      ],
+      "style": {
+        "style": "NOWHERE"
+      },
+      "variance": {
+        "style": "NOWHERE"
+      }
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:potatoes",
+          "data": {
+            "age": 7
+          }
+        }
+      ],
+      "style": {
+        "style": "NOWHERE"
+      },
+      "variance": {
+        "style": "NOWHERE"
+      }
+    },
     {
       "chance": 0.001,
       "palette": [

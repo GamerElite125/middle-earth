@@ -63,11 +63,25 @@
         }
       ],
       "style": {
-        "style": "STRATA"
+        "style": "IRIS_DOUBLE"
       },
       "zoom": 0.4
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -133,9 +147,27 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/mushrooms/dead-bush-mix-c0-03"
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        },
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        },
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        }
+      ]
+    }
   ],
-  "terrain3D": "snippet/terrain-3d/rugged/amp30-perlin-crack448",
   "entitySpawners": [
     "sundered/frontier-outlaws",
     "sundered/frontier-herds"

@@ -1,5 +1,4 @@
 {
-  "surfaceDetail": 0.5,
   "seed": 810005,
   "interpolator": {
     "function": "BILINEAR_STARCAST_6",
@@ -8,7 +7,7 @@
   "composite": [
     {
       "style": {
-        "style": "CRATER",
+        "style": "CELLULAR_IRIS",
         "zoom": 0.9
       },
       "seed": 810051,

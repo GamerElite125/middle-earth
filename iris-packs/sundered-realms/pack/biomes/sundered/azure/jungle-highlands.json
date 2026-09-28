@@ -24,7 +24,35 @@
       "max": 60
     }
   ],
-  "wall": "snippet/biome-palette/wall/jungle-wood-leaves",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stripped_jungle_wood"
+      },
+      {
+        "block": "minecraft:jungle_leaves"
+      },
+      {
+        "block": "minecraft:stripped_jungle_wood"
+      },
+      {
+        "block": "minecraft:jungle_leaves"
+      },
+      {
+        "block": "minecraft:stripped_jungle_wood"
+      },
+      {
+        "block": "minecraft:jungle_leaves"
+      },
+      {
+        "block": "minecraft:stripped_jungle_wood"
+      }
+    ],
+    "style": {
+      "style": "NOWHERE"
+    },
+    "zoom": 0.1
+  },
   "layers": [
     {
       "minHeight": 1,
@@ -47,7 +75,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -74,7 +116,29 @@
         "y": -2
       }
     },
-    "snippet/object-placer/trees/jungle-sgeneric-organic-stilt-c0-45",
+    {
+      "chance": 0.45,
+      "mode": "ORGANIC_STILT",
+      "place": [
+        "trees/jungle/sgeneric1",
+        "trees/jungle/sgeneric2",
+        "trees/jungle/sgeneric3",
+        "trees/jungle/sgeneric4"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      },
+      "stiltSettings": {
+        "organicJitter": 6,
+        "organicScratch": 1
+      }
+    },
     {
       "place": [
         "sundered/azure/sun-serpent-pyramid"
@@ -163,7 +227,38 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/grass/jungle-undergrowth-c0-45",
+    {
+      "chance": 0.45,
+      "palette": [
+        {
+          "block": "minecraft:jungle_leaves"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:jungle_leaves"
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:jungle_leaves"
+        }
+      ],
+      "style": {
+        "fracture": {
+          "style": "STATIC"
+        },
+        "style": "FRACTAL_BILLOW_IRIS"
+      },
+      "variance": {
+        "style": "NOWHERE"
+      }
+    },
     {
       "chance": 0.2,
       "palette": [
@@ -175,7 +270,30 @@
         }
       ]
     },
-    "snippet/decorator/twigs/jungle-c0-01"
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:jungle_button",
+          "data": {
+            "face": "floor",
+            "facing": "east",
+            "powered": false
+          }
+        },
+        {
+          "block": "minecraft:air"
+        },
+        {
+          "block": "minecraft:jungle_button",
+          "data": {
+            "face": "floor",
+            "facing": "south",
+            "powered": false
+          }
+        }
+      ]
+    }
   ],
   "proceduralObjects": {
     "ruins": [
@@ -268,7 +386,6 @@
       }
     ]
   },
-  "terrain3D": "snippet/terrain-3d/hilly/amp18-nowhere-crack416",
   "effects": [
     {
       "particleEffect": "TOTEM_OF_UNDYING",

@@ -65,7 +65,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -221,7 +235,14 @@
         }
       ]
     },
-    "snippet/decorator/shrubs/firefly-bush"
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:firefly_bush"
+        }
+      ]
+    }
   ],
   "effects": [
     {

@@ -16,11 +16,25 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PACK = os.path.normpath(os.path.join(HERE, "..", "pack"))
 PACK_NAME = "sundered-realms"
 MANIFEST = json.load(open(os.path.join(HERE, "objects-manifest.json")))
+# Base-pack snippets, inlined and conformed to Iris 4.0.x (see inline_snippets.py). Inlining keeps the
+# pack independent of which overworld pack version it is installed over.
+INLINE = json.load(open(os.path.join(HERE, "snippets-inline.json")))
 M = "minecraft:"
 written = []
 
 
+def inline(node):
+    if isinstance(node, str) and node in INLINE:
+        return copy.deepcopy(INLINE[node])
+    if isinstance(node, dict):
+        return {k: inline(v) for k, v in node.items()}
+    if isinstance(node, list):
+        return [inline(v) for v in node]
+    return node
+
+
 def out(rel, data):
+    data = inline(data)
     path = os.path.join(PACK, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
@@ -383,23 +397,23 @@ def write_monsters():
 # ============================================================================ generators
 def write_generators():
     out("generators/sundered/cay.json", {
-        "surfaceDetail": 0.4, "seed": 810001,
+        "seed": 810001,
         "interpolator": {"function": "BILINEAR_STARCAST_6", "horizontalScale": 22},
         "composite": [{"style": {"style": "SIMPLEX", "zoom": 1.4, "fracture": {"style": "FRACTAL_WATER", "zoom": 0.4, "multiplier": 12}},
                        "seed": 810011, "bezier": True, "exponent": 1.4}]})
     out("generators/sundered/volcano-cone.json", {
-        "surfaceDetail": 0.6, "seed": 810002,
+        "seed": 810002,
         "interpolator": {"function": "BILINEAR_STARCAST_6", "horizontalScale": 12},
         "composite": [
             {"style": {"style": "CELLULAR_HEIGHT", "zoom": 3.2}, "seed": 810021, "exponent": 1.8, "opacity": 1},
             {"style": {"style": "FRACTAL_RM_SIMPLEX", "zoom": 0.35}, "seed": 810022, "opacity": 0.18}]})
     out("generators/sundered/bog.json", {
-        "surfaceDetail": 0.3, "seed": 810003,
+        "seed": 810003,
         "interpolator": {"function": "BILINEAR_STARCAST_3", "horizontalScale": 8},
         "composite": [{"style": {"style": "FRACTAL_WATER", "zoom": 0.45}, "seed": 810031},
                       {"style": {"style": "SIMPLEX", "zoom": 0.12}, "seed": 810032, "opacity": 0.35}]})
     out("generators/sundered/mesa-terrace.json", {
-        "surfaceDetail": 0.5, "seed": 810004,
+        "seed": 810004,
         "interpolator": {"function": "BILINEAR_STARCAST_9", "horizontalScale": 30},
         "composite": [{"style": {"style": "IRIS_THICK", "zoom": 1.1, "fracture": {"style": "IRIS_HALF", "zoom": 0.3, "multiplier": 14}},
                        "seed": 810041, "bezier": True, "exponent": 1.1}],
@@ -407,12 +421,12 @@ def write_generators():
         "cliffHeightGenerator": {"style": {"style": "NOWHERE"}, "seed": 810042, "zoom": 3.4, "octaves": 3, "enabled": True,
                                  "opacity": 1, "exponent": 1.1}})
     out("generators/sundered/craters.json", {
-        "surfaceDetail": 0.5, "seed": 810005,
+        "seed": 810005,
         "interpolator": {"function": "BILINEAR_STARCAST_6", "horizontalScale": 16},
-        "composite": [{"style": {"style": "CRATER", "zoom": 0.9}, "seed": 810051, "opacity": 0.8},
+        "composite": [{"style": {"style": "CELLULAR_IRIS", "zoom": 0.9}, "seed": 810051, "opacity": 0.8},
                       {"style": {"style": "PERLIN_IRIS", "zoom": 1.2}, "seed": 810052, "opacity": 0.5}]})
     out("generators/sundered/gravespires.json", {
-        "surfaceDetail": 0.7, "seed": 810006,
+        "seed": 810006,
         "interpolator": {"function": "BILINEAR_STARCAST_6", "horizontalScale": 18},
         "composite": [{"style": {"style": "CELLULAR_HEIGHT_IRIS", "zoom": 1.6}, "seed": 810061, "exponent": 2.2},
                       {"style": {"style": "FRACTAL_RM_SIMPLEX", "zoom": 0.5}, "seed": 810062, "opacity": 0.3}]})
@@ -464,7 +478,6 @@ def azure(S, sea_spawn):
                                       ruin("serpent-pillar", 72001, 0.05, "PILLAR", M + "mossy_stone_bricks", M + "cracked_stone_bricks", 4, 11),
                                       ruin("jungle-arch", 72002, 0.02, "ARCH", M + "stone_bricks", M + "mossy_stone_bricks", 6, 10, 1, 2, 5, 8),
                                       ruin("plaza-slab", 72003, 0.03, "FLOOR_SLAB", M + "mossy_stone_bricks", M + "moss_block", 1, 1, 4, 8, 5, 10)]},
-                                  terrain3d="snippet/terrain-3d/hilly/amp18-nowhere-crack416",
                                   effects=[ambient("TOTEM_OF_UNDYING", 2, 12, 600)], spawners=sp)
     L["cenote-jungle"] = biome("azure/cenote-jungle", "Cenote Jungle", "#1FA35A", M + "jungle",
                                trop("sundered_cenote_jungle", grass="#35C22A"),
@@ -501,15 +514,7 @@ def azure(S, sea_spawn):
                                                   vanilla=[(M + "chests/ruined_portal", 1), (M + "chests/bastion_treasure", 1)], max_slope=4)],
                                procedural={"formations": [formation("lava-vent-column", 73001, 0.2, "BASALT_COLUMN", M + "basalt", 4, 10, 2, 3,
                                                                     cap=M + "magma_block")]},
-                               terrain3d=t3d(30137, 36, 144, 28, "HEXAGON", 5, 2, 336),
                                effects=[smoke(), smoke(1, 450, "LARGE_SMOKE")],
-                               river={"placement": "PREFERRED_HEADWATER", "routing": "PREFER", "outletAdmission": True,
-                                      "profiles": ["volcanic_lava"], "surfaceBiomes": [], "mouthBiomes": [], "shoreBiomes": [],
-                                      "bankBiomes": [], "floodedCaveBiomes": [], "surfacePools": ["volcanic_pool"],
-                                      "surfaceSourceDensity": 6.0, "surfaceSourceSpacing": 128, "surfaceTributaries": 2,
-                                      "surfaceInlandOutlets": 3, "surfaceCoastalOutlets": 0, "widthMultiplier": 0.5,
-                                      "depthMultiplier": 1.25, "routingMultiplier": 0.5, "bankMultiplier": 1.0, "shoreWidth": 1.0,
-                                      "surfaceMinimumCourseLength": 128, "surfaceMaximumIncision": 24},
                                spawners=sp)
     L["ember-slopes"] = biome("azure/ember-slopes", "Ember Slopes", "#6E3B1E", M + "savanna",
                               custom("sundered_ember_slopes", "savanna", "#9FA83A", "#8F9E36", fog="#D5A57A", temp=1.4, humidity=0.3,
@@ -518,11 +523,10 @@ def azure(S, sea_spawn):
                               [layer(["coarse_dirt", "grass_block", "tuff", "basalt[axis=y]"], 1, 1, style="SIMPLEX", zoom=0.4),
                                layer(["dirt", "tuff"], 2, 4), STONE],
                               decorators=["snippet/decorator/grass/dry-grass", deco(["dead_bush"], 0.03)],
-                              objects=["snippet/object-placer/trees/acacia-savannas-c0-04",
+                              objects=[trees(["trees/acacia/savana1", "trees/acacia/savana2", "trees/acacia/savana3", "trees/acacia/savana4", "trees/acacia/savana5"], 0.04),
                                        structure("sundered/azure/ember-temple", 0.004, loot=temple_loot, max_slope=4),
                                        structure("sundered/azure/serpent-stela", 0.01)],
-                              procedural={"trees": [palms]},
-                              terrain3d="snippet/terrain-3d/rugged/amp30-perlin-crack448", spawners=sp)
+                              procedural={"trees": [palms]}, spawners=sp)
     shore = biome("azure/white-sand-beach", "White Sand Beach", "#FFF6D5", M + "beach",
                   trop("sundered_white_beach", grass="#7BE35A"), [("flat", 0, 3)],
                   [layer(["sand", "sand", "sand", "white_concrete_powder"], 2, 4, style="SIMPLEX", zoom=0.5), layer(["sandstone"], 2, 3)],
@@ -580,15 +584,14 @@ def ashfang(S):
               blight("sundered_bloodrock", grass="#7A4A3A", fog="#8A3A2A"),
               [("cracked-cliffs", 20, 70)],
               [layer(["red_terracotta", "red_nether_bricks", "netherrack", "terracotta"], 1, 2, style="SIMPLEX", zoom=0.25),
-               layer(["red_terracotta", "brown_terracotta", "terracotta"], 4, 12, style="STRATA", zoom=0.5), STONE],
+               layer(["red_terracotta", "brown_terracotta", "terracotta"], 4, 12, style="IRIS_DOUBLE", zoom=0.5), STONE],
               decorators=[deco(["crimson_roots", "crimson_fungus"], 0.03), deco(["dead_bush"], 0.02)],
               objects=[fort, structure("sundered/ashfang/blood-altar", 0.015),
                        "snippet/object-placer/clutter/bonespire-c0-003-d1-weathered"],
               procedural={"formations": [formation("blood-spire", 75001, 0.25, "SPIRE", M + "red_terracotta", 12, 30, 2, 4,
                                                    strata=["red_terracotta", "red_nether_bricks", "brown_terracotta"]),
                                          formation("blood-hoodoo", 75002, 0.15, "HOODOO", M + "red_terracotta", 8, 16, 2, 3,
-                                                   cap=M + "nether_bricks", extra={"hoodooCapRadius": 3, "hoodooCapHeight": 2})]},
-              terrain3d="snippet/terrain-3d/rugged/amp32-hexagon-crack392", spawners=sp),
+                                                   cap=M + "nether_bricks", extra={"hoodooCapRadius": 3, "hoodooCapHeight": 2})]}, spawners=sp),
         biome("ashfang/cinder-fields", "Cinder Fields", "#3A3A3A", M + "badlands",
               blight("sundered_cinder_fields", grass="#4A4A40", fog="#555050", sky="#5A4A48", particle=M + "white_ash", rarity=40),
               [("sundered/craters", 4, 26)],
@@ -619,7 +622,7 @@ def ashfang(S):
                   [layer(["gravel", "blackstone", "tuff"], 2, 3, style="SIMPLEX", zoom=0.3)],
                   decorators=[deco(["dead_bush"], 0.02)], spawners=sp)
     return {"land": L, "shore": [shore], "sea": ["ocean/dark-depth-ocean", "ocean/ocean"],
-            "cave": ["carving/volcanic", "carving/ember-rifts", "carving/deepslate", "carving/sulfur"], "color": "#8A1E1E",
+            "cave": ["carving/volcanic", "carving/ember-rifts", "carving/deepslate", "carving/volcanic-child"], "color": "#8A1E1E",
             "name": "Ashfang Reach"}
 
 
@@ -696,13 +699,12 @@ def frontier(S):
                           "snippet/decorator/plants/cactus-flowering-max2-c0-0005"],
               objects=[town, structure("sundered/frontier/longhorn-marker", 0.01), structure("sundered/frontier/sun-oracle", 0.003,
                                                                                             loot=loot, vanilla=vanilla, max_slope=3)],
-              terrain3d=t3d(81001, 3, 120, 10, "CELLULAR", 6, 1, 90, "CELLULAR", 0.0, 0.1),
               spawners=sp),
         biome("frontier/red-mesa", "Red Mesa", "#B5522A", M + "badlands",
               dry("sundered_red_mesa", grass="#90814D", foliage="#9E814D"),
               [("sundered/mesa-terrace", 10, 60)],
               [layer(["red_sand"], 1, 2), layer(["orange_terracotta", "terracotta", "red_terracotta", "white_terracotta",
-                                                 "yellow_terracotta", "brown_terracotta"], 8, 24, style="STRATA", zoom=0.35),
+                                                 "yellow_terracotta", "brown_terracotta"], 8, 24, style="IRIS_DOUBLE", zoom=0.35),
                "snippet/biome-palette/stone/stone3-andesite3-2-2"],
               decorators=["snippet/decorator/mushrooms/dead-bush-mix-c0-01", "snippet/decorator/plants/cactus-flowering-max5-c0-0005"],
               objects=[mine, structure("sundered/frontier/bandit-fort", 0.006, loot=loot, max_slope=3)],
@@ -720,19 +722,18 @@ def frontier(S):
               [layer(["grass_block", "coarse_dirt", "grass_block"], 1, 1, style="SIMPLEX", zoom=0.4), layer(["dirt"], 2, 4), STONE],
               decorators=["snippet/decorator/grass/arid-mix-c0-018", "snippet/decorator/grass/dry-grass", "snippet/decorator/shrubs/bush",
                           deco(["short_dry_grass"], 0.1)],
-              objects=["snippet/object-placer/trees/acacia-savannad-c0-07", town, structure("sundered/frontier/bandit-fort", 0.005, loot=loot),
+              objects=[trees(["trees/acacia/savana1", "trees/acacia/savana2", "trees/acacia/savana3", "trees/acacia/savana4", "trees/acacia/savana5"], 0.07), town, structure("sundered/frontier/bandit-fort", 0.005, loot=loot),
                        structure("sundered/frontier/longhorn-marker", 0.015), "snippet/object-placer/clutter/savrock-c0-1"],
               spawners=sp),
         biome("frontier/deadwood-canyon", "Deadwood Canyon", "#9A5A3A", M + "wooded_badlands",
               dry("sundered_deadwood_canyon", grass="#9A8A50"),
               [("canyon-steep", 10, 70)],
               [layer(["coarse_dirt", "red_sand", "gravel"], 1, 1, style="SIMPLEX"),
-               layer(["red_terracotta", "terracotta", "orange_terracotta", "light_gray_terracotta"], 10, 30, style="STRATA", zoom=0.4),
+               layer(["red_terracotta", "terracotta", "orange_terracotta", "light_gray_terracotta"], 10, 30, style="IRIS_DOUBLE", zoom=0.4),
                STONE],
               decorators=["snippet/decorator/mushrooms/dead-bush-mix-c0-03"],
               objects=[mine, trees(["trees/oak/dead1", "trees/oak/dead2", "trees/oak/dead3", "trees/spruce/aridpine1",
-                                    "trees/spruce/aridpine2"], 0.12)],
-              terrain3d="snippet/terrain-3d/rugged/amp30-perlin-crack448", spawners=sp),
+                                    "trees/spruce/aridpine2"], 0.12)], spawners=sp),
     ]
     shore = biome("frontier/dry-coast", "Dry Coast", "#D9B77A", M + "beach", dry("sundered_dry_coast", cat="beach"), [("flat", 0, 3)],
                   [layer(["sand", "red_sand"], 2, 3, style="SIMPLEX", zoom=0.3), layer(["sandstone"], 2, 3)],
@@ -767,7 +768,7 @@ def everbloom(S):
               objects=[trees(["trees/sakura/genericsak1", "trees/sakura/genericsak2", "trees/sakura/genericsak3",
                               "trees/sakura/mlarge1", "trees/sakura/mlarge2"], 0.3, 1, -1),
                        tower, structure("sundered/everbloom/fairy-ring", 0.02), structure("sundered/everbloom/moonwell", 0.008)],
-              procedural={"trees": [ptree("glimmer-birch", 92001, 0.5, M + "birch_log", M + "azalea_leaves", "POPLAR", 12, 20),
+              procedural={"trees": [ptree("glimmer-birch", 92001, 0.5, M + "birch_log", M + "azalea_leaves", "BIRCH", 12, 20),
                                     ptree("glimmer-cherry", 92002, 0.35, M + "cherry_log", M + "cherry_leaves", "CHERRY", 7, 11)],
                           "fungi": [glowcap]},
               effects=[ambient("END_ROD", 2, 10, 500)], spawners=sp),
@@ -915,8 +916,7 @@ def umbral(S):
               decorators=[deco(["snow[layers=2]"], 0.2)],
               objects=[structure("sundered/umbral/soulfire-obelisk", 0.01), structure("sundered/umbral/gibbet-cage", 0.01)],
               procedural={"formations": [formation("grave-spire", 97001, 0.2, "SPIRE", M + "deepslate", 16, 38, 2, 4,
-                                                   strata=["deepslate", "tuff", "blackstone"], cap=M + "snow_block")]},
-              terrain3d="snippet/terrain-3d/rugged/amp40-nowhere-crack416", spawners=sp),
+                                                   strata=["deepslate", "tuff", "blackstone"], cap=M + "snow_block")]}, spawners=sp),
         biome("umbral/deadpine-vale", "Deadpine Vale", "#2F3A34", M + "old_growth_spruce_taiga",
               dark("sundered_deadpine", fog="#4A4A55"),
               [("rare-hills", 14, 40)],
@@ -939,7 +939,6 @@ def umbral(S):
               procedural={"ruins": [ruin("gothic-arch", 99001, 0.04, "ARCH", M + "deepslate_bricks", M + "cracked_deepslate_bricks", 9, 14,
                                          1, 2, 5, 9),
                                     ruin("gothic-pillar", 99002, 0.07, "PILLAR", M + "polished_deepslate", M + "cracked_deepslate_tiles", 6, 14)]},
-              terrain3d="snippet/terrain-3d/hilly/amp22-nowhere-crack448",
               effects=[ambient("SOUL", 2, 12, 700)], spawners=sp),
     ]
     shore = biome("umbral/black-shingle", "Black Shingle", "#2A2A2A", M + "stony_shore", dark("sundered_black_shingle"),

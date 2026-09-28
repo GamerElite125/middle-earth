@@ -83,7 +83,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -174,7 +188,26 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/mushrooms/dead-bush-mix-c0-03",
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        },
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        },
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        }
+      ]
+    },
     {
       "chance": 0.04,
       "palette": [
@@ -186,28 +219,22 @@
         }
       ]
     },
-    "snippet/decorator/plants/cactus-flowering-max2-c0-0005"
+    {
+      "chance": 0.0005,
+      "palette": [
+        {
+          "block": "minecraft:cactus"
+        }
+      ],
+      "stackMax": 2,
+      "stackMin": 1,
+      "topPalette": [
+        {
+          "block": "minecraft:cactus_flower"
+        }
+      ]
+    }
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 81001,
-    "amplitude": 3,
-    "horizontalScale": 120,
-    "verticalScale": 10,
-    "densityStyle": {
-      "style": "CELLULAR"
-    },
-    "crackDepth": 6,
-    "crackWidth": 1,
-    "crackScale": 90,
-    "crackStyle": {
-      "style": "CELLULAR"
-    },
-    "minimumSlope": 0.0,
-    "slopeFade": 0.1,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  },
   "entitySpawners": [
     "sundered/frontier-outlaws",
     "sundered/frontier-herds"

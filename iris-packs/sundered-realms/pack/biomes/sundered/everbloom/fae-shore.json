@@ -54,7 +54,21 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/plants/sugar-cane-shore-c0-18"
+    {
+      "chance": 0.18,
+      "palette": [
+        {
+          "block": "minecraft:sugar_cane"
+        }
+      ],
+      "partOf": "SHORE_LINE",
+      "stackMax": 4,
+      "stackMin": 1,
+      "style": {
+        "style": "NOWHERE",
+        "zoom": 0.65
+      }
+    }
   ],
   "entitySpawners": [
     "sundered/everbloom-fae",

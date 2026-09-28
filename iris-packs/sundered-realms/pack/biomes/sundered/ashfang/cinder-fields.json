@@ -65,7 +65,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -123,7 +137,25 @@
       },
       "mode": "CENTER_STILT"
     },
-    "snippet/object-placer/clutter/magmaspire-carve-c0-21-d4"
+    {
+      "bottom": true,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "chance": 0.21,
+      "density": 4,
+      "force": true,
+      "place": [
+        "clutter/magmaspire1",
+        "clutter/magmaspire2",
+        "clutter/magmaspire3"
+      ],
+      "scale": {
+        "size": 0.75
+      },
+      "translate": {
+        "y": -1
+      }
+    }
   ],
   "decorators": [
     {
@@ -142,7 +174,27 @@
         }
       ]
     },
-    "snippet/decorator/pebbles/blackstone-crimson-c0-009"
+    {
+      "chance": 0.009,
+      "palette": [
+        {
+          "block": "minecraft:polished_blackstone_button",
+          "data": {
+            "face": "floor",
+            "facing": "east",
+            "powered": false
+          }
+        },
+        {
+          "block": "minecraft:crimson_button",
+          "data": {
+            "face": "floor",
+            "facing": "south",
+            "powered": false
+          }
+        }
+      ]
+    }
   ],
   "effects": [
     {

@@ -43,11 +43,72 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
-    "snippet/object-placer/trees/oak-thoakgeneric-c0-18",
-    "snippet/object-placer/trees/mixed-tredwood-c0-35",
+    {
+      "chance": 0.18,
+      "place": [
+        "trees/oak/thoakgeneric1",
+        "trees/oak/thoakgeneric2",
+        "trees/oak/thoakgeneric3",
+        "trees/oak/thoakgeneric4",
+        "trees/oak/thoakgeneric8",
+        "trees/oak/thoakgeneric10"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      }
+    },
+    {
+      "chance": 0.35,
+      "place": [
+        "trees/mixed/tredwood1",
+        "trees/mixed/tredwood2",
+        "trees/mixed/tredwood3",
+        "trees/mixed/tredwood4",
+        "trees/mixed/tredwood5",
+        "trees/mixed/tredwood6",
+        "trees/mixed/tredwood7",
+        "trees/mixed/tredwood8",
+        "trees/mixed/tredwood9",
+        "trees/mixed/tredwood10"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      },
+      "translate": {
+        "x": 0,
+        "y": -12,
+        "z": 0
+      }
+    },
     {
       "place": [
         "sundered/crownlands/crown-watchtower"
@@ -74,9 +135,190 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/grass/moss-fern-c0-1",
-    "snippet/decorator/plants/leaf-litter",
-    "snippet/decorator/flowers/tulip-mix-c0-189"
+    {
+      "absoluteMaxStack": 1,
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:moss_carpet",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:short_grass",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:fern",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:tall_grass",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 4
+          }
+        }
+      ],
+      "style": {
+        "fracture": {
+          "multiplier": 16,
+          "style": "STATIC"
+        },
+        "style": "VASCULAR",
+        "zoom": 0.3
+      }
+    },
+    {
+      "chance": 0.189,
+      "palette": [
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        }
+      ],
+      "style": {
+        "fracture": {
+          "multiplier": 8,
+          "style": "STATIC"
+        },
+        "style": "SIMPLEX",
+        "zoom": 0.3
+      },
+      "variance": {
+        "fracture": {
+          "multiplier": 10,
+          "style": "SIMPLEX",
+          "zoom": 0.2
+        },
+        "style": "CELLULAR",
+        "zoom": 0.3
+      }
+    }
   ],
   "entitySpawners": [
     "sundered/crownlands-roads",

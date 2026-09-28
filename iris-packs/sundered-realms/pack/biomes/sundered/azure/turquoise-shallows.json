@@ -54,7 +54,26 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/sea/tall-seagrass-c0-2",
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "lower"
+          }
+        }
+      ],
+      "partOf": "SEA_FLOOR",
+      "topPalette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "upper"
+          }
+        }
+      ]
+    },
     {
       "chance": 0.02,
       "palette": [
@@ -64,7 +83,20 @@
       ],
       "partOf": "SEA_FLOOR"
     },
-    "snippet/decorator/sea/fire-coral-c0-01",
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:fire_coral"
+        },
+        {
+          "block": "minecraft:dead_fire_coral"
+        },
+        {
+          "block": "minecraft:fire_coral_fan"
+        }
+      ]
+    },
     {
       "chance": 0.08,
       "palette": [

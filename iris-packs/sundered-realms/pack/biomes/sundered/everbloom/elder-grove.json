@@ -48,7 +48,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -110,8 +124,153 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/grass/moss-fern-c0-1",
-    "snippet/decorator/plants/leaf-litter",
+    {
+      "absoluteMaxStack": 1,
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:moss_carpet",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:short_grass",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:fern",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:tall_grass",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 1
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 2
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 3
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "north",
+            "segment_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "south",
+            "segment_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "east",
+            "segment_amount": 4
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "facing": "west",
+            "segment_amount": 4
+          }
+        }
+      ],
+      "style": {
+        "fracture": {
+          "multiplier": 16,
+          "style": "STATIC"
+        },
+        "style": "VASCULAR",
+        "zoom": 0.3
+      }
+    },
     {
       "chance": 0.2,
       "palette": [

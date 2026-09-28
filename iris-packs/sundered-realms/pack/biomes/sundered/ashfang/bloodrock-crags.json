@@ -64,11 +64,25 @@
         }
       ],
       "style": {
-        "style": "STRATA"
+        "style": "IRIS_DOUBLE"
       },
       "zoom": 0.5
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -129,7 +143,66 @@
       },
       "mode": "CENTER_STILT"
     },
-    "snippet/object-placer/clutter/bonespire-c0-003-d1-weathered"
+    {
+      "bottom": true,
+      "chance": 0.003,
+      "density": 1,
+      "edit": [
+        {
+          "chance": 0.2,
+          "find": [
+            {
+              "block": "minecraft:bone_block"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:air"
+              },
+              {
+                "block": "minecraft:white_concrete_powder"
+              }
+            ]
+          }
+        }
+      ],
+      "place": [
+        "clutter/bonespire1",
+        "clutter/bonespire2",
+        "clutter/bonespire3",
+        "clutter/bonespire4",
+        "clutter/bonespire5",
+        "clutter/bonespire6",
+        "clutter/bonespire7",
+        "clutter/bonespire8",
+        "clutter/bonespire9",
+        "clutter/bonespire10",
+        "clutter/bonespire11",
+        "clutter/bonespire12",
+        "clutter/bonespire13",
+        "clutter/bonespire14",
+        "clutter/bonespire15",
+        "clutter/bonespire16",
+        "clutter/bonespire17",
+        "clutter/bonespire18",
+        "clutter/bonespire19",
+        "clutter/bonespire20"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      },
+      "translate": {
+        "y": -15,
+        "yRandom": 10
+      }
+    }
   ],
   "decorators": [
     {
@@ -235,7 +308,6 @@
       }
     ]
   },
-  "terrain3D": "snippet/terrain-3d/rugged/amp32-hexagon-crack392",
   "entitySpawners": [
     "sundered/ashfang-warbands"
   ]

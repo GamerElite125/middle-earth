@@ -68,7 +68,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -162,7 +176,40 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/grass/dry-grass",
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:short_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:air",
+          "weight": 3
+        }
+      ],
+      "slopeCondition": {
+        "maximumSlope": 5
+      },
+      "style": {
+        "exponent": 1.5,
+        "fracture": {
+          "fracture": {
+            "multiplier": 18,
+            "style": "STATIC"
+          },
+          "multiplier": 55,
+          "style": "NOWHERE",
+          "zoom": 0.15
+        },
+        "style": "CELLULAR",
+        "zoom": 0.3
+      }
+    },
     {
       "chance": 0.03,
       "palette": [

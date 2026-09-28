@@ -193,26 +193,6 @@
       }
     ]
   },
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30137,
-    "amplitude": 36,
-    "horizontalScale": 144,
-    "verticalScale": 28,
-    "densityStyle": {
-      "style": "HEXAGON"
-    },
-    "crackDepth": 5,
-    "crackWidth": 2,
-    "crackScale": 336,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.2,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  },
   "effects": [
     {
       "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
@@ -240,33 +220,5 @@
     "sundered/azure-night",
     "tropical/water",
     "tropical/beach"
-  ],
-  "riverPolicy": {
-    "placement": "PREFERRED_HEADWATER",
-    "routing": "PREFER",
-    "outletAdmission": true,
-    "profiles": [
-      "volcanic_lava"
-    ],
-    "surfaceBiomes": [],
-    "mouthBiomes": [],
-    "shoreBiomes": [],
-    "bankBiomes": [],
-    "floodedCaveBiomes": [],
-    "surfacePools": [
-      "volcanic_pool"
-    ],
-    "surfaceSourceDensity": 6.0,
-    "surfaceSourceSpacing": 128,
-    "surfaceTributaries": 2,
-    "surfaceInlandOutlets": 3,
-    "surfaceCoastalOutlets": 0,
-    "widthMultiplier": 0.5,
-    "depthMultiplier": 1.25,
-    "routingMultiplier": 0.5,
-    "bankMultiplier": 1.0,
-    "shoreWidth": 1.0,
-    "surfaceMinimumCourseLength": 128,
-    "surfaceMaximumIncision": 24
-  }
+  ]
 }

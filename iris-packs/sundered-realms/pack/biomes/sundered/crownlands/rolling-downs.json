@@ -43,7 +43,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -111,12 +125,130 @@
       ],
       "overrideGlobalLoot": true
     },
-    "snippet/object-placer/trees/birch-antioch-c0-07-d4",
-    "snippet/object-placer/trees/oak-toak-c0-18"
+    {
+      "chance": 0.07,
+      "density": 4,
+      "place": [
+        "trees/birch/antioch3",
+        "trees/birch/antioch4",
+        "trees/birch/antioch5",
+        "trees/birch/antioch6",
+        "trees/birch/antioch7",
+        "trees/birch/antioch8",
+        "trees/birch/antioch9",
+        "trees/birch/antioch10",
+        "trees/birch/antioch11",
+        "trees/birch/antioch12",
+        "trees/birch/antioch13"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      }
+    },
+    {
+      "chance": 0.18,
+      "place": [
+        "trees/oak/toak1",
+        "trees/oak/toak2",
+        "trees/oak/toak3",
+        "trees/oak/toak4",
+        "trees/oak/toak8",
+        "trees/oak/toak10"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      }
+    }
   ],
   "decorators": [
-    "snippet/decorator/flowers/meadow-mix-c0-2-simplex-z0-2",
-    "snippet/decorator/grass/short-c0-6"
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ],
+      "style": {
+        "fracture": {
+          "multiplier": 8,
+          "style": "STATIC"
+        },
+        "style": "SIMPLEX",
+        "zoom": 0.2
+      },
+      "variance": {
+        "fracture": {
+          "multiplier": 10,
+          "style": "SIMPLEX",
+          "zoom": 0.2
+        },
+        "style": "CELLULAR",
+        "zoom": 0.25
+      }
+    },
+    {
+      "chance": 0.6,
+      "palette": [
+        {
+          "block": "minecraft:short_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    }
   ],
   "entitySpawners": [
     "sundered/crownlands-roads",

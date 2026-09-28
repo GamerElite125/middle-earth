@@ -68,7 +68,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -203,7 +217,53 @@
         }
       }
     },
-    "snippet/object-placer/clutter/bone-c0-006-d1-weathered"
+    {
+      "bottom": true,
+      "chance": 0.006,
+      "density": 1,
+      "edit": [
+        {
+          "chance": 0.2,
+          "find": [
+            {
+              "block": "minecraft:bone_block"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:air"
+              },
+              {
+                "block": "minecraft:white_concrete_powder"
+              }
+            ]
+          }
+        }
+      ],
+      "place": [
+        "clutter/bone1",
+        "clutter/bone2",
+        "clutter/bone3",
+        "clutter/bone4",
+        "clutter/bone5",
+        "clutter/bone6",
+        "clutter/bone7"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      },
+      "translate": {
+        "y": -15,
+        "yRandom": 10
+      }
+    }
   ],
   "decorators": [
     {
@@ -232,7 +292,40 @@
       "stackMin": 1,
       "stackMax": 3
     },
-    "snippet/decorator/grass/dry-grass"
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:short_dry_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:air",
+          "weight": 3
+        }
+      ],
+      "slopeCondition": {
+        "maximumSlope": 5
+      },
+      "style": {
+        "exponent": 1.5,
+        "fracture": {
+          "fracture": {
+            "multiplier": 18,
+            "style": "STATIC"
+          },
+          "multiplier": 55,
+          "style": "NOWHERE",
+          "zoom": 0.15
+        },
+        "style": "CELLULAR",
+        "zoom": 0.3
+      }
+    }
   ],
   "effects": [
     {

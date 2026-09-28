@@ -1,5 +1,4 @@
 {
-  "surfaceDetail": 0.3,
   "seed": 810003,
   "interpolator": {
     "function": "BILINEAR_STARCAST_3",

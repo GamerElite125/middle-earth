@@ -59,7 +59,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -164,7 +178,47 @@
     }
   ],
   "decorators": [
-    "snippet/decorator/flowers/meadow-mix-c0-06",
+    {
+      "chance": 0.06,
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    },
     {
       "chance": 0.08,
       "palette": [
@@ -173,7 +227,14 @@
         }
       ]
     },
-    "snippet/decorator/shrubs/firefly-bush",
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:firefly_bush"
+        }
+      ]
+    },
     {
       "chance": 0.03,
       "palette": [
@@ -206,7 +267,7 @@
         },
         "trunk": "minecraft:birch_log",
         "leaves": "minecraft:azalea_leaves",
-        "profile": "POPLAR",
+        "profile": "BIRCH",
         "heightMin": 12,
         "heightMax": 20,
         "trunkWidth": 1,

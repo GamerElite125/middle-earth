@@ -1,5 +1,5 @@
 {
-  "version": 4013,
+  "version": 4002,
   "name": "Sundered Realms",
   "importedStructures": {
     "datapackOverrides": true,
@@ -66,24 +66,6 @@
             ]
           }
         }
-      },
-      {
-        "match": [
-          "minecraft:village",
-          "minecraft:pillager_outpost",
-          "minecraft:mansion",
-          "minecraft:desert_pyramid",
-          "minecraft:jungle_pyramid",
-          "minecraft:igloo",
-          "minecraft:swamp_hut",
-          "minecraft:shipwreck_beached",
-          "minecraft:ruined_portal"
-        ],
-        "terrain": {
-          "mode": "FLATTEN",
-          "horizontalPadding": 24,
-          "flattenRange": 64
-        }
       }
     ]
   },
@@ -149,470 +131,6 @@
   "environment": "NORMAL",
   "dimensionAngleDeg": 69,
   "fluidHeight": 50,
-  "hydrology": {
-    "rivers": {
-      "enabled": true,
-      "routing": {
-        "tileSize": 1024,
-        "sampleSpacing": 64,
-        "maximumRouteLength": 16384,
-        "minimumSurfaceCourseLength": 384,
-        "minimumUndergroundCourseLength": 384,
-        "maximumOutletsPerTile": 1,
-        "maximumCoastalOutletsPerTile": 2,
-        "oceanOutlets": true,
-        "inlandOutlets": [
-          "SINKHOLE_GROTTO"
-        ],
-        "valleyPreference": 1.5,
-        "uphillPenalty": 24.0,
-        "slopePenalty": 2.0,
-        "confluenceAttraction": 0.2,
-        "regional": {
-          "enabled": false,
-          "sampleSpacing": 256,
-          "minimumLength": 2048,
-          "maximumTrunks": 2,
-          "maximumCachedBasins": 8,
-          "maximumCachedStations": 131072,
-          "coastalChannels": true,
-          "coastalChannelChance": 0.25,
-          "maximumCoastalIncision": 8
-        }
-      },
-      "geometry": {
-        "meanders": {
-          "primaryWavelength": 192,
-          "detailWavelength": 48,
-          "primaryStrength": 0.55,
-          "detailStrength": 0.18,
-          "maximumOffsetRatio": 0.45,
-          "smoothingPasses": 2,
-          "maximumTurnDegrees": 20
-        },
-        "surface": {
-          "bedRoundness": 2.0,
-          "bedRoughness": 0.25,
-          "wallRoughness": 0.25,
-          "roughnessWavelength": 16
-        },
-        "underground": {
-          "bedRoundness": 3.0,
-          "bedRoughness": 0.36,
-          "wallRoughness": 0.32,
-          "roughnessWavelength": 9,
-          "radialBase": 0.86,
-          "radialMinimum": 0.58,
-          "radialMaximum": 1.18,
-          "primaryLobeStrength": 0.08,
-          "detailLobeStrength": 0.06,
-          "ceilingRoughness": 0.0
-        },
-        "grottos": {
-          "bedRoundness": 3.2,
-          "bedRoughness": 0.38,
-          "wallRoughness": 0.34,
-          "roughnessWavelength": 11,
-          "radialBase": 0.86,
-          "radialMinimum": 0.58,
-          "radialMaximum": 1.18,
-          "primaryLobeStrength": 0.08,
-          "detailLobeStrength": 0.06,
-          "ceilingRoughness": 0.0,
-          "aspectMinimum": 0.62,
-          "aspectRange": 0.2
-        },
-        "drops": {
-          "cascadeRunPerBlock": 2,
-          "cascadeExponent": 1.4,
-          "maximumCascadeStep": 2,
-          "flowWidthRatio": 0.45,
-          "maximumFlowDepth": 2,
-          "basinWidthRatio": 1.8,
-          "maximumBasinDepth": 8,
-          "undergroundCascadeRunPerBlock": 0
-        },
-        "banks3D": {
-          "enabled": false,
-          "amplitude": 8,
-          "horizontalScale": 48,
-          "verticalScale": 8,
-          "maximumOverhang": 8
-        }
-      },
-      "surface": {
-        "enabled": true,
-        "sources": {
-          "density": 1.75,
-          "minimumElevation": 64,
-          "minimumPerTile": 0,
-          "minimumSpacing": 384
-        },
-        "channel": {
-          "width": {
-            "min": 4,
-            "max": 8,
-            "style": {
-              "style": "IRIS",
-              "zoom": 384
-            }
-          },
-          "depth": {
-            "min": 2,
-            "max": 4,
-            "style": {
-              "style": "IRIS",
-              "zoom": 320
-            }
-          },
-          "sink": 0,
-          "maximumIncision": 16,
-          "roughness": 0.25,
-          "roughnessWavelength": 16,
-          "springWidthRatio": 2.5,
-          "springLength": 24,
-          "smoothingRadius": 16,
-          "outlineMinimumRatio": 0.6,
-          "outlineMaximumRatio": 1.4,
-          "springExtraDepth": 1.0
-        },
-        "banks": {
-          "shoreWidth": 1.5,
-          "shoreRise": 0.0,
-          "blendSlope": 3.0,
-          "blendBaseWidth": 0.0,
-          "minimumBlendWidth": 4,
-          "maximumBlendWidth": 32,
-          "excavation": {
-            "maximumDepth": 16,
-            "maximumWidth": 40,
-            "maximumVolumePerBlock": 1024
-          },
-          "exposeCutStrata": true,
-          "shoreMaterial": {
-            "enabled": true,
-            "palette": {
-              "palette": [
-                {
-                  "block": "minecraft:sand"
-                }
-              ]
-            },
-            "depth": 2
-          },
-          "bankMaterial": {
-            "enabled": false,
-            "palette": {
-              "palette": [
-                {
-                  "block": "minecraft:stone"
-                }
-              ]
-            },
-            "depth": 1
-          }
-        },
-        "bed": {
-          "allowGravityBlocks": true,
-          "padding": 2,
-          "material": {
-            "enabled": false,
-            "palette": {
-              "palette": [
-                {
-                  "block": "minecraft:stone"
-                }
-              ]
-            },
-            "depth": 1
-          }
-        },
-        "flow": {
-          "cascadeRun": 2,
-          "waterfallMinimumDrop": 6,
-          "waterfallThalwegFraction": 0.65,
-          "plungeBasinMinimumDrop": 2,
-          "plungeBasinLengthRatio": 2.0,
-          "plungeBasinDepth": 1
-        },
-        "mouths": {
-          "flareRatio": 2.5,
-          "maximumOceanApron": 8,
-          "inletLength": 64,
-          "inletDepth": 3,
-          "maximumIncision": 32,
-          "inletCourseFraction": 0.5,
-          "inletRampSlope": 1.0
-        },
-        "erosion": {
-          "enabled": true,
-          "smoothingRadius": 12,
-          "thalwegFraction": 0.45,
-          "blendCurve": 1.0,
-          "bedNoise": 0.5,
-          "style": "SMOOTH",
-          "terraceSteps": 4,
-          "cliffFraction": 0.5,
-          "bedProfile": "BOWL"
-        },
-        "ponds": {
-          "source": {
-            "enabled": true,
-            "minimumRadius": 6,
-            "maximumRadius": 12,
-            "depth": 3
-          },
-          "terminal": {
-            "enabled": true,
-            "minimumRadius": 4,
-            "maximumRadius": 7,
-            "depth": 3
-          }
-        }
-      },
-      "underground": {
-        "enabled": true,
-        "sources": {
-          "density": 1.5,
-          "minimumPerTile": 0,
-          "minimumSpacing": 640
-        },
-        "fluidLevel": {
-          "min": -48,
-          "max": 32,
-          "style": {
-            "style": "IRIS",
-            "zoom": 512
-          }
-        },
-        "channelWidth": {
-          "min": 3,
-          "max": 8,
-          "style": {
-            "style": "IRIS",
-            "zoom": 384
-          }
-        },
-        "depth": {
-          "min": 1,
-          "max": 3,
-          "style": {
-            "style": "IRIS",
-            "zoom": 320
-          }
-        },
-        "headroom": {
-          "min": 6,
-          "max": 14,
-          "style": {
-            "style": "IRIS",
-            "zoom": 384
-          }
-        },
-        "connectToExistingCaves": true,
-        "mouthLevelingDistance": 128,
-        "tributaries": 1,
-        "minimumRockCover": 1,
-        "minimumFloorCover": 1,
-        "wideningSources": 8,
-        "bedMaterial": {
-          "enabled": false,
-          "palette": {
-            "palette": [
-              {
-                "block": "minecraft:stone"
-              }
-            ]
-          },
-          "depth": 1
-        }
-      },
-      "grottos": {
-        "coastal": {
-          "enabled": true,
-          "poolLevel": "SEA_LEVEL",
-          "horizontalRadius": 12,
-          "verticalRadius": 7,
-          "headroom": 10,
-          "maximumVolume": 16384,
-          "cliffMinimumHeight": 7,
-          "cliffSlopeFactor": 0.5,
-          "seaCaves": {
-            "enabled": true,
-            "maximumPerTile": 3,
-            "minimumSpacing": 160,
-            "minimumCoastHeight": 8,
-            "depth": 12,
-            "sweepJitterDegrees": 25.0
-          }
-        },
-        "inland": {
-          "enabled": true,
-          "connectSurfaceRivers": true,
-          "horizontalRadius": 10,
-          "verticalRadius": 6,
-          "headroom": 10,
-          "maximumVolume": 16384
-        }
-      },
-      "profiles": [
-        {
-          "id": "water",
-          "fluidPalette": {
-            "palette": [
-              {
-                "block": "minecraft:water"
-              }
-            ]
-          }
-        },
-        {
-          "id": "volcanic_lava",
-          "fluidPalette": {
-            "palette": [
-              {
-                "block": "minecraft:lava"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "surfacePools": [
-      {
-        "id": "lava_pool",
-        "fluidPalette": {
-          "palette": [
-            {
-              "block": "minecraft:lava"
-            }
-          ]
-        },
-        "density": 0.75,
-        "spacing": 384,
-        "minimumRadius": 4,
-        "maximumRadius": 7,
-        "depth": 2
-      },
-      {
-        "id": "tropical_lake",
-        "fluidPalette": {
-          "palette": [
-            {
-              "block": "minecraft:water"
-            }
-          ]
-        },
-        "density": 8.0,
-        "spacing": 160,
-        "minimumRadius": 8,
-        "maximumRadius": 16,
-        "depth": 3
-      },
-      {
-        "id": "volcanic_pool",
-        "fluidPalette": {
-          "palette": [
-            {
-              "block": "minecraft:lava"
-            }
-          ]
-        },
-        "density": 6.0,
-        "spacing": 128,
-        "minimumRadius": 6,
-        "maximumRadius": 12,
-        "depth": 3
-      }
-    ],
-    "deepFluids": [
-      {
-        "id": "deep_lava",
-        "fluidPalette": {
-          "palette": [
-            {
-              "block": "minecraft:lava"
-            }
-          ]
-        },
-        "height": {
-          "min": -192,
-          "max": 32,
-          "style": {
-            "style": "IRIS",
-            "zoom": 1024
-          }
-        },
-        "density": 0.5,
-        "spacing": 1024,
-        "horizontalRadius": 12,
-        "verticalRadius": 5,
-        "channelWidth": 3,
-        "depth": 1,
-        "headroom": 6,
-        "containedPools": true,
-        "shortChannels": false
-      },
-      {
-        "id": "deep_lava_small",
-        "fluidPalette": {
-          "palette": [
-            {
-              "block": "minecraft:lava"
-            }
-          ]
-        },
-        "height": {
-          "min": -160,
-          "max": 40,
-          "style": {
-            "style": "IRIS",
-            "zoom": 512
-          }
-        },
-        "density": 1.5,
-        "spacing": 320,
-        "horizontalRadius": 6,
-        "verticalRadius": 4,
-        "channelWidth": 2,
-        "depth": 1,
-        "headroom": 4,
-        "containedPools": true,
-        "shortChannels": false
-      }
-    ]
-  },
-  "riverPolicy": {
-    "placement": "NATURAL",
-    "routing": "ALLOW",
-    "outletAdmission": true,
-    "profiles": [
-      "water"
-    ],
-    "surfaceBiomes": [
-      "temperate/sea/river",
-      "mountain/sea/river-soft"
-    ],
-    "mouthBiomes": [
-      "temperate/sea/ocean",
-      "ocean/rich-oceans"
-    ],
-    "shoreBiomes": [
-      "temperate/shore/beach",
-      "temperate/shore/oak-beach"
-    ],
-    "bankBiomes": [
-      "temperate/plains",
-      "temperate/calmplains"
-    ],
-    "floodedCaveBiomes": [
-      "carving/rocky-cavebiome",
-      "carving/chalk-gardens"
-    ],
-    "widthMultiplier": 1.0,
-    "depthMultiplier": 1.0,
-    "routingMultiplier": 1.0
-  },
   "continentZoom": 1.9,
   "continentalStyle": {
     "style": "NOWHERE_CELLULAR",
@@ -700,7 +218,8 @@
             "block": "minecraft:bedrock"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/bedrock"
     },
     {
       "threshold": 0.35,
@@ -714,7 +233,8 @@
             "block": "minecraft:bedrock"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/bedrock"
     },
     {
       "threshold": 1,
@@ -745,7 +265,8 @@
             "block": "minecraft:deepslate"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/deepslate"
     },
     {
       "threshold": 0.75,
@@ -759,7 +280,8 @@
             "block": "minecraft:deepslate"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/deepslate"
     },
     {
       "threshold": 0.625,
@@ -773,7 +295,8 @@
             "block": "minecraft:deepslate"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/deepslate"
     },
     {
       "threshold": 0.5,
@@ -787,7 +310,8 @@
             "block": "minecraft:deepslate"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/deepslate"
     },
     {
       "threshold": 0.375,
@@ -801,7 +325,8 @@
             "block": "minecraft:deepslate"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/deepslate"
     },
     {
       "threshold": 0.25,
@@ -815,7 +340,8 @@
             "block": "minecraft:deepslate"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/deepslate"
     },
     {
       "threshold": 0.125,
@@ -829,36 +355,471 @@
             "block": "minecraft:deepslate"
           }
         ]
-      }
+      },
+      "chanceStyle": "snippet/style/deepslate"
     }
   ],
   "shoreBiomeStyle": {
     "style": "NOWHERE_CELLULAR"
   },
   "deposits": [
-    "snippet/deposit/stone/granite",
-    "snippet/deposit/stone/andesite",
-    "snippet/deposit/stone/diorite",
-    "snippet/deposit/stone/gravel",
-    "snippet/deposit/ore/coal-sky",
-    "snippet/deposit/ore/coal-highland",
-    "snippet/deposit/ore/iron-sky",
-    "snippet/deposit/ore/iron-mid",
-    "snippet/deposit/ore/iron-low",
-    "snippet/deposit/ore/copper-caves",
-    "snippet/deposit/ore/copper-dripstone-caves",
-    "snippet/deposit/ore/gold-low",
-    "snippet/deposit/ore/gold-low-rare",
-    "snippet/deposit/ore/gold-badlands",
-    "snippet/deposit/ore/redstone-low",
-    "snippet/deposit/ore/redstone-deep",
-    "snippet/deposit/ore/diamond-deep-small",
-    "snippet/deposit/ore/diamond-low",
-    "snippet/deposit/ore/diamond-deep-large",
-    "snippet/deposit/ore/diamond-deep-medium",
-    "snippet/deposit/ore/lapis-mid",
-    "snippet/deposit/ore/lapis-low",
-    "snippet/deposit/ore/emerald-mountains"
+    {
+      "minHeight": 19,
+      "maxPerChunk": 8,
+      "maxHeight": 390,
+      "minPerChunk": 1,
+      "minSize": 25,
+      "maxSize": 25,
+      "palette": [
+        {
+          "block": "minecraft:granite"
+        }
+      ],
+      "varience": 2
+    },
+    {
+      "minHeight": 19,
+      "maxPerChunk": 8,
+      "maxHeight": 310,
+      "minPerChunk": 1,
+      "minSize": 25,
+      "maxSize": 25,
+      "palette": [
+        {
+          "block": "minecraft:andesite"
+        }
+      ],
+      "varience": 2
+    },
+    {
+      "minHeight": 19,
+      "maxPerChunk": 8,
+      "maxHeight": 309,
+      "minPerChunk": 1,
+      "minSize": 25,
+      "maxSize": 25,
+      "palette": [
+        {
+          "block": "minecraft:diorite"
+        }
+      ],
+      "varience": 2
+    },
+    {
+      "minHeight": 19,
+      "maxPerChunk": 8,
+      "maxHeight": 389,
+      "minPerChunk": 1,
+      "minSize": 25,
+      "maxSize": 25,
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        }
+      ],
+      "varience": 2
+    },
+    {
+      "minHeight": 400,
+      "maxHeight": 767,
+      "heightDistribution": "UNIFORM",
+      "surfaceClearance": 0,
+      "minPerChunk": 60,
+      "maxPerChunk": 60,
+      "minSize": 17,
+      "maxSize": 17,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:coal_ore"
+        }
+      ],
+      "replaceableBlocks": [
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
+      ]
+    },
+    {
+      "minHeight": 128,
+      "maxHeight": 512,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 1,
+      "minPerChunk": 80,
+      "maxPerChunk": 80,
+      "minSize": 17,
+      "maxSize": 17,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.65,
+      "palette": [
+        {
+          "block": "minecraft:coal_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 288,
+      "maxHeight": 896,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 180,
+      "maxPerChunk": 180,
+      "minSize": 9,
+      "maxSize": 9,
+      "shape": "VANILLA_ELLIPSOID",
+      "palette": [
+        {
+          "block": "minecraft:iron_ore"
+        }
+      ],
+      "replaceableBlocks": [
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
+      ]
+    },
+    {
+      "minHeight": 80,
+      "maxHeight": 240,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 40,
+      "maxPerChunk": 40,
+      "minSize": 9,
+      "maxSize": 9,
+      "shape": "VANILLA_ELLIPSOID",
+      "palette": [
+        {
+          "block": "minecraft:iron_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 0,
+      "maxHeight": 272,
+      "heightDistribution": "UNIFORM",
+      "surfaceClearance": 0,
+      "minPerChunk": 40,
+      "maxPerChunk": 40,
+      "minSize": 4,
+      "maxSize": 4,
+      "shape": "VANILLA_ELLIPSOID",
+      "palette": [
+        {
+          "block": "minecraft:iron_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 96,
+      "maxHeight": 352,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 64,
+      "maxPerChunk": 64,
+      "minSize": 10,
+      "maxSize": 10,
+      "shape": "VANILLA_ELLIPSOID",
+      "biomeScope": "CAVE",
+      "excludedBiomes": [
+        "carving/drip",
+        "carving/drip-child",
+        "carving/drip-lite",
+        "carving/drip-lite-child"
+      ],
+      "palette": [
+        {
+          "block": "minecraft:copper_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 96,
+      "maxHeight": 352,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 64,
+      "maxPerChunk": 64,
+      "minSize": 20,
+      "maxSize": 20,
+      "shape": "VANILLA_ELLIPSOID",
+      "biomeScope": "CAVE",
+      "includedBiomes": [
+        "carving/drip",
+        "carving/drip-child",
+        "carving/drip-lite",
+        "carving/drip-lite-child"
+      ],
+      "palette": [
+        {
+          "block": "minecraft:copper_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 0,
+      "maxHeight": 192,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
+      "minSize": 9,
+      "maxSize": 9,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:gold_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 0,
+      "maxHeight": 32,
+      "heightDistribution": "UNIFORM",
+      "surfaceClearance": 0,
+      "minPerChunk": 0,
+      "maxPerChunk": 2,
+      "minSize": 9,
+      "maxSize": 9,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:gold_ore"
+        }
+      ],
+      "replaceableBlocks": [
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
+      ]
+    },
+    {
+      "minHeight": 192,
+      "maxHeight": 640,
+      "heightDistribution": "UNIFORM",
+      "surfaceClearance": 0,
+      "minPerChunk": 100,
+      "maxPerChunk": 100,
+      "minSize": 9,
+      "maxSize": 9,
+      "shape": "VANILLA_ELLIPSOID",
+      "biomeScope": "SURFACE",
+      "includedBiomes": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands"
+      ],
+      "palette": [
+        {
+          "block": "minecraft:gold_ore"
+        }
+      ],
+      "replaceableBlocks": [
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
+      ]
+    },
+    {
+      "minHeight": 0,
+      "maxHeight": 158,
+      "heightDistribution": "UNIFORM",
+      "surfaceClearance": 0,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
+      "minSize": 8,
+      "maxSize": 8,
+      "shape": "VANILLA_ELLIPSOID",
+      "palette": [
+        {
+          "data": {
+            "lit": false
+          },
+          "block": "minecraft:redstone_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": -64,
+      "maxHeight": 64,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
+      "minSize": 8,
+      "maxSize": 8,
+      "shape": "VANILLA_ELLIPSOID",
+      "palette": [
+        {
+          "data": {
+            "lit": false
+          },
+          "block": "minecraft:redstone_ore"
+        }
+      ],
+      "replaceableBlocks": [
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
+      ]
+    },
+    {
+      "minHeight": -160,
+      "maxHeight": 160,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 28,
+      "maxPerChunk": 28,
+      "minSize": 4,
+      "maxSize": 4,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 0,
+      "maxHeight": 120,
+      "heightDistribution": "UNIFORM",
+      "surfaceClearance": 0,
+      "minPerChunk": 8,
+      "maxPerChunk": 8,
+      "minSize": 8,
+      "maxSize": 8,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": -160,
+      "maxHeight": 160,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 4,
+      "maxPerChunk": 4,
+      "spawnChance": 0.1111111111111111,
+      "minSize": 12,
+      "maxSize": 12,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.7,
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": -160,
+      "maxHeight": 160,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
+      "minSize": 8,
+      "maxSize": 8,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 1.0,
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 64,
+      "maxHeight": 192,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 8,
+      "maxPerChunk": 8,
+      "minSize": 7,
+      "maxSize": 7,
+      "shape": "VANILLA_ELLIPSOID",
+      "palette": [
+        {
+          "block": "minecraft:lapis_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 0,
+      "maxHeight": 256,
+      "heightDistribution": "UNIFORM",
+      "surfaceClearance": 0,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
+      "minSize": 7,
+      "maxSize": 7,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 1.0,
+      "palette": [
+        {
+          "block": "minecraft:lapis_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": 96,
+      "maxHeight": 1088,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 200,
+      "maxPerChunk": 200,
+      "minSize": 3,
+      "maxSize": 3,
+      "shape": "VANILLA_ELLIPSOID",
+      "biomeScope": "SURFACE",
+      "includedBiomes": [
+        "minecraft:cherry_grove",
+        "minecraft:frozen_peaks",
+        "minecraft:grove",
+        "minecraft:jagged_peaks",
+        "minecraft:meadow",
+        "minecraft:snowy_slopes",
+        "minecraft:stony_peaks",
+        "minecraft:windswept_forest",
+        "minecraft:windswept_gravelly_hills",
+        "minecraft:windswept_hills"
+      ],
+      "palette": [
+        {
+          "block": "minecraft:emerald_ore"
+        }
+      ],
+      "replaceableBlocks": [
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
+      ]
+    }
   ],
   "caveBiomeStyle": {
     "style": "SIMPLEX",
@@ -920,7 +881,7 @@
     "defaultObjectPlaceMode": "ORGANIC_STILT",
     "anchorScanStep": 1,
     "anchorSearchAttempts": 12,
-    "allowFluid": false,
+    "allowFluid": true,
     "fluidMinDepthBelowSurface": 20,
     "fluidRequiresFloor": true,
     "allowLava": true,

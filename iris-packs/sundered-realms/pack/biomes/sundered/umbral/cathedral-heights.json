@@ -62,7 +62,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -245,7 +259,6 @@
       }
     ]
   },
-  "terrain3D": "snippet/terrain-3d/hilly/amp22-nowhere-crack448",
   "effects": [
     {
       "particleEffect": "SOUL",

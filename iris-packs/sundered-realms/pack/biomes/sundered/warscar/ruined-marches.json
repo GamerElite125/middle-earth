@@ -52,7 +52,21 @@
         }
       ]
     },
-    "snippet/biome-palette/stone/andesite-blend-6-18"
+    {
+      "maxHeight": 18,
+      "minHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
   ],
   "objects": [
     {
@@ -133,11 +147,105 @@
       },
       "mode": "CENTER_STILT"
     },
-    "snippet/object-placer/trees/oak-dead-c0-4-d2"
+    {
+      "chance": 0.4,
+      "density": 2,
+      "place": [
+        "trees/oak/dead1",
+        "trees/oak/dead2",
+        "trees/oak/dead3",
+        "trees/oak/dead4",
+        "trees/oak/dead5",
+        "trees/oak/dead6"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 270,
+          "min": 0
+        }
+      },
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    }
   ],
   "decorators": [
-    "snippet/decorator/grass/short-c0-6",
-    "snippet/decorator/flowers/meadow-rubble-mix-c0-025"
+    {
+      "chance": 0.6,
+      "palette": [
+        {
+          "block": "minecraft:short_grass",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.025,
+      "palette": [
+        {
+          "block": "minecraft:oak_leaves"
+        },
+        {
+          "block": "minecraft:rose_bush"
+        },
+        {
+          "block": "minecraft:cobblestone_slab"
+        },
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    }
   ],
   "proceduralObjects": {
     "ruins": [

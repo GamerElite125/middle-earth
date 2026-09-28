@@ -30,7 +30,19 @@
       "max": 190
     }
   ],
-  "wall": "snippet/biome-palette/wall/stone-andesite-cobble",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:cobblestone"
+      }
+    ]
+  },
   "layers": [
     {
       "minHeight": 1,
@@ -176,7 +188,6 @@
       }
     ]
   },
-  "terrain3D": "snippet/terrain-3d/rugged/amp40-nowhere-crack416",
   "entitySpawners": [
     "sundered/umbral-damned",
     "tundra/passive"
