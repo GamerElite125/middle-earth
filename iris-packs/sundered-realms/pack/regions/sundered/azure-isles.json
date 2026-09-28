@@ -1,0 +1,41 @@
+{
+  "name": "The Azure Isles",
+  "color": "#1EC8A8",
+  "rarity": 1,
+  "landBiomes": [
+    "sundered/azure/palm-cays",
+    "sundered/azure/jungle-highlands",
+    "sundered/azure/cenote-jungle",
+    "sundered/azure/mangrove-lagoon",
+    "sundered/azure/volcanic-isle",
+    "sundered/azure/ember-slopes"
+  ],
+  "shoreBiomes": [
+    "sundered/azure/white-sand-beach"
+  ],
+  "seaBiomes": [
+    "sundered/azure/turquoise-shallows",
+    "ocean/rich-oceans",
+    "vanilla/deep_lukewarm_ocean"
+  ],
+  "caveBiomes": [
+    "carving/jungle",
+    "carving/lush",
+    "carving/volcanic",
+    "carving/drip"
+  ],
+  "landBiomeZoom": 5.0,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "tropical/food",
+      "sundered/azure-pirate"
+    ]
+  }
+}

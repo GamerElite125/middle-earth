@@ -1,0 +1,268 @@
+{
+  "name": "Scorched Battlefield",
+  "color": "#6A5A4A",
+  "rarity": 1,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "sundered_scorched_battlefield",
+      "category": "plains",
+      "grassColor": "#7A7A52",
+      "foliageColor": "#6A6A45",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "fogColor": "#9A948A",
+      "skyColor": "#8A8A90",
+      "temperature": 0.6,
+      "humidity": 0.3,
+      "ambientParticle": {
+        "particle": "minecraft:ash",
+        "rarity": 150
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/craters",
+      "min": 4,
+      "max": 16
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:soul_soil"
+        },
+        {
+          "block": "minecraft:rooted_dirt"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.15
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/warscar/broken-trebuchet"
+      ],
+      "chance": 0.012,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/warscar/war-graves"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/warscar/ruined-keep"
+      ],
+      "chance": 0.005,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -15
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/warscar-spoils",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/simple_dungeon",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "trees/oak/dead1",
+        "trees/oak/dead2",
+        "trees/oak/dead3"
+      ],
+      "chance": 0.1,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      }
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/grass/dry-grass",
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:poppy"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "ruins": [
+      {
+        "name": "siege-rubble",
+        "chance": 0.15,
+        "density": 1,
+        "variants": 8,
+        "seed": 95001,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "RUBBLE",
+        "block": "minecraft:cobblestone",
+        "weatheredBlock": "minecraft:mossy_cobblestone",
+        "heightMin": 1,
+        "heightMax": 3,
+        "widthMin": 3,
+        "widthMax": 6,
+        "lengthMin": 3,
+        "lengthMax": 6,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      },
+      {
+        "name": "battle-wall",
+        "chance": 0.05,
+        "density": 1,
+        "variants": 8,
+        "seed": 95002,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "WALL",
+        "block": "minecraft:stone_bricks",
+        "weatheredBlock": "minecraft:cracked_stone_bricks",
+        "heightMin": 3,
+        "heightMax": 7,
+        "widthMin": 1,
+        "widthMax": 2,
+        "lengthMin": 5,
+        "lengthMax": 11,
+        "mossiness": 0.45,
+        "erosion": 0.45,
+        "buriedFraction": 0.2
+      }
+    ]
+  },
+  "effects": [
+    {
+      "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+      "chance": 1,
+      "interval": 700,
+      "particleCount": 0,
+      "particleOffset": 0,
+      "particleAltX": 0.001,
+      "particleAltY": 0.13885,
+      "particleAltZ": 0.001
+    }
+  ],
+  "entitySpawners": [
+    "sundered/warscar-restless"
+  ]
+}

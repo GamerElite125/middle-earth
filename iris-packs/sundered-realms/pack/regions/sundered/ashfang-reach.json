@@ -1,0 +1,37 @@
+{
+  "name": "Ashfang Reach",
+  "color": "#8A1E1E",
+  "rarity": 2,
+  "landBiomes": [
+    "sundered/ashfang/blighted-wastes",
+    "sundered/ashfang/bloodrock-crags",
+    "sundered/ashfang/cinder-fields",
+    "sundered/ashfang/rotwood"
+  ],
+  "shoreBiomes": [
+    "sundered/ashfang/ashen-strand"
+  ],
+  "seaBiomes": [
+    "ocean/dark-depth-ocean",
+    "ocean/ocean"
+  ],
+  "caveBiomes": [
+    "carving/volcanic",
+    "carving/ember-rifts",
+    "carving/deepslate",
+    "carving/sulfur"
+  ],
+  "landBiomeZoom": 4.5,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "sundered/ashfang-warchest"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:skeleton",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&7Fallen Soldier",
+  "helmet": {
+    "type": "iron_helmet"
+  },
+  "chestplate": {
+    "type": "chainmail_chestplate"
+  },
+  "mainHand": {
+    "type": "iron_sword"
+  }
+}

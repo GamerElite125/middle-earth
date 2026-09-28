@@ -1,0 +1,35 @@
+{
+  "name": "The Warscar Marches",
+  "color": "#7A6A5A",
+  "rarity": 2,
+  "landBiomes": [
+    "sundered/warscar/scorched-battlefield",
+    "sundered/warscar/ruined-marches",
+    "sundered/warscar/ashen-woods"
+  ],
+  "shoreBiomes": [
+    "sundered/warscar/grey-strand"
+  ],
+  "seaBiomes": [
+    "ocean/ocean",
+    "temperate/sea/ocean"
+  ],
+  "caveBiomes": [
+    "carving/deepslate",
+    "carving/rocky-cavebiome",
+    "carving/deep"
+  ],
+  "landBiomeZoom": 4.0,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "temperate/clutter"
+    ]
+  }
+}

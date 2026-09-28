@@ -1,0 +1,301 @@
+{
+  "name": "Glimmerwood",
+  "color": "#4FD4A0",
+  "rarity": 1,
+  "derivative": "minecraft:flower_forest",
+  "vanillaDerivative": "minecraft:flower_forest",
+  "customDerivitives": [
+    {
+      "id": "sundered_glimmerwood",
+      "category": "forest",
+      "grassColor": "#5CE07A",
+      "foliageColor": "#4FD4A0",
+      "waterColor": "#5AC8FA",
+      "waterFogColor": "#1B4F8A",
+      "downfallType": "rain",
+      "fogColor": "#CDB6F2",
+      "skyColor": "#9FB8FF",
+      "temperature": 0.7,
+      "humidity": 0.8,
+      "ambientParticle": {
+        "particle": "minecraft:firefly",
+        "rarity": 90
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 10,
+      "max": 30
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:moss_block"
+        },
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/sakura/genericsak1",
+        "trees/sakura/genericsak2",
+        "trees/sakura/genericsak3",
+        "trees/sakura/mlarge1",
+        "trees/sakura/mlarge2"
+      ],
+      "chance": 0.3,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      }
+    },
+    {
+      "place": [
+        "sundered/everbloom/mage-tower"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -14
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/everbloom-arcane",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/stronghold_library",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/everbloom/fairy-ring"
+      ],
+      "chance": 0.02,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/everbloom/moonwell"
+      ],
+      "chance": 0.008,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -2
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/flowers/meadow-mix-c0-06",
+    {
+      "chance": 0.08,
+      "palette": [
+        {
+          "block": "minecraft:pink_petals[facing=north,flower_amount=4]"
+        }
+      ]
+    },
+    "snippet/decorator/shrubs/firefly-bush",
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:azalea"
+        },
+        {
+          "block": "minecraft:flowering_azalea"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "glimmer-birch",
+        "chance": 0.5,
+        "density": 1,
+        "variants": 10,
+        "seed": 92001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:birch_log",
+        "leaves": "minecraft:azalea_leaves",
+        "profile": "POPLAR",
+        "heightMin": 12,
+        "heightMax": 20,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        }
+      },
+      {
+        "name": "glimmer-cherry",
+        "chance": 0.35,
+        "density": 1,
+        "variants": 10,
+        "seed": 92002,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:cherry_log",
+        "leaves": "minecraft:cherry_leaves",
+        "profile": "CHERRY",
+        "heightMin": 7,
+        "heightMax": 11,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        }
+      }
+    ],
+    "fungi": [
+      {
+        "name": "glowcap",
+        "chance": 0.25,
+        "density": 2,
+        "variants": 8,
+        "seed": 91001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "stem": "minecraft:mushroom_stem",
+        "cap": "minecraft:red_mushroom_block",
+        "capPalette": {
+          "palette": [
+            {
+              "block": "minecraft:red_mushroom_block",
+              "weight": 3
+            },
+            {
+              "block": "minecraft:pink_wool",
+              "weight": 1
+            }
+          ]
+        },
+        "stemHeightMin": 4,
+        "stemHeightMax": 8,
+        "capShape": "DOME",
+        "capRadiusMin": 2,
+        "capRadiusMax": 4,
+        "spotBlock": "minecraft:shroomlight",
+        "spotChance": 0.15
+      }
+    ]
+  },
+  "effects": [
+    {
+      "particleEffect": "END_ROD",
+      "chance": 3,
+      "interval": 500,
+      "particleCount": 2,
+      "particleOffset": 10,
+      "particleAltX": 0.3,
+      "particleAltY": -0.2,
+      "particleAltZ": 0.3
+    }
+  ],
+  "entitySpawners": [
+    "sundered/everbloom-fae",
+    "sundered/everbloom-night"
+  ]
+}

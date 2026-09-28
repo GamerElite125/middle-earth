@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:wolf",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&8Warg",
+  "attributes": [
+    {
+      "attribute": "max_health",
+      "name": "sundered-warg-health",
+      "operation": "ADD_NUMBER",
+      "minAmount": 10,
+      "maxAmount": 14,
+      "chance": 1
+    }
+  ]
+}

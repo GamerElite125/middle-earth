@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:drowned",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "WATER",
+  "customName": "&bSunken Buccaneer",
+  "helmet": {
+    "type": "leather_helmet",
+    "leatherColor": "#111111"
+  },
+  "mainHand": {
+    "type": "iron_sword"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "name": "Red Mesa",
+  "color": "#B5522A",
+  "rarity": 1,
+  "derivative": "minecraft:badlands",
+  "vanillaDerivative": "minecraft:badlands",
+  "customDerivitives": [
+    {
+      "id": "sundered_red_mesa",
+      "category": "mesa",
+      "grassColor": "#90814D",
+      "foliageColor": "#9E814D",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "none",
+      "fogColor": "#E8C8A0",
+      "skyColor": "#8FC0E8",
+      "temperature": 2.0,
+      "humidity": 0.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/mesa-terrace",
+      "min": 10,
+      "max": 60
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:red_sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 8,
+      "maxHeight": 24,
+      "palette": [
+        {
+          "block": "minecraft:orange_terracotta"
+        },
+        {
+          "block": "minecraft:terracotta"
+        },
+        {
+          "block": "minecraft:red_terracotta"
+        },
+        {
+          "block": "minecraft:white_terracotta"
+        },
+        {
+          "block": "minecraft:yellow_terracotta"
+        },
+        {
+          "block": "minecraft:brown_terracotta"
+        }
+      ],
+      "style": {
+        "style": "STRATA"
+      },
+      "zoom": 0.35
+    },
+    "snippet/biome-palette/stone/stone3-andesite3-2-2"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/frontier/abandoned-mine"
+      ],
+      "chance": 0.006,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -30
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 6
+      },
+      "loot": [
+        {
+          "name": "sundered/frontier-strongbox",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/desert_pyramid",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:chests/abandoned_mineshaft",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/frontier/bandit-fort"
+      ],
+      "chance": 0.006,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/frontier-strongbox",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/mushrooms/dead-bush-mix-c0-01",
+    "snippet/decorator/plants/cactus-flowering-max5-c0-0005"
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "mesa-hoodoo",
+        "chance": 0.2,
+        "density": 1,
+        "variants": 12,
+        "seed": 82001,
+        "mode": "CENTER_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "surfaceSupportBuffer": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "form": "HOODOO",
+        "block": "minecraft:orange_terracotta",
+        "heightMin": 8,
+        "heightMax": 20,
+        "baseWidthMin": 2,
+        "baseWidthMax": 3,
+        "topWidth": 0,
+        "translate": {
+          "y": -2
+        },
+        "roughness": 0.15,
+        "jitter": 0.03,
+        "capBlock": "minecraft:red_sandstone",
+        "strataPalette": {
+          "palette": [
+            {
+              "block": "minecraft:orange_terracotta"
+            },
+            {
+              "block": "minecraft:red_terracotta"
+            },
+            {
+              "block": "minecraft:white_terracotta"
+            },
+            {
+              "block": "minecraft:terracotta"
+            }
+          ]
+        },
+        "strataThickness": 2,
+        "hoodooCapRadius": 3,
+        "hoodooCapHeight": 2
+      },
+      {
+        "name": "mesa-arch",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 12,
+        "seed": 82002,
+        "mode": "CENTER_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "surfaceSupportBuffer": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "form": "ARCH",
+        "block": "minecraft:red_terracotta",
+        "heightMin": 14,
+        "heightMax": 24,
+        "baseWidthMin": 3,
+        "baseWidthMax": 4,
+        "topWidth": 0,
+        "translate": {
+          "y": -2
+        },
+        "roughness": 0.15,
+        "jitter": 0.03,
+        "strataPalette": {
+          "palette": [
+            {
+              "block": "minecraft:orange_terracotta"
+            },
+            {
+              "block": "minecraft:red_terracotta"
+            },
+            {
+              "block": "minecraft:brown_terracotta"
+            }
+          ]
+        },
+        "strataThickness": 2,
+        "archSpan": 18,
+        "archThickness": 4
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/frontier-outlaws",
+    "sundered/frontier-herds"
+  ]
+}

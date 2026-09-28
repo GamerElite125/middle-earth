@@ -1,0 +1,37 @@
+{
+  "group": "NORMAL",
+  "maximumRate": {
+    "amount": 7,
+    "per": {
+      "seconds": 20
+    }
+  },
+  "maxEntitiesPerChunk": 3,
+  "weather": "ANY",
+  "spawns": [
+    {
+      "entity": "sundered/grave-knight",
+      "rarity": 3,
+      "minSpawns": 1,
+      "maxSpawns": 2
+    },
+    {
+      "entity": "sundered/hollow-revenant",
+      "rarity": 2,
+      "minSpawns": 1,
+      "maxSpawns": 3
+    },
+    {
+      "entity": "standard/hostile/skeleton",
+      "rarity": 2,
+      "minSpawns": 1,
+      "maxSpawns": 3
+    },
+    {
+      "entity": "standard/neutral/enderman",
+      "rarity": 8,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    }
+  ]
+}

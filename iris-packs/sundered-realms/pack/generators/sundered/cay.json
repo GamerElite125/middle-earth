@@ -1,0 +1,24 @@
+{
+  "surfaceDetail": 0.4,
+  "seed": 810001,
+  "interpolator": {
+    "function": "BILINEAR_STARCAST_6",
+    "horizontalScale": 22
+  },
+  "composite": [
+    {
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 1.4,
+        "fracture": {
+          "style": "FRACTAL_WATER",
+          "zoom": 0.4,
+          "multiplier": 12
+        }
+      },
+      "seed": 810011,
+      "bezier": true,
+      "exponent": 1.4
+    }
+  ]
+}

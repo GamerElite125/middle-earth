@@ -1,0 +1,41 @@
+{
+  "group": "NORMAL",
+  "maximumRate": {
+    "amount": 6,
+    "per": {
+      "seconds": 20
+    }
+  },
+  "maxEntitiesPerChunk": 2,
+  "weather": "ANY",
+  "spawns": [
+    {
+      "entity": "sundered/temple-sentinel",
+      "rarity": 3,
+      "minSpawns": 1,
+      "maxSpawns": 2
+    },
+    {
+      "entity": "standard/hostile/zombie",
+      "rarity": 3,
+      "minSpawns": 1,
+      "maxSpawns": 2
+    },
+    {
+      "entity": "sundered/sunken-pirate",
+      "rarity": 5,
+      "minSpawns": 1,
+      "maxSpawns": 2
+    },
+    {
+      "entity": "standard/neutral/spider",
+      "rarity": 4,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    }
+  ],
+  "timeBlock": {
+    "startHour": 19,
+    "endHour": 5
+  }
+}

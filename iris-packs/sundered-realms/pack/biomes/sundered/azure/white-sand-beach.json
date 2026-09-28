@@ -1,0 +1,116 @@
+{
+  "name": "White Sand Beach",
+  "color": "#FFF6D5",
+  "rarity": 1,
+  "derivative": "minecraft:beach",
+  "vanillaDerivative": "minecraft:beach",
+  "customDerivitives": [
+    {
+      "id": "sundered_white_beach",
+      "category": "jungle",
+      "grassColor": "#7BE35A",
+      "foliageColor": "#29B51C",
+      "waterColor": "#27D6C9",
+      "waterFogColor": "#0E6E86",
+      "downfallType": "rain",
+      "temperature": 0.95,
+      "humidity": 0.9
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:white_concrete_powder"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.5
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:sea_pickle[pickles=2,waterlogged=true]"
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    },
+    {
+      "chance": 0.002,
+      "palette": [
+        {
+          "block": "minecraft:turtle_egg[eggs=2,hatch=0]"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "azure-beach-palm",
+        "chance": 0.25,
+        "density": 1,
+        "variants": 10,
+        "seed": 71003,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:jungle_log",
+        "leaves": "minecraft:jungle_leaves",
+        "profile": "PALM",
+        "heightMin": 6,
+        "heightMax": 11,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        },
+        "leanAngle": 28
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/azure-wildlife",
+    "sundered/azure-night",
+    "tropical/water",
+    "tropical/beach"
+  ]
+}

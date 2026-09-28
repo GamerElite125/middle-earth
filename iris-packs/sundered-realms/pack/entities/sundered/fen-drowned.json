@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:drowned",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "WATER",
+  "customName": "&3Fen-Drowned"
+}

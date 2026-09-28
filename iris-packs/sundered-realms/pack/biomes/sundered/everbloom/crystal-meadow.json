@@ -1,0 +1,192 @@
+{
+  "name": "Crystal Meadow",
+  "color": "#B38CFF",
+  "rarity": 1,
+  "derivative": "minecraft:meadow",
+  "vanillaDerivative": "minecraft:meadow",
+  "customDerivitives": [
+    {
+      "id": "sundered_crystal_meadow",
+      "category": "forest",
+      "grassColor": "#7DE88A",
+      "foliageColor": "#6FD68A",
+      "waterColor": "#5AC8FA",
+      "waterFogColor": "#1B4F8A",
+      "downfallType": "rain",
+      "fogColor": "#CDB6F2",
+      "skyColor": "#9FB8FF",
+      "temperature": 0.7,
+      "humidity": 0.8,
+      "ambientParticle": {
+        "particle": "minecraft:end_rod",
+        "rarity": 300
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 8,
+      "max": 20
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:calcite"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        },
+        {
+          "block": "minecraft:amethyst_block"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      }
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/everbloom/arcane-henge"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/everbloom/mage-tower"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -14
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/everbloom-arcane",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/stronghold_library",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/everbloom/moonwell"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -2
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/flowers/wildflowers",
+    "snippet/decorator/flowers/allium-mix-c0-03",
+    {
+      "chance": 0.006,
+      "palette": [
+        {
+          "block": "minecraft:amethyst_cluster[facing=up,waterlogged=false]"
+        },
+        {
+          "block": "minecraft:large_amethyst_bud[facing=up,waterlogged=false]"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "crystals": [
+      {
+        "name": "meadow-geode",
+        "chance": 0.12,
+        "density": 1,
+        "variants": 8,
+        "seed": 93001,
+        "mode": "CENTER_HEIGHT",
+        "growthSurface": "FLOOR",
+        "block": "minecraft:amethyst_block",
+        "tipBlock": "minecraft:amethyst_cluster",
+        "glow": true,
+        "glowBlock": "minecraft:pearlescent_froglight",
+        "baseBlock": "minecraft:calcite",
+        "shardCountMin": 3,
+        "shardCountMax": 6,
+        "shardLengthMin": 4,
+        "shardLengthMax": 9,
+        "translate": {
+          "y": -1
+        }
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/everbloom-fae",
+    "sundered/everbloom-night"
+  ]
+}

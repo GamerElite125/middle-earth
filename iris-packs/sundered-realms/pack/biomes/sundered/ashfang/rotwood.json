@@ -1,0 +1,183 @@
+{
+  "name": "Rotwood Thicket",
+  "color": "#4A2A3A",
+  "rarity": 1,
+  "derivative": "minecraft:dark_forest",
+  "vanillaDerivative": "minecraft:dark_forest",
+  "customDerivitives": [
+    {
+      "id": "sundered_rotwood",
+      "category": "forest",
+      "grassColor": "#4F3A2A",
+      "foliageColor": "#5A1A1A",
+      "waterColor": "#4A2A2A",
+      "waterFogColor": "#1A0808",
+      "downfallType": "none",
+      "fogColor": "#4A2A2A",
+      "skyColor": "#7A3A30",
+      "temperature": 1.2,
+      "humidity": 0.0,
+      "ambientParticle": {
+        "particle": "minecraft:crimson_spore",
+        "rarity": 35
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 10,
+      "max": 34
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:crimson_nylium"
+        },
+        {
+          "block": "minecraft:rooted_dirt"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/crimson/blackgeneric1",
+        "trees/crimson/blackgeneric2",
+        "trees/crimson/blackgeneric3",
+        "trees/crimson/crimsonwood1",
+        "trees/crimson/crimsonwood2",
+        "trees/crimson/crimsonwood3",
+        "trees/crimson/bonehand1",
+        "trees/crimson/bonehand2"
+      ],
+      "chance": 0.55,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      }
+    },
+    {
+      "place": [
+        "sundered/ashfang/orc-warcamp"
+      ],
+      "chance": 0.012,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/ashfang-warchest",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/pillager_outpost",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:chests/bastion_other",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.12,
+      "palette": [
+        {
+          "block": "minecraft:crimson_roots"
+        },
+        {
+          "block": "minecraft:crimson_fungus"
+        },
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "rot-oak",
+        "chance": 0.4,
+        "density": 1,
+        "variants": 10,
+        "seed": 76001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:nether_wart_block",
+        "profile": "DARK_OAK",
+        "heightMin": 8,
+        "heightMax": 14,
+        "trunkWidth": 2,
+        "translate": {
+          "y": 0
+        },
+        "plausible": false
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/ashfang-warbands"
+  ]
+}

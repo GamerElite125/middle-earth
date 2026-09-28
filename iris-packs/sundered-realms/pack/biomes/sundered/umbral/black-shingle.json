@@ -1,0 +1,54 @@
+{
+  "name": "Black Shingle",
+  "color": "#2A2A2A",
+  "rarity": 1,
+  "derivative": "minecraft:stony_shore",
+  "vanillaDerivative": "minecraft:stony_shore",
+  "customDerivitives": [
+    {
+      "id": "sundered_black_shingle",
+      "category": "taiga",
+      "grassColor": "#4A5A52",
+      "foliageColor": "#3A4A42",
+      "waterColor": "#2A3A5A",
+      "waterFogColor": "#0A1020",
+      "downfallType": "snow",
+      "fogColor": "#3A3A4A",
+      "skyColor": "#2A2A3A",
+      "temperature": -0.3,
+      "humidity": 0.4
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:cobbled_deepslate"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    }
+  ],
+  "entitySpawners": [
+    "sundered/umbral-damned",
+    "tundra/passive"
+  ]
+}

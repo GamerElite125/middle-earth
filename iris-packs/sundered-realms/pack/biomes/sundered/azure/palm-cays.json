@@ -1,0 +1,196 @@
+{
+  "name": "Palm Cays",
+  "color": "#F4E7B0",
+  "rarity": 1,
+  "derivative": "minecraft:beach",
+  "vanillaDerivative": "minecraft:beach",
+  "customDerivitives": [
+    {
+      "id": "sundered_palm_cays",
+      "category": "jungle",
+      "grassColor": "#6BE04A",
+      "foliageColor": "#43C92D",
+      "waterColor": "#27D6C9",
+      "waterFogColor": "#0E6E86",
+      "downfallType": "rain",
+      "temperature": 0.95,
+      "humidity": 0.9
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/cay",
+      "min": 1,
+      "max": 9
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/azure/serpent-stela"
+      ],
+      "chance": 0.008,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/azure/pirate-cove"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -4
+      },
+      "mode": "CENTER_HEIGHT",
+      "loot": [
+        {
+          "name": "sundered/azure-pirate",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/shipwreck_treasure",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.12,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:sugar_cane"
+        }
+      ],
+      "stackMin": 1,
+      "stackMax": 3
+    },
+    "snippet/decorator/sea/tall-seagrass-c0-2"
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "azure-palm",
+        "chance": 0.55,
+        "density": 2,
+        "variants": 10,
+        "seed": 71001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:jungle_log",
+        "leaves": "minecraft:jungle_leaves",
+        "profile": "PALM",
+        "heightMin": 7,
+        "heightMax": 13,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        },
+        "leanAngle": 18
+      },
+      {
+        "name": "azure-royal-palm",
+        "chance": 0.35,
+        "density": 1,
+        "variants": 10,
+        "seed": 71002,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:stripped_jungle_log",
+        "leaves": "minecraft:jungle_leaves",
+        "profile": "PALM",
+        "heightMin": 11,
+        "heightMax": 17,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        },
+        "leanAngle": 10
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/azure-wildlife",
+    "sundered/azure-night",
+    "tropical/water",
+    "tropical/beach"
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "name": "Gravespire Peaks",
+  "color": "#2A2A3A",
+  "rarity": 1,
+  "derivative": "minecraft:jagged_peaks",
+  "vanillaDerivative": "minecraft:jagged_peaks",
+  "customDerivitives": [
+    {
+      "id": "sundered_gravespire",
+      "category": "extreme_hills",
+      "grassColor": "#4A5A52",
+      "foliageColor": "#3A4A42",
+      "waterColor": "#2A3A5A",
+      "waterFogColor": "#0A1020",
+      "downfallType": "snow",
+      "fogColor": "#3A3A4A",
+      "skyColor": "#2A2A3A",
+      "temperature": -0.3,
+      "humidity": 0.4,
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 60
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/gravespires",
+      "min": 40,
+      "max": 190
+    }
+  ],
+  "wall": "snippet/biome-palette/wall/stone-andesite-cobble",
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:snow_block"
+        },
+        {
+          "block": "minecraft:powder_snow"
+        }
+      ],
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 1.2
+      }
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:deepslate"
+        },
+        {
+          "block": "minecraft:tuff"
+        },
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:cobbled_deepslate"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 20,
+      "palette": [
+        {
+          "block": "minecraft:deepslate"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/umbral/soulfire-obelisk"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/umbral/gibbet-cage"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:snow[layers=2]"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "grave-spire",
+        "chance": 0.2,
+        "density": 1,
+        "variants": 12,
+        "seed": 97001,
+        "mode": "CENTER_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "surfaceSupportBuffer": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "form": "SPIRE",
+        "block": "minecraft:deepslate",
+        "heightMin": 16,
+        "heightMax": 38,
+        "baseWidthMin": 2,
+        "baseWidthMax": 4,
+        "topWidth": 0,
+        "translate": {
+          "y": -2
+        },
+        "roughness": 0.15,
+        "jitter": 0.03,
+        "capBlock": "minecraft:snow_block",
+        "strataPalette": {
+          "palette": [
+            {
+              "block": "minecraft:deepslate"
+            },
+            {
+              "block": "minecraft:tuff"
+            },
+            {
+              "block": "minecraft:blackstone"
+            }
+          ]
+        },
+        "strataThickness": 2
+      }
+    ]
+  },
+  "terrain3D": "snippet/terrain-3d/rugged/amp40-nowhere-crack416",
+  "entitySpawners": [
+    "sundered/umbral-damned",
+    "tundra/passive"
+  ]
+}

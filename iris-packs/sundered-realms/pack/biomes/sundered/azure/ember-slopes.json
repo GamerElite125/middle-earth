@@ -1,0 +1,169 @@
+{
+  "name": "Ember Slopes",
+  "color": "#6E3B1E",
+  "rarity": 1,
+  "derivative": "minecraft:savanna",
+  "vanillaDerivative": "minecraft:savanna",
+  "customDerivitives": [
+    {
+      "id": "sundered_ember_slopes",
+      "category": "savanna",
+      "grassColor": "#9FA83A",
+      "foliageColor": "#8F9E36",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "fogColor": "#D5A57A",
+      "temperature": 1.4,
+      "humidity": 0.3,
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 90
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "min": 20,
+      "max": 55
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:tuff"
+        },
+        {
+          "block": "minecraft:basalt[axis=y]"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.4
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:tuff"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    "snippet/object-placer/trees/acacia-savannas-c0-04",
+    {
+      "place": [
+        "sundered/azure/ember-temple"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -16
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/azure-temple",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/azure/serpent-stela"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/grass/dry-grass",
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "azure-palm",
+        "chance": 0.55,
+        "density": 2,
+        "variants": 10,
+        "seed": 71001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:jungle_log",
+        "leaves": "minecraft:jungle_leaves",
+        "profile": "PALM",
+        "heightMin": 7,
+        "heightMax": 13,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        },
+        "leanAngle": 18
+      }
+    ]
+  },
+  "terrain3D": "snippet/terrain-3d/rugged/amp30-perlin-crack448",
+  "entitySpawners": [
+    "sundered/azure-wildlife",
+    "sundered/azure-night",
+    "tropical/water",
+    "tropical/beach"
+  ]
+}

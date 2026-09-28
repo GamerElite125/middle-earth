@@ -1,0 +1,37 @@
+{
+  "group": "NORMAL",
+  "maximumRate": {
+    "amount": 6,
+    "per": {
+      "seconds": 20
+    }
+  },
+  "maxEntitiesPerChunk": 3,
+  "weather": "ANY",
+  "spawns": [
+    {
+      "entity": "sundered/jaguar",
+      "rarity": 3,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    },
+    {
+      "entity": "standard/passive/parrot",
+      "rarity": 2,
+      "minSpawns": 1,
+      "maxSpawns": 3
+    },
+    {
+      "entity": "standard/passive/turtle",
+      "rarity": 4,
+      "minSpawns": 1,
+      "maxSpawns": 2
+    },
+    {
+      "entity": "standard/neutral/panda",
+      "rarity": 8,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    }
+  ]
+}

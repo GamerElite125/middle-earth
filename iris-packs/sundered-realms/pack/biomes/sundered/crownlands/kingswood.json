@@ -1,0 +1,85 @@
+{
+  "name": "Kingswood",
+  "color": "#3F8F3A",
+  "rarity": 1,
+  "derivative": "minecraft:forest",
+  "vanillaDerivative": "minecraft:forest",
+  "customDerivitives": [
+    {
+      "id": "sundered_kingswood",
+      "category": "forest",
+      "grassColor": "#6CBF4A",
+      "foliageColor": "#6CC24A",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "temperature": 0.8,
+      "humidity": 0.5
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 10,
+      "max": 28
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    "snippet/object-placer/trees/oak-thoakgeneric-c0-18",
+    "snippet/object-placer/trees/mixed-tredwood-c0-35",
+    {
+      "place": [
+        "sundered/crownlands/crown-watchtower"
+      ],
+      "chance": 0.008,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/crownlands-market",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/grass/moss-fern-c0-1",
+    "snippet/decorator/plants/leaf-litter",
+    "snippet/decorator/flowers/tulip-mix-c0-189"
+  ],
+  "entitySpawners": [
+    "sundered/crownlands-roads",
+    "temperate/hostile"
+  ]
+}

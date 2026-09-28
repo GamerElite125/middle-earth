@@ -1,0 +1,88 @@
+{
+  "name": "Buccaneer's Chest",
+  "rarity": 1,
+  "minPicked": 3,
+  "maxPicked": 6,
+  "maxTries": 24,
+  "loot": [
+    {
+      "type": "gold_ingot",
+      "minAmount": 1,
+      "maxAmount": 6,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "emerald",
+      "minAmount": 1,
+      "maxAmount": 4,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "honey_bottle",
+      "minAmount": 1,
+      "maxAmount": 3,
+      "rarity": 2,
+      "slotTypes": "STORAGE",
+      "displayName": "&6Bottle of Black Rum"
+    },
+    {
+      "type": "gunpowder",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "map",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 3,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "compass",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 4,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "heart_of_the_sea",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 30,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "nautilus_shell",
+      "minAmount": 1,
+      "maxAmount": 2,
+      "rarity": 8,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "iron_sword",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 10,
+      "slotTypes": "STORAGE",
+      "displayName": "&eCutlass of Captain Morrow",
+      "enchantments": [
+        {
+          "enchantment": "sharpness",
+          "minLevel": 1,
+          "maxLevel": 3,
+          "chance": 1.0
+        },
+        {
+          "enchantment": "looting",
+          "minLevel": 1,
+          "maxLevel": 2,
+          "chance": 0.5
+        }
+      ]
+    }
+  ]
+}

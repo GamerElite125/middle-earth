@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:husk",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&eDust Revenant",
+  "helmet": {
+    "type": "leather_helmet",
+    "leatherColor": "#6B4A2B"
+  }
+}

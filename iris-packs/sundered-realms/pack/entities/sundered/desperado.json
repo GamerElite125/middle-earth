@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:pillager",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&6Desperado",
+  "helmet": {
+    "type": "leather_helmet",
+    "leatherColor": "#2B2B2B"
+  },
+  "chestplate": {
+    "type": "leather_chestplate",
+    "leatherColor": "#7A5230"
+  }
+}

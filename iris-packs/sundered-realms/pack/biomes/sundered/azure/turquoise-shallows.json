@@ -1,0 +1,174 @@
+{
+  "name": "Turquoise Shallows",
+  "color": "#2EE6D6",
+  "rarity": 1,
+  "derivative": "minecraft:warm_ocean",
+  "vanillaDerivative": "minecraft:warm_ocean",
+  "customDerivitives": [
+    {
+      "id": "sundered_turquoise_shallows",
+      "category": "ocean",
+      "grassColor": "#6BE04A",
+      "foliageColor": "#43C92D",
+      "waterColor": "#2DEBD9",
+      "waterFogColor": "#0B8FA6",
+      "downfallType": "rain",
+      "temperature": 0.9
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/cay",
+      "min": -14,
+      "max": 4
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:white_concrete_powder"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.4
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/sea/tall-seagrass-c0-2",
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:sea_pickle[pickles=3,waterlogged=true]"
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    },
+    "snippet/decorator/sea/fire-coral-c0-01",
+    {
+      "chance": 0.08,
+      "palette": [
+        {
+          "block": "minecraft:tube_coral"
+        },
+        {
+          "block": "minecraft:brain_coral"
+        },
+        {
+          "block": "minecraft:bubble_coral"
+        },
+        {
+          "block": "minecraft:horn_coral"
+        },
+        {
+          "block": "minecraft:fire_coral_fan"
+        },
+        {
+          "block": "minecraft:tube_coral_fan"
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    }
+  ],
+  "proceduralObjects": {
+    "coral": [
+      {
+        "name": "azure-brain",
+        "chance": 0.3,
+        "density": 2,
+        "variants": 8,
+        "seed": 74001,
+        "mode": "CENTER_HEIGHT",
+        "underwater": true,
+        "waterlogged": true,
+        "form": "BRAIN",
+        "block": "minecraft:brain_coral_block",
+        "heightMin": 2,
+        "heightMax": 4,
+        "brainRadius": 2
+      },
+      {
+        "name": "azure-branch",
+        "chance": 0.4,
+        "density": 2,
+        "variants": 8,
+        "seed": 74002,
+        "mode": "CENTER_HEIGHT",
+        "underwater": true,
+        "waterlogged": true,
+        "form": "BRANCHING",
+        "block": "minecraft:tube_coral_block",
+        "tipBlock": "minecraft:tube_coral",
+        "heightMin": 3,
+        "heightMax": 7
+      },
+      {
+        "name": "azure-fan",
+        "chance": 0.3,
+        "density": 1,
+        "variants": 8,
+        "seed": 74003,
+        "mode": "CENTER_HEIGHT",
+        "underwater": true,
+        "waterlogged": true,
+        "form": "FAN",
+        "block": "minecraft:fire_coral_block",
+        "heightMin": 3,
+        "heightMax": 6,
+        "fanWidth": 4
+      }
+    ],
+    "trees": [
+      {
+        "name": "azure-islet-palm",
+        "chance": 0.1,
+        "density": 1,
+        "variants": 10,
+        "seed": 71004,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:jungle_log",
+        "leaves": "minecraft:jungle_leaves",
+        "profile": "PALM",
+        "heightMin": 6,
+        "heightMax": 10,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        },
+        "leanAngle": 20
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/azure-reef"
+  ]
+}

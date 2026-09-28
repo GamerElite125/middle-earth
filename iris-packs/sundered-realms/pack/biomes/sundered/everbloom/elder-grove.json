@@ -1,0 +1,229 @@
+{
+  "name": "Elder Grove",
+  "color": "#2F7A3A",
+  "rarity": 1,
+  "derivative": "minecraft:old_growth_birch_forest",
+  "vanillaDerivative": "minecraft:old_growth_birch_forest",
+  "customDerivitives": [
+    {
+      "id": "sundered_elder_grove",
+      "category": "forest",
+      "grassColor": "#3FBF5A",
+      "foliageColor": "#2FA84A",
+      "waterColor": "#5AC8FA",
+      "waterFogColor": "#1B4F8A",
+      "downfallType": "rain",
+      "fogColor": "#B6D8C0",
+      "skyColor": "#9FB8FF",
+      "temperature": 0.7,
+      "humidity": 0.8
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 14,
+      "max": 40
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:rooted_dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/everbloom/fairy-ring"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/everbloom/mage-tower"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -14
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/everbloom-arcane",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/stronghold_library",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/grass/moss-fern-c0-1",
+    "snippet/decorator/plants/leaf-litter",
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:large_fern"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "elder-oak",
+        "chance": 0.6,
+        "density": 1,
+        "variants": 10,
+        "seed": 94001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:oak_log",
+        "leaves": "minecraft:oak_leaves",
+        "profile": "OAK",
+        "heightMin": 22,
+        "heightMax": 34,
+        "trunkWidth": 3,
+        "translate": {
+          "y": 0
+        },
+        "rootStyle": "BUTTRESS",
+        "rootFlare": 1.5
+      },
+      {
+        "name": "elder-dark",
+        "chance": 0.3,
+        "density": 1,
+        "variants": 10,
+        "seed": 94002,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:dark_oak_log",
+        "leaves": "minecraft:flowering_azalea_leaves",
+        "profile": "DARK_OAK_FLAT_WIDE",
+        "heightMin": 16,
+        "heightMax": 24,
+        "trunkWidth": 2,
+        "translate": {
+          "y": 0
+        }
+      }
+    ],
+    "fungi": [
+      {
+        "name": "glowcap",
+        "chance": 0.25,
+        "density": 2,
+        "variants": 8,
+        "seed": 91001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "stem": "minecraft:mushroom_stem",
+        "cap": "minecraft:red_mushroom_block",
+        "capPalette": {
+          "palette": [
+            {
+              "block": "minecraft:red_mushroom_block",
+              "weight": 3
+            },
+            {
+              "block": "minecraft:pink_wool",
+              "weight": 1
+            }
+          ]
+        },
+        "stemHeightMin": 4,
+        "stemHeightMax": 8,
+        "capShape": "DOME",
+        "capRadiusMin": 2,
+        "capRadiusMax": 4,
+        "spotBlock": "minecraft:shroomlight",
+        "spotChance": 0.15
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/everbloom-fae",
+    "sundered/everbloom-night"
+  ]
+}

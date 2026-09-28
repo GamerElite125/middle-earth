@@ -1,0 +1,228 @@
+{
+  "name": "Murkwood Swamp",
+  "color": "#2E3F24",
+  "rarity": 1,
+  "derivative": "minecraft:swamp",
+  "vanillaDerivative": "minecraft:swamp",
+  "customDerivitives": [
+    {
+      "id": "sundered_murkwood",
+      "category": "swamp",
+      "grassColor": "#3E4A25",
+      "foliageColor": "#34401F",
+      "waterColor": "#3A3F22",
+      "waterFogColor": "#1E2012",
+      "downfallType": "rain",
+      "fogColor": "#5A6052",
+      "skyColor": "#7A8078",
+      "temperature": 0.7,
+      "humidity": 1.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 0,
+      "max": 8
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:mud"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:mud"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/willow/w1",
+        "trees/willow/w2",
+        "trees/willow/w3",
+        "trees/willow/w4",
+        "trees/willow/w5",
+        "trees/willow/bt1",
+        "trees/willow/bt2",
+        "trees/willow/bt3"
+      ],
+      "chance": 0.5,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      }
+    },
+    {
+      "place": [
+        "trees/darkoak/smdeadwillow1",
+        "trees/darkoak/generic1",
+        "trees/darkoak/generic2",
+        "trees/darkoak/generic3"
+      ],
+      "chance": 0.4,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      }
+    },
+    {
+      "place": [
+        "sundered/dreadmire/stilt-witch-hut"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -3
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/dreadmire-crypt",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/dreadmire/drowned-shrine"
+      ],
+      "chance": 0.012,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/dreadmire-crypt",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:large_fern"
+        },
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.12,
+      "palette": [
+        {
+          "block": "minecraft:lily_pad"
+        }
+      ],
+      "partOf": "SEA_SURFACE"
+    },
+    "snippet/decorator/shrubs/firefly-bush"
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "murk-willow",
+        "chance": 0.4,
+        "density": 1,
+        "variants": 10,
+        "seed": 77001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:mangrove_log",
+        "leaves": "minecraft:mangrove_leaves",
+        "profile": "WILLOW",
+        "heightMin": 9,
+        "heightMax": 15,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        }
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/dreadmire-haunts",
+    "swamp/passive",
+    "swamp/water"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "name": "Cinder Fields",
+  "color": "#3A3A3A",
+  "rarity": 1,
+  "derivative": "minecraft:badlands",
+  "vanillaDerivative": "minecraft:badlands",
+  "customDerivitives": [
+    {
+      "id": "sundered_cinder_fields",
+      "category": "desert",
+      "grassColor": "#4A4A40",
+      "foliageColor": "#5A4A2E",
+      "waterColor": "#4A2A2A",
+      "waterFogColor": "#1A0808",
+      "downfallType": "none",
+      "fogColor": "#555050",
+      "skyColor": "#5A4A48",
+      "temperature": 1.2,
+      "humidity": 0.0,
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 40
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/craters",
+      "min": 4,
+      "max": 26
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:basalt[axis=y]"
+        },
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:gray_concrete_powder"
+        },
+        {
+          "block": "minecraft:tuff"
+        },
+        {
+          "block": "minecraft:magma_block"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.2
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/ashfang/orc-warcamp"
+      ],
+      "chance": 0.012,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/ashfang-warchest",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/pillager_outpost",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:chests/bastion_other",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/ashfang/bone-totem"
+      ],
+      "chance": 0.02,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    "snippet/object-placer/clutter/magmaspire-carve-c0-21-d4"
+  ],
+  "decorators": [
+    {
+      "chance": 0.003,
+      "palette": [
+        {
+          "block": "minecraft:fire"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    "snippet/decorator/pebbles/blackstone-crimson-c0-009"
+  ],
+  "effects": [
+    {
+      "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+      "chance": 1,
+      "interval": 500,
+      "particleCount": 0,
+      "particleOffset": 0,
+      "particleAltX": 0.001,
+      "particleAltY": 0.13885,
+      "particleAltZ": 0.001
+    }
+  ],
+  "entitySpawners": [
+    "sundered/ashfang-warbands"
+  ]
+}

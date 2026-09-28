@@ -1,0 +1,290 @@
+{
+  "name": "Serpent Jungle Highlands",
+  "color": "#118A3B",
+  "rarity": 1,
+  "derivative": "minecraft:jungle",
+  "vanillaDerivative": "minecraft:jungle",
+  "customDerivitives": [
+    {
+      "id": "sundered_serpent_jungle",
+      "category": "jungle",
+      "grassColor": "#3DD62C",
+      "foliageColor": "#29B51C",
+      "waterColor": "#27D6C9",
+      "waterFogColor": "#0E6E86",
+      "downfallType": "rain",
+      "temperature": 0.95,
+      "humidity": 0.9
+    }
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "min": 25,
+      "max": 60
+    }
+  ],
+  "wall": "snippet/biome-palette/wall/jungle-wood-leaves",
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/jungle/cocogeneric2",
+        "trees/jungle/cocogeneric3",
+        "trees/jungle/lgeneric1",
+        "trees/jungle/lgeneric2",
+        "trees/jungle/lgeneric3",
+        "trees/jungle/lgeneric6"
+      ],
+      "chance": 0.45,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -2
+      }
+    },
+    "snippet/object-placer/trees/jungle-sgeneric-organic-stilt-c0-45",
+    {
+      "place": [
+        "sundered/azure/sun-serpent-pyramid"
+      ],
+      "chance": 0.0035,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -20
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/azure-temple",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/jungle_temple",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:chests/buried_treasure",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/azure/jungle-shrine"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 5
+      },
+      "loot": [
+        {
+          "name": "sundered/azure-temple",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/azure/serpent-stela"
+      ],
+      "chance": 0.02,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/grass/jungle-undergrowth-c0-45",
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:large_fern"
+        }
+      ]
+    },
+    "snippet/decorator/twigs/jungle-c0-01"
+  ],
+  "proceduralObjects": {
+    "ruins": [
+      {
+        "name": "serpent-pillar",
+        "chance": 0.05,
+        "density": 1,
+        "variants": 8,
+        "seed": 72001,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "PILLAR",
+        "block": "minecraft:mossy_stone_bricks",
+        "weatheredBlock": "minecraft:cracked_stone_bricks",
+        "heightMin": 4,
+        "heightMax": 11,
+        "widthMin": 1,
+        "widthMax": 3,
+        "lengthMin": 3,
+        "lengthMax": 7,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      },
+      {
+        "name": "jungle-arch",
+        "chance": 0.02,
+        "density": 1,
+        "variants": 8,
+        "seed": 72002,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "ARCH",
+        "block": "minecraft:stone_bricks",
+        "weatheredBlock": "minecraft:mossy_stone_bricks",
+        "heightMin": 6,
+        "heightMax": 10,
+        "widthMin": 1,
+        "widthMax": 2,
+        "lengthMin": 5,
+        "lengthMax": 8,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      },
+      {
+        "name": "plaza-slab",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 8,
+        "seed": 72003,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "FLOOR_SLAB",
+        "block": "minecraft:mossy_stone_bricks",
+        "weatheredBlock": "minecraft:moss_block",
+        "heightMin": 1,
+        "heightMax": 1,
+        "widthMin": 4,
+        "widthMax": 8,
+        "lengthMin": 5,
+        "lengthMax": 10,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      }
+    ]
+  },
+  "terrain3D": "snippet/terrain-3d/hilly/amp18-nowhere-crack416",
+  "effects": [
+    {
+      "particleEffect": "TOTEM_OF_UNDYING",
+      "chance": 3,
+      "interval": 600,
+      "particleCount": 2,
+      "particleOffset": 12,
+      "particleAltX": 0.3,
+      "particleAltY": -0.2,
+      "particleAltZ": 0.3
+    }
+  ],
+  "entitySpawners": [
+    "sundered/azure-wildlife",
+    "sundered/azure-night",
+    "tropical/water",
+    "tropical/beach"
+  ]
+}

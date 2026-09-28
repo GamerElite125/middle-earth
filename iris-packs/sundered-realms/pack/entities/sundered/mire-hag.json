@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:witch",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&aMire Hag"
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:wandering_trader",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "ANIMAL",
+  "customName": "&6Travelling Merchant"
+}

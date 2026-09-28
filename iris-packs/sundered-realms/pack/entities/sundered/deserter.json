@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:vindicator",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&8Oathbreaker Deserter",
+  "helmet": {
+    "type": "chainmail_helmet"
+  }
+}

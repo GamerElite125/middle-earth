@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stray",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&3Hollow Revenant"
+}

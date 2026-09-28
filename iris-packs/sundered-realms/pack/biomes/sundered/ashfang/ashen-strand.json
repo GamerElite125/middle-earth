@@ -1,0 +1,63 @@
+{
+  "name": "Ashen Strand",
+  "color": "#555050",
+  "rarity": 1,
+  "derivative": "minecraft:stony_shore",
+  "vanillaDerivative": "minecraft:stony_shore",
+  "customDerivitives": [
+    {
+      "id": "sundered_ashen_strand",
+      "category": "desert",
+      "grassColor": "#4A4A40",
+      "foliageColor": "#5A4A2E",
+      "waterColor": "#4A2A2A",
+      "waterFogColor": "#1A0808",
+      "downfallType": "none",
+      "fogColor": "#6A3A2A",
+      "skyColor": "#7A3A30",
+      "temperature": 1.2,
+      "humidity": 0.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:tuff"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "entitySpawners": [
+    "sundered/ashfang-warbands"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:bogged",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&2Bog Wight"
+}

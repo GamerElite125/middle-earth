@@ -1,0 +1,38 @@
+{
+  "name": "The Sunscorch Frontier",
+  "color": "#D98A3A",
+  "rarity": 2,
+  "landBiomes": [
+    "sundered/frontier/cracked-flats",
+    "sundered/frontier/red-mesa",
+    "sundered/frontier/sagebrush-prairie",
+    "sundered/frontier/deadwood-canyon"
+  ],
+  "shoreBiomes": [
+    "sundered/frontier/dry-coast"
+  ],
+  "seaBiomes": [
+    "ocean/warm",
+    "ocean/ocean"
+  ],
+  "caveBiomes": [
+    "carving/sandstone",
+    "carving/red-sandstone",
+    "carving/mixed-sandstone",
+    "carving/sand-hollows"
+  ],
+  "landBiomeZoom": 4.5,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "hot/food",
+      "sundered/frontier-strongbox"
+    ]
+  }
+}

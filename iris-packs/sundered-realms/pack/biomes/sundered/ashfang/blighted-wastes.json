@@ -1,0 +1,252 @@
+{
+  "name": "Blighted Wastes",
+  "color": "#5A4A3A",
+  "rarity": 1,
+  "derivative": "minecraft:badlands",
+  "vanillaDerivative": "minecraft:badlands",
+  "customDerivitives": [
+    {
+      "id": "sundered_blighted_wastes",
+      "category": "desert",
+      "grassColor": "#6B5A3A",
+      "foliageColor": "#5A4A2E",
+      "waterColor": "#4A2A2A",
+      "waterFogColor": "#1A0808",
+      "downfallType": "none",
+      "fogColor": "#6A3A2A",
+      "skyColor": "#7A3A30",
+      "temperature": 1.2,
+      "humidity": 0.0,
+      "ambientParticle": {
+        "particle": "minecraft:ash",
+        "rarity": 120
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 6,
+      "max": 22
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:soul_soil"
+        },
+        {
+          "block": "minecraft:packed_mud"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:rooted_dirt"
+        }
+      ],
+      "style": {
+        "style": "CELLULAR"
+      },
+      "zoom": 0.12
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/ashfang/orc-warcamp"
+      ],
+      "chance": 0.012,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/ashfang-warchest",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/pillager_outpost",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:chests/bastion_other",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/ashfang/skullgate-fortress"
+      ],
+      "chance": 0.003,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -18
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/ashfang-warchest",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/pillager_outpost",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:chests/bastion_other",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/ashfang/bone-totem"
+      ],
+      "chance": 0.02,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/ashfang/blood-altar"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "trees/oak/dead1",
+        "trees/oak/dead2",
+        "trees/oak/dead3",
+        "trees/oak/dead4"
+      ],
+      "chance": 0.08,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      }
+    },
+    "snippet/object-placer/clutter/bone-c0-006-d1-weathered"
+  ],
+  "decorators": [
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:crimson_roots"
+        }
+      ]
+    },
+    {
+      "chance": 0.002,
+      "palette": [
+        {
+          "block": "minecraft:bone_block[axis=y]"
+        }
+      ],
+      "stackMin": 1,
+      "stackMax": 3
+    },
+    "snippet/decorator/grass/dry-grass"
+  ],
+  "effects": [
+    {
+      "particleEffect": "CRIMSON_SPORE",
+      "chance": 3,
+      "interval": 400,
+      "particleCount": 3,
+      "particleOffset": 10,
+      "particleAltX": 0.3,
+      "particleAltY": -0.2,
+      "particleAltZ": 0.3
+    }
+  ],
+  "entitySpawners": [
+    "sundered/ashfang-warbands"
+  ]
+}

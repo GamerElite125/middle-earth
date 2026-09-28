@@ -1,0 +1,125 @@
+{
+  "name": "Rolling Downs",
+  "color": "#7CC24A",
+  "rarity": 1,
+  "derivative": "minecraft:meadow",
+  "vanillaDerivative": "minecraft:meadow",
+  "customDerivitives": [
+    {
+      "id": "sundered_rolling_downs",
+      "category": "plains",
+      "grassColor": "#8DD65A",
+      "foliageColor": "#6CC24A",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "temperature": 0.8,
+      "humidity": 0.5
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 10,
+      "max": 34
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/crownlands/castle-keep"
+      ],
+      "chance": 0.003,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -13
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2
+      },
+      "loot": [
+        {
+          "name": "sundered/warscar-spoils",
+          "weight": 1
+        },
+        {
+          "name": "sundered/crownlands-market",
+          "weight": 2
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/village/village_weaponsmith",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/crownlands/crown-watchtower"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/crownlands-market",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    "snippet/object-placer/trees/birch-antioch-c0-07-d4",
+    "snippet/object-placer/trees/oak-toak-c0-18"
+  ],
+  "decorators": [
+    "snippet/decorator/flowers/meadow-mix-c0-2-simplex-z0-2",
+    "snippet/decorator/grass/short-c0-6"
+  ],
+  "entitySpawners": [
+    "sundered/crownlands-roads",
+    "temperate/hostile"
+  ]
+}

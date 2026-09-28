@@ -1,0 +1,49 @@
+{
+  "group": "NORMAL",
+  "maximumRate": {
+    "amount": 6,
+    "per": {
+      "seconds": 20
+    }
+  },
+  "maxEntitiesPerChunk": 3,
+  "weather": "ANY",
+  "spawns": [
+    {
+      "entity": "sundered/travelling-merchant",
+      "rarity": 12,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    },
+    {
+      "entity": "sundered/crown-sentry",
+      "rarity": 20,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    },
+    {
+      "entity": "standard/passive/cow",
+      "rarity": 2,
+      "minSpawns": 2,
+      "maxSpawns": 4
+    },
+    {
+      "entity": "standard/passive/sheep",
+      "rarity": 2,
+      "minSpawns": 2,
+      "maxSpawns": 4
+    },
+    {
+      "entity": "standard/passive/horse",
+      "rarity": 4,
+      "minSpawns": 2,
+      "maxSpawns": 3
+    },
+    {
+      "entity": "standard/passive/pig",
+      "rarity": 3,
+      "minSpawns": 1,
+      "maxSpawns": 3
+    }
+  ]
+}

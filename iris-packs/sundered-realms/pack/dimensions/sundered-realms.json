@@ -1,0 +1,969 @@
+{
+  "version": 4013,
+  "name": "Sundered Realms",
+  "importedStructures": {
+    "datapackOverrides": true,
+    "adjustments": [
+      {
+        "match": [
+          "minecraft:stronghold"
+        ],
+        "yBand": {
+          "min": -120,
+          "max": -20
+        },
+        "terrain": {
+          "mode": "ENCASE",
+          "horizontalPadding": 4,
+          "ceilingPadding": 4,
+          "floorPadding": 4,
+          "encasePalette": {
+            "zoom": 1,
+            "palette": [
+              {
+                "block": "minecraft:stone_bricks",
+                "weight": 6
+              },
+              {
+                "block": "minecraft:mossy_stone_bricks",
+                "weight": 2
+              },
+              {
+                "block": "minecraft:cracked_stone_bricks",
+                "weight": 2
+              },
+              {
+                "block": "minecraft:cobblestone",
+                "weight": 1
+              }
+            ]
+          }
+        }
+      },
+      {
+        "match": [
+          "minecraft:trial_chambers"
+        ],
+        "yShift": -64
+      },
+      {
+        "match": [
+          "minecraft:mineshaft"
+        ],
+        "preserveSourceY": true
+      },
+      {
+        "match": [
+          "minecraft:village"
+        ],
+        "stilt": {
+          "maxDepth": 2,
+          "palette": {
+            "palette": [
+              {
+                "block": "minecraft:dirt"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "match": [
+          "minecraft:village",
+          "minecraft:pillager_outpost",
+          "minecraft:mansion",
+          "minecraft:desert_pyramid",
+          "minecraft:jungle_pyramid",
+          "minecraft:igloo",
+          "minecraft:swamp_hut",
+          "minecraft:shipwreck_beached",
+          "minecraft:ruined_portal"
+        ],
+        "terrain": {
+          "mode": "FLATTEN",
+          "horizontalPadding": 24,
+          "flattenRange": 64
+        }
+      }
+    ]
+  },
+  "structures": [
+    {
+      "nativeStructures": [
+        {
+          "structure": "minecraft:ancient_city"
+        }
+      ],
+      "placementId": "ancient-city-native",
+      "nativeSuppression": "REPLACE_SOURCE",
+      "underground": true,
+      "terrain": {
+        "mode": "FORCE_CARVE",
+        "horizontalPadding": 14,
+        "ceilingPadding": 12,
+        "floorPadding": 0,
+        "shape": "ERODED",
+        "erosionStrength": 1.0,
+        "erosionFrequency": 0.05
+      },
+      "stilt": {
+        "maxDepth": 768,
+        "spacing": 1,
+        "palette": {
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:deepslate_bricks",
+              "weight": 6
+            },
+            {
+              "block": "minecraft:cracked_deepslate_bricks",
+              "weight": 1
+            },
+            {
+              "block": "minecraft:deepslate_tiles",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:cracked_deepslate_tiles",
+              "weight": 1
+            }
+          ]
+        }
+      },
+      "minHeight": -220,
+      "maxHeight": -220,
+      "distribution": "RANDOM_SPREAD",
+      "spacing": 64,
+      "separation": 5,
+      "salt": 42069
+    }
+  ],
+  "fullbright": false,
+  "upperDimension": "",
+  "upperDimensionGap": 32,
+  "upperDimensionCarving": false,
+  "upperDimensionObjects": false,
+  "environment": "NORMAL",
+  "dimensionAngleDeg": 69,
+  "fluidHeight": 50,
+  "hydrology": {
+    "rivers": {
+      "enabled": true,
+      "routing": {
+        "tileSize": 1024,
+        "sampleSpacing": 64,
+        "maximumRouteLength": 16384,
+        "minimumSurfaceCourseLength": 384,
+        "minimumUndergroundCourseLength": 384,
+        "maximumOutletsPerTile": 1,
+        "maximumCoastalOutletsPerTile": 2,
+        "oceanOutlets": true,
+        "inlandOutlets": [
+          "SINKHOLE_GROTTO"
+        ],
+        "valleyPreference": 1.5,
+        "uphillPenalty": 24.0,
+        "slopePenalty": 2.0,
+        "confluenceAttraction": 0.2,
+        "regional": {
+          "enabled": false,
+          "sampleSpacing": 256,
+          "minimumLength": 2048,
+          "maximumTrunks": 2,
+          "maximumCachedBasins": 8,
+          "maximumCachedStations": 131072,
+          "coastalChannels": true,
+          "coastalChannelChance": 0.25,
+          "maximumCoastalIncision": 8
+        }
+      },
+      "geometry": {
+        "meanders": {
+          "primaryWavelength": 192,
+          "detailWavelength": 48,
+          "primaryStrength": 0.55,
+          "detailStrength": 0.18,
+          "maximumOffsetRatio": 0.45,
+          "smoothingPasses": 2,
+          "maximumTurnDegrees": 20
+        },
+        "surface": {
+          "bedRoundness": 2.0,
+          "bedRoughness": 0.25,
+          "wallRoughness": 0.25,
+          "roughnessWavelength": 16
+        },
+        "underground": {
+          "bedRoundness": 3.0,
+          "bedRoughness": 0.36,
+          "wallRoughness": 0.32,
+          "roughnessWavelength": 9,
+          "radialBase": 0.86,
+          "radialMinimum": 0.58,
+          "radialMaximum": 1.18,
+          "primaryLobeStrength": 0.08,
+          "detailLobeStrength": 0.06,
+          "ceilingRoughness": 0.0
+        },
+        "grottos": {
+          "bedRoundness": 3.2,
+          "bedRoughness": 0.38,
+          "wallRoughness": 0.34,
+          "roughnessWavelength": 11,
+          "radialBase": 0.86,
+          "radialMinimum": 0.58,
+          "radialMaximum": 1.18,
+          "primaryLobeStrength": 0.08,
+          "detailLobeStrength": 0.06,
+          "ceilingRoughness": 0.0,
+          "aspectMinimum": 0.62,
+          "aspectRange": 0.2
+        },
+        "drops": {
+          "cascadeRunPerBlock": 2,
+          "cascadeExponent": 1.4,
+          "maximumCascadeStep": 2,
+          "flowWidthRatio": 0.45,
+          "maximumFlowDepth": 2,
+          "basinWidthRatio": 1.8,
+          "maximumBasinDepth": 8,
+          "undergroundCascadeRunPerBlock": 0
+        },
+        "banks3D": {
+          "enabled": false,
+          "amplitude": 8,
+          "horizontalScale": 48,
+          "verticalScale": 8,
+          "maximumOverhang": 8
+        }
+      },
+      "surface": {
+        "enabled": true,
+        "sources": {
+          "density": 1.75,
+          "minimumElevation": 64,
+          "minimumPerTile": 0,
+          "minimumSpacing": 384
+        },
+        "channel": {
+          "width": {
+            "min": 4,
+            "max": 8,
+            "style": {
+              "style": "IRIS",
+              "zoom": 384
+            }
+          },
+          "depth": {
+            "min": 2,
+            "max": 4,
+            "style": {
+              "style": "IRIS",
+              "zoom": 320
+            }
+          },
+          "sink": 0,
+          "maximumIncision": 16,
+          "roughness": 0.25,
+          "roughnessWavelength": 16,
+          "springWidthRatio": 2.5,
+          "springLength": 24,
+          "smoothingRadius": 16,
+          "outlineMinimumRatio": 0.6,
+          "outlineMaximumRatio": 1.4,
+          "springExtraDepth": 1.0
+        },
+        "banks": {
+          "shoreWidth": 1.5,
+          "shoreRise": 0.0,
+          "blendSlope": 3.0,
+          "blendBaseWidth": 0.0,
+          "minimumBlendWidth": 4,
+          "maximumBlendWidth": 32,
+          "excavation": {
+            "maximumDepth": 16,
+            "maximumWidth": 40,
+            "maximumVolumePerBlock": 1024
+          },
+          "exposeCutStrata": true,
+          "shoreMaterial": {
+            "enabled": true,
+            "palette": {
+              "palette": [
+                {
+                  "block": "minecraft:sand"
+                }
+              ]
+            },
+            "depth": 2
+          },
+          "bankMaterial": {
+            "enabled": false,
+            "palette": {
+              "palette": [
+                {
+                  "block": "minecraft:stone"
+                }
+              ]
+            },
+            "depth": 1
+          }
+        },
+        "bed": {
+          "allowGravityBlocks": true,
+          "padding": 2,
+          "material": {
+            "enabled": false,
+            "palette": {
+              "palette": [
+                {
+                  "block": "minecraft:stone"
+                }
+              ]
+            },
+            "depth": 1
+          }
+        },
+        "flow": {
+          "cascadeRun": 2,
+          "waterfallMinimumDrop": 6,
+          "waterfallThalwegFraction": 0.65,
+          "plungeBasinMinimumDrop": 2,
+          "plungeBasinLengthRatio": 2.0,
+          "plungeBasinDepth": 1
+        },
+        "mouths": {
+          "flareRatio": 2.5,
+          "maximumOceanApron": 8,
+          "inletLength": 64,
+          "inletDepth": 3,
+          "maximumIncision": 32,
+          "inletCourseFraction": 0.5,
+          "inletRampSlope": 1.0
+        },
+        "erosion": {
+          "enabled": true,
+          "smoothingRadius": 12,
+          "thalwegFraction": 0.45,
+          "blendCurve": 1.0,
+          "bedNoise": 0.5,
+          "style": "SMOOTH",
+          "terraceSteps": 4,
+          "cliffFraction": 0.5,
+          "bedProfile": "BOWL"
+        },
+        "ponds": {
+          "source": {
+            "enabled": true,
+            "minimumRadius": 6,
+            "maximumRadius": 12,
+            "depth": 3
+          },
+          "terminal": {
+            "enabled": true,
+            "minimumRadius": 4,
+            "maximumRadius": 7,
+            "depth": 3
+          }
+        }
+      },
+      "underground": {
+        "enabled": true,
+        "sources": {
+          "density": 1.5,
+          "minimumPerTile": 0,
+          "minimumSpacing": 640
+        },
+        "fluidLevel": {
+          "min": -48,
+          "max": 32,
+          "style": {
+            "style": "IRIS",
+            "zoom": 512
+          }
+        },
+        "channelWidth": {
+          "min": 3,
+          "max": 8,
+          "style": {
+            "style": "IRIS",
+            "zoom": 384
+          }
+        },
+        "depth": {
+          "min": 1,
+          "max": 3,
+          "style": {
+            "style": "IRIS",
+            "zoom": 320
+          }
+        },
+        "headroom": {
+          "min": 6,
+          "max": 14,
+          "style": {
+            "style": "IRIS",
+            "zoom": 384
+          }
+        },
+        "connectToExistingCaves": true,
+        "mouthLevelingDistance": 128,
+        "tributaries": 1,
+        "minimumRockCover": 1,
+        "minimumFloorCover": 1,
+        "wideningSources": 8,
+        "bedMaterial": {
+          "enabled": false,
+          "palette": {
+            "palette": [
+              {
+                "block": "minecraft:stone"
+              }
+            ]
+          },
+          "depth": 1
+        }
+      },
+      "grottos": {
+        "coastal": {
+          "enabled": true,
+          "poolLevel": "SEA_LEVEL",
+          "horizontalRadius": 12,
+          "verticalRadius": 7,
+          "headroom": 10,
+          "maximumVolume": 16384,
+          "cliffMinimumHeight": 7,
+          "cliffSlopeFactor": 0.5,
+          "seaCaves": {
+            "enabled": true,
+            "maximumPerTile": 3,
+            "minimumSpacing": 160,
+            "minimumCoastHeight": 8,
+            "depth": 12,
+            "sweepJitterDegrees": 25.0
+          }
+        },
+        "inland": {
+          "enabled": true,
+          "connectSurfaceRivers": true,
+          "horizontalRadius": 10,
+          "verticalRadius": 6,
+          "headroom": 10,
+          "maximumVolume": 16384
+        }
+      },
+      "profiles": [
+        {
+          "id": "water",
+          "fluidPalette": {
+            "palette": [
+              {
+                "block": "minecraft:water"
+              }
+            ]
+          }
+        },
+        {
+          "id": "volcanic_lava",
+          "fluidPalette": {
+            "palette": [
+              {
+                "block": "minecraft:lava"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "surfacePools": [
+      {
+        "id": "lava_pool",
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
+        },
+        "density": 0.75,
+        "spacing": 384,
+        "minimumRadius": 4,
+        "maximumRadius": 7,
+        "depth": 2
+      },
+      {
+        "id": "tropical_lake",
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:water"
+            }
+          ]
+        },
+        "density": 8.0,
+        "spacing": 160,
+        "minimumRadius": 8,
+        "maximumRadius": 16,
+        "depth": 3
+      },
+      {
+        "id": "volcanic_pool",
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
+        },
+        "density": 6.0,
+        "spacing": 128,
+        "minimumRadius": 6,
+        "maximumRadius": 12,
+        "depth": 3
+      }
+    ],
+    "deepFluids": [
+      {
+        "id": "deep_lava",
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
+        },
+        "height": {
+          "min": -192,
+          "max": 32,
+          "style": {
+            "style": "IRIS",
+            "zoom": 1024
+          }
+        },
+        "density": 0.5,
+        "spacing": 1024,
+        "horizontalRadius": 12,
+        "verticalRadius": 5,
+        "channelWidth": 3,
+        "depth": 1,
+        "headroom": 6,
+        "containedPools": true,
+        "shortChannels": false
+      },
+      {
+        "id": "deep_lava_small",
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
+        },
+        "height": {
+          "min": -160,
+          "max": 40,
+          "style": {
+            "style": "IRIS",
+            "zoom": 512
+          }
+        },
+        "density": 1.5,
+        "spacing": 320,
+        "horizontalRadius": 6,
+        "verticalRadius": 4,
+        "channelWidth": 2,
+        "depth": 1,
+        "headroom": 4,
+        "containedPools": true,
+        "shortChannels": false
+      }
+    ]
+  },
+  "riverPolicy": {
+    "placement": "NATURAL",
+    "routing": "ALLOW",
+    "outletAdmission": true,
+    "profiles": [
+      "water"
+    ],
+    "surfaceBiomes": [
+      "temperate/sea/river",
+      "mountain/sea/river-soft"
+    ],
+    "mouthBiomes": [
+      "temperate/sea/ocean",
+      "ocean/rich-oceans"
+    ],
+    "shoreBiomes": [
+      "temperate/shore/beach",
+      "temperate/shore/oak-beach"
+    ],
+    "bankBiomes": [
+      "temperate/plains",
+      "temperate/calmplains"
+    ],
+    "floodedCaveBiomes": [
+      "carving/rocky-cavebiome",
+      "carving/chalk-gardens"
+    ],
+    "widthMultiplier": 1.0,
+    "depthMultiplier": 1.0,
+    "routingMultiplier": 1.0
+  },
+  "continentZoom": 1.9,
+  "continentalStyle": {
+    "style": "NOWHERE_CELLULAR",
+    "fracture": {
+      "style": "FRACTAL_SMOKE",
+      "multiplier": 1,
+      "fracture": {
+        "style": "STATIC",
+        "multiplier": 1
+      }
+    },
+    "zoom": 6
+  },
+  "logicalHeight": 512,
+  "dimensionHeight": {
+    "max": 512,
+    "min": -256
+  },
+  "landChance": 0.52,
+  "regionStyle": {
+    "style": "CELLULAR_IRIS_DOUBLE",
+    "fracture": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.15,
+      "multiplier": 9,
+      "fracture": {
+        "style": "STATIC",
+        "multiplier": 1
+      }
+    }
+  },
+  "regionZoom": 24.0,
+  "regions": [
+    "sundered/azure-isles",
+    "sundered/ashfang-reach",
+    "sundered/dreadmire",
+    "sundered/sunscorch-frontier",
+    "sundered/everbloom",
+    "sundered/crownlands",
+    "sundered/warscar-marches",
+    "sundered/umbral-peaks"
+  ],
+  "seaBiomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "landBiomeStyle": {
+    "style": "NOWHERE_CELLULAR",
+    "fracture": {
+      "multiplier": 55,
+      "style": "NOWHERE",
+      "zoom": 0.15,
+      "fracture": {
+        "style": "STATIC",
+        "multiplier": 4
+      }
+    }
+  },
+  "ores": [
+    {
+      "threshold": 1,
+      "range": {
+        "min": 0,
+        "max": 0
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:bedrock"
+          }
+        ]
+      },
+      "chanceStyle": {
+        "style": "FLAT"
+      }
+    },
+    {
+      "threshold": 0.625,
+      "range": {
+        "min": 1,
+        "max": 1
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:bedrock"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.35,
+      "range": {
+        "min": 2,
+        "max": 4
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:bedrock"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 1,
+      "range": {
+        "min": 1,
+        "max": 57
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      },
+      "chanceStyle": {
+        "style": "FLAT"
+      }
+    },
+    {
+      "threshold": 0.874,
+      "range": {
+        "min": 58,
+        "max": 58
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.75,
+      "range": {
+        "min": 59,
+        "max": 59
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.625,
+      "range": {
+        "min": 60,
+        "max": 60
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.5,
+      "range": {
+        "min": 61,
+        "max": 61
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.375,
+      "range": {
+        "min": 62,
+        "max": 62
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.25,
+      "range": {
+        "min": 63,
+        "max": 63
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.125,
+      "range": {
+        "min": 64,
+        "max": 64
+      },
+      "palette": {
+        "palette": [
+          {
+            "block": "minecraft:deepslate"
+          }
+        ]
+      }
+    }
+  ],
+  "shoreBiomeStyle": {
+    "style": "NOWHERE_CELLULAR"
+  },
+  "deposits": [
+    "snippet/deposit/stone/granite",
+    "snippet/deposit/stone/andesite",
+    "snippet/deposit/stone/diorite",
+    "snippet/deposit/stone/gravel",
+    "snippet/deposit/ore/coal-sky",
+    "snippet/deposit/ore/coal-highland",
+    "snippet/deposit/ore/iron-sky",
+    "snippet/deposit/ore/iron-mid",
+    "snippet/deposit/ore/iron-low",
+    "snippet/deposit/ore/copper-caves",
+    "snippet/deposit/ore/copper-dripstone-caves",
+    "snippet/deposit/ore/gold-low",
+    "snippet/deposit/ore/gold-low-rare",
+    "snippet/deposit/ore/gold-badlands",
+    "snippet/deposit/ore/redstone-low",
+    "snippet/deposit/ore/redstone-deep",
+    "snippet/deposit/ore/diamond-deep-small",
+    "snippet/deposit/ore/diamond-low",
+    "snippet/deposit/ore/diamond-deep-large",
+    "snippet/deposit/ore/diamond-deep-medium",
+    "snippet/deposit/ore/lapis-mid",
+    "snippet/deposit/ore/lapis-low",
+    "snippet/deposit/ore/emerald-mountains"
+  ],
+  "caveBiomeStyle": {
+    "style": "SIMPLEX",
+    "zoom": 2.6
+  },
+  "coordFractureZoom": 0.15,
+  "preventLeafDecay": true,
+  "useMantle": true,
+  "carvingEnabled": true,
+  "decorate": true,
+  "loot": {
+    "mode": "FALLBACK",
+    "tables": [
+      "global-clutter"
+    ]
+  },
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 700
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.72
+    },
+    "detailDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.54
+    },
+    "warpStyle": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.5
+    },
+    "baseWeight": 0.9,
+    "detailWeight": 0.11,
+    "warpStrength": 0.24,
+    "densityThreshold": {
+      "min": -0.14,
+      "max": -0.06,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.74
+      }
+    },
+    "thresholdBias": 0.14,
+    "sampleStep": 3,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.88
+    },
+    "surfaceBreakNoiseThreshold": 0.6,
+    "surfaceBreakDepth": 16,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 14,
+    "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 12,
+    "allowFluid": false,
+    "fluidMinDepthBelowSurface": 20,
+    "fluidRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.08
+        },
+        "weight": 0.08,
+        "threshold": 0.03,
+        "verticalRange": {
+          "min": 24,
+          "max": 660
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_FBM_SIMPLEX",
+          "zoom": 0.24
+        },
+        "weight": 0.04,
+        "threshold": 0.08,
+        "verticalRange": {
+          "min": 6,
+          "max": 240
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.18
+  },
+  "carving": [
+    {
+      "id": "global-deepdark-band",
+      "enabled": true,
+      "biome": "carving/standard-deepdark",
+      "worldYRange": {
+        "min": -250,
+        "max": -175
+      }
+    }
+  ]
+}

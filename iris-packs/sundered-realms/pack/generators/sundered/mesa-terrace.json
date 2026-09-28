@@ -1,0 +1,37 @@
+{
+  "surfaceDetail": 0.5,
+  "seed": 810004,
+  "interpolator": {
+    "function": "BILINEAR_STARCAST_9",
+    "horizontalScale": 30
+  },
+  "composite": [
+    {
+      "style": {
+        "style": "IRIS_THICK",
+        "zoom": 1.1,
+        "fracture": {
+          "style": "IRIS_HALF",
+          "zoom": 0.3,
+          "multiplier": 14
+        }
+      },
+      "seed": 810041,
+      "bezier": true,
+      "exponent": 1.1
+    }
+  ],
+  "cliffHeightMin": 22,
+  "cliffHeightMax": 58,
+  "cliffHeightGenerator": {
+    "style": {
+      "style": "NOWHERE"
+    },
+    "seed": 810042,
+    "zoom": 3.4,
+    "octaves": 3,
+    "enabled": true,
+    "opacity": 1,
+    "exponent": 1.1
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "name": "Deadwood Canyon",
+  "color": "#9A5A3A",
+  "rarity": 1,
+  "derivative": "minecraft:wooded_badlands",
+  "vanillaDerivative": "minecraft:wooded_badlands",
+  "customDerivitives": [
+    {
+      "id": "sundered_deadwood_canyon",
+      "category": "mesa",
+      "grassColor": "#9A8A50",
+      "foliageColor": "#AEA42A",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "none",
+      "fogColor": "#E8C8A0",
+      "skyColor": "#8FC0E8",
+      "temperature": 2.0,
+      "humidity": 0.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "canyon-steep",
+      "min": 10,
+      "max": 70
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:red_sand"
+        },
+        {
+          "block": "minecraft:gravel"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      }
+    },
+    {
+      "minHeight": 10,
+      "maxHeight": 30,
+      "palette": [
+        {
+          "block": "minecraft:red_terracotta"
+        },
+        {
+          "block": "minecraft:terracotta"
+        },
+        {
+          "block": "minecraft:orange_terracotta"
+        },
+        {
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ],
+      "style": {
+        "style": "STRATA"
+      },
+      "zoom": 0.4
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/frontier/abandoned-mine"
+      ],
+      "chance": 0.006,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -30
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 6
+      },
+      "loot": [
+        {
+          "name": "sundered/frontier-strongbox",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/desert_pyramid",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:chests/abandoned_mineshaft",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "trees/oak/dead1",
+        "trees/oak/dead2",
+        "trees/oak/dead3",
+        "trees/spruce/aridpine1",
+        "trees/spruce/aridpine2"
+      ],
+      "chance": 0.12,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      }
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/mushrooms/dead-bush-mix-c0-03"
+  ],
+  "terrain3D": "snippet/terrain-3d/rugged/amp30-perlin-crack448",
+  "entitySpawners": [
+    "sundered/frontier-outlaws",
+    "sundered/frontier-herds"
+  ]
+}

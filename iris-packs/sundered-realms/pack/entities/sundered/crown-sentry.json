@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:iron_golem",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "ANIMAL",
+  "customName": "&9Crown Sentry"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:vindicator",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&4Ashfang Brute",
+  "helmet": {
+    "type": "iron_helmet"
+  },
+  "mainHand": {
+    "type": "iron_axe"
+  }
+}

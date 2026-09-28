@@ -1,0 +1,228 @@
+{
+  "name": "Deadpine Vale",
+  "color": "#2F3A34",
+  "rarity": 1,
+  "derivative": "minecraft:old_growth_spruce_taiga",
+  "vanillaDerivative": "minecraft:old_growth_spruce_taiga",
+  "customDerivitives": [
+    {
+      "id": "sundered_deadpine",
+      "category": "taiga",
+      "grassColor": "#4A5A52",
+      "foliageColor": "#3A4A42",
+      "waterColor": "#2A3A5A",
+      "waterFogColor": "#0A1020",
+      "downfallType": "snow",
+      "fogColor": "#4A4A55",
+      "skyColor": "#2A2A3A",
+      "temperature": -0.3,
+      "humidity": 0.4
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 14,
+      "max": 40
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:snow_block"
+        },
+        {
+          "block": "minecraft:pale_moss_block"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/spruce/genericdead1",
+        "trees/spruce/genericdead2",
+        "trees/spruce/genericdead3",
+        "trees/spruce/levergreen1",
+        "trees/spruce/levergreen2",
+        "trees/spruce/levergreen3"
+      ],
+      "chance": 0.7,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      }
+    },
+    {
+      "place": [
+        "sundered/umbral/necropolis-gate"
+      ],
+      "chance": 0.005,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -18
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/umbral-reliquary",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/ancient_city",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:chests/stronghold_corridor",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/umbral/gibbet-cage"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/umbral/soulfire-obelisk"
+      ],
+      "chance": 0.008,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.08,
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:snow[layers=1]"
+        }
+      ]
+    },
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:pale_moss_carpet"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "dread-pine",
+        "chance": 0.4,
+        "density": 1,
+        "variants": 10,
+        "seed": 98001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:spruce_log",
+        "leaves": "minecraft:spruce_leaves",
+        "profile": "SPRUCE",
+        "heightMin": 18,
+        "heightMax": 30,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        },
+        "plausible": false
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/umbral-damned",
+    "tundra/passive"
+  ]
+}

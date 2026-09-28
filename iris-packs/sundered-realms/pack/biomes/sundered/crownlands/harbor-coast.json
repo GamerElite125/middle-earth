@@ -1,0 +1,81 @@
+{
+  "name": "Harbor Coast",
+  "color": "#E8DDB0",
+  "rarity": 1,
+  "derivative": "minecraft:beach",
+  "vanillaDerivative": "minecraft:beach",
+  "customDerivitives": [
+    {
+      "id": "sundered_harbor_coast",
+      "category": "beach",
+      "grassColor": "#8DD65A",
+      "foliageColor": "#6CC24A",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "temperature": 0.8,
+      "humidity": 0.5
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:gravel"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/crownlands/lighthouse"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      }
+    }
+  ],
+  "entitySpawners": [
+    "sundered/crownlands-roads",
+    "temperate/hostile"
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "name": "Emberpeak Volcano",
+  "color": "#8C1E1E",
+  "rarity": 1,
+  "derivative": "minecraft:stony_peaks",
+  "vanillaDerivative": "minecraft:stony_peaks",
+  "customDerivitives": [
+    {
+      "id": "sundered_emberpeak",
+      "category": "extreme_hills",
+      "grassColor": "#8A8F2A",
+      "foliageColor": "#7E8A28",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "none",
+      "fogColor": "#C9723A",
+      "skyColor": "#D9885A",
+      "temperature": 1.6,
+      "humidity": 0.1,
+      "ambientParticle": {
+        "particle": "minecraft:ash",
+        "rarity": 40
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/volcano-cone",
+      "min": 30,
+      "max": 170
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:basalt[axis=y]"
+        },
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:tuff"
+        },
+        {
+          "block": "minecraft:magma_block"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 9,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:tuff"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/azure/volcano-caldera"
+      ],
+      "chance": 0.12,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -4
+      },
+      "mode": "MAX_HEIGHT",
+      "clamp": {
+        "minimumHeight": 170,
+        "maximumHeight": 2048
+      }
+    },
+    {
+      "place": [
+        "sundered/azure/ember-temple"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -16
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/azure-temple",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/ruined_portal",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:chests/bastion_treasure",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.004,
+      "palette": [
+        {
+          "block": "minecraft:fire"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "lava-vent-column",
+        "chance": 0.2,
+        "density": 1,
+        "variants": 12,
+        "seed": 73001,
+        "mode": "CENTER_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "surfaceSupportBuffer": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "form": "BASALT_COLUMN",
+        "block": "minecraft:basalt",
+        "heightMin": 4,
+        "heightMax": 10,
+        "baseWidthMin": 2,
+        "baseWidthMax": 3,
+        "topWidth": 0,
+        "translate": {
+          "y": -2
+        },
+        "roughness": 0.15,
+        "jitter": 0.03,
+        "capBlock": "minecraft:magma_block"
+      }
+    ]
+  },
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30137,
+    "amplitude": 36,
+    "horizontalScale": 144,
+    "verticalScale": 28,
+    "densityStyle": {
+      "style": "HEXAGON"
+    },
+    "crackDepth": 5,
+    "crackWidth": 2,
+    "crackScale": 336,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.2,
+    "slopeFade": 0.3,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  },
+  "effects": [
+    {
+      "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+      "chance": 1,
+      "interval": 300,
+      "particleCount": 0,
+      "particleOffset": 0,
+      "particleAltX": 0.001,
+      "particleAltY": 0.13885,
+      "particleAltZ": 0.001
+    },
+    {
+      "particleEffect": "LARGE_SMOKE",
+      "chance": 1,
+      "interval": 450,
+      "particleCount": 0,
+      "particleOffset": 0,
+      "particleAltX": 0.001,
+      "particleAltY": 0.13885,
+      "particleAltZ": 0.001
+    }
+  ],
+  "entitySpawners": [
+    "sundered/azure-wildlife",
+    "sundered/azure-night",
+    "tropical/water",
+    "tropical/beach"
+  ],
+  "riverPolicy": {
+    "placement": "PREFERRED_HEADWATER",
+    "routing": "PREFER",
+    "outletAdmission": true,
+    "profiles": [
+      "volcanic_lava"
+    ],
+    "surfaceBiomes": [],
+    "mouthBiomes": [],
+    "shoreBiomes": [],
+    "bankBiomes": [],
+    "floodedCaveBiomes": [],
+    "surfacePools": [
+      "volcanic_pool"
+    ],
+    "surfaceSourceDensity": 6.0,
+    "surfaceSourceSpacing": 128,
+    "surfaceTributaries": 2,
+    "surfaceInlandOutlets": 3,
+    "surfaceCoastalOutlets": 0,
+    "widthMultiplier": 0.5,
+    "depthMultiplier": 1.25,
+    "routingMultiplier": 0.5,
+    "bankMultiplier": 1.0,
+    "shoreWidth": 1.0,
+    "surfaceMinimumCourseLength": 128,
+    "surfaceMaximumIncision": 24
+  }
+}

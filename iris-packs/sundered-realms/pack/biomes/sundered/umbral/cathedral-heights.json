@@ -1,0 +1,265 @@
+{
+  "name": "Cathedral Heights",
+  "color": "#3A3548",
+  "rarity": 1,
+  "derivative": "minecraft:snowy_slopes",
+  "vanillaDerivative": "minecraft:snowy_slopes",
+  "customDerivitives": [
+    {
+      "id": "sundered_cathedral_heights",
+      "category": "icy",
+      "grassColor": "#4A5A52",
+      "foliageColor": "#3A4A42",
+      "waterColor": "#2A3A5A",
+      "waterFogColor": "#0A1020",
+      "downfallType": "snow",
+      "fogColor": "#3A3A4A",
+      "skyColor": "#2A2A3A",
+      "temperature": -0.3,
+      "humidity": 0.4,
+      "ambientParticle": {
+        "particle": "minecraft:ash",
+        "rarity": 180
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "min": 30,
+      "max": 70
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:snow_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:deepslate_tiles"
+        },
+        {
+          "block": "minecraft:cobbled_deepslate"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.25
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 9,
+      "palette": [
+        {
+          "block": "minecraft:deepslate"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/umbral/hollow-cathedral"
+      ],
+      "chance": 0.0035,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -20
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/umbral-reliquary",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/ancient_city",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:chests/stronghold_corridor",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/umbral/necropolis-gate"
+      ],
+      "chance": 0.005,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -18
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/umbral-reliquary",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/ancient_city",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:chests/stronghold_corridor",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/umbral/soulfire-obelisk"
+      ],
+      "chance": 0.012,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.25,
+      "palette": [
+        {
+          "block": "minecraft:snow[layers=3]"
+        }
+      ]
+    },
+    {
+      "chance": 0.004,
+      "palette": [
+        {
+          "block": "minecraft:wither_rose"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "ruins": [
+      {
+        "name": "gothic-arch",
+        "chance": 0.04,
+        "density": 1,
+        "variants": 8,
+        "seed": 99001,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "ARCH",
+        "block": "minecraft:deepslate_bricks",
+        "weatheredBlock": "minecraft:cracked_deepslate_bricks",
+        "heightMin": 9,
+        "heightMax": 14,
+        "widthMin": 1,
+        "widthMax": 2,
+        "lengthMin": 5,
+        "lengthMax": 9,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      },
+      {
+        "name": "gothic-pillar",
+        "chance": 0.07,
+        "density": 1,
+        "variants": 8,
+        "seed": 99002,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "PILLAR",
+        "block": "minecraft:polished_deepslate",
+        "weatheredBlock": "minecraft:cracked_deepslate_tiles",
+        "heightMin": 6,
+        "heightMax": 14,
+        "widthMin": 1,
+        "widthMax": 3,
+        "lengthMin": 3,
+        "lengthMax": 7,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      }
+    ]
+  },
+  "terrain3D": "snippet/terrain-3d/hilly/amp22-nowhere-crack448",
+  "effects": [
+    {
+      "particleEffect": "SOUL",
+      "chance": 3,
+      "interval": 700,
+      "particleCount": 2,
+      "particleOffset": 12,
+      "particleAltX": 0.3,
+      "particleAltY": -0.2,
+      "particleAltZ": 0.3
+    }
+  ],
+  "entitySpawners": [
+    "sundered/umbral-damned",
+    "tundra/passive"
+  ]
+}

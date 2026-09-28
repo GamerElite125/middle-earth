@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:wither_skeleton",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&5Grave Knight",
+  "helmet": {
+    "type": "chainmail_helmet"
+  },
+  "chestplate": {
+    "type": "netherite_chestplate"
+  },
+  "mainHand": {
+    "type": "stone_sword"
+  }
+}

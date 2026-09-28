@@ -1,0 +1,63 @@
+{
+  "name": "Fae Shore",
+  "color": "#E8F5FF",
+  "rarity": 1,
+  "derivative": "minecraft:beach",
+  "vanillaDerivative": "minecraft:beach",
+  "customDerivitives": [
+    {
+      "id": "sundered_fae_shore",
+      "category": "forest",
+      "grassColor": "#5CE07A",
+      "foliageColor": "#4FD4A0",
+      "waterColor": "#5AC8FA",
+      "waterFogColor": "#1B4F8A",
+      "downfallType": "rain",
+      "fogColor": "#CDB6F2",
+      "skyColor": "#9FB8FF",
+      "temperature": 0.7,
+      "humidity": 0.8
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:calcite"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/plants/sugar-cane-shore-c0-18"
+  ],
+  "entitySpawners": [
+    "sundered/everbloom-fae",
+    "sundered/everbloom-night"
+  ]
+}

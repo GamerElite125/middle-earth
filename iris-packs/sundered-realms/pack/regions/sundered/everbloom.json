@@ -1,0 +1,36 @@
+{
+  "name": "The Everbloom",
+  "color": "#B38CFF",
+  "rarity": 2,
+  "landBiomes": [
+    "sundered/everbloom/glimmerwood",
+    "sundered/everbloom/crystal-meadow",
+    "sundered/everbloom/elder-grove"
+  ],
+  "shoreBiomes": [
+    "sundered/everbloom/fae-shore"
+  ],
+  "seaBiomes": [
+    "temperate/sea/ocean",
+    "ocean/rich-oceans"
+  ],
+  "caveBiomes": [
+    "carving/amethyst",
+    "carving/lush",
+    "carving/calcite",
+    "carving/mushroom"
+  ],
+  "landBiomeZoom": 4.0,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "forest/food"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "name": "Frontier Strongbox",
+  "rarity": 1,
+  "minPicked": 3,
+  "maxPicked": 6,
+  "maxTries": 24,
+  "loot": [
+    {
+      "type": "gold_nugget",
+      "minAmount": 6,
+      "maxAmount": 24,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "gold_ingot",
+      "minAmount": 1,
+      "maxAmount": 5,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "raw_gold",
+      "minAmount": 1,
+      "maxAmount": 6,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "leather",
+      "minAmount": 2,
+      "maxAmount": 6,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "saddle",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 5,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "lead",
+      "minAmount": 1,
+      "maxAmount": 2,
+      "rarity": 4,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "crossbow",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 8,
+      "slotTypes": "STORAGE",
+      "displayName": "&6Old Faithful",
+      "lore": [
+        "&7Six notches on the stock."
+      ],
+      "enchantments": [
+        {
+          "enchantment": "quick_charge",
+          "minLevel": 2,
+          "maxLevel": 3,
+          "chance": 1.0
+        },
+        {
+          "enchantment": "piercing",
+          "minLevel": 1,
+          "maxLevel": 3,
+          "chance": 0.5
+        }
+      ]
+    },
+    {
+      "type": "tnt",
+      "minAmount": 1,
+      "maxAmount": 4,
+      "rarity": 6,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "golden_horse_armor",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 20,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "diamond",
+      "minAmount": 1,
+      "maxAmount": 3,
+      "rarity": 15,
+      "slotTypes": "STORAGE"
+    }
+  ]
+}

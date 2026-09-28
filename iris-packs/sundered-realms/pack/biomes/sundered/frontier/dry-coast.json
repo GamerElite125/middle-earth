@@ -1,0 +1,70 @@
+{
+  "name": "Dry Coast",
+  "color": "#D9B77A",
+  "rarity": 1,
+  "derivative": "minecraft:beach",
+  "vanillaDerivative": "minecraft:beach",
+  "customDerivitives": [
+    {
+      "id": "sundered_dry_coast",
+      "category": "beach",
+      "grassColor": "#BFB755",
+      "foliageColor": "#AEA42A",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "none",
+      "fogColor": "#E8C8A0",
+      "skyColor": "#8FC0E8",
+      "temperature": 2.0,
+      "humidity": 0.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:red_sand"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "entitySpawners": [
+    "sundered/frontier-outlaws",
+    "sundered/frontier-herds"
+  ]
+}

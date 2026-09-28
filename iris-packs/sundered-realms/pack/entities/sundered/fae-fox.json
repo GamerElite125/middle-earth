@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:fox",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "ANIMAL"
+}

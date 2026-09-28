@@ -1,0 +1,29 @@
+{
+  "group": "NORMAL",
+  "maximumRate": {
+    "amount": 6,
+    "per": {
+      "seconds": 20
+    }
+  },
+  "maxEntitiesPerChunk": 2,
+  "weather": "ANY",
+  "spawns": [
+    {
+      "entity": "standard/hostile/zombie",
+      "rarity": 2,
+      "minSpawns": 1,
+      "maxSpawns": 2
+    },
+    {
+      "entity": "standard/neutral/spider",
+      "rarity": 3,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    }
+  ],
+  "timeBlock": {
+    "startHour": 19,
+    "endHour": 5
+  }
+}

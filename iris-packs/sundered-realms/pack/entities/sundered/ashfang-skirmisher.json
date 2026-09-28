@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:pillager",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&6Ashfang Skirmisher",
+  "helmet": {
+    "type": "leather_helmet",
+    "leatherColor": "#5C1A1A"
+  }
+}

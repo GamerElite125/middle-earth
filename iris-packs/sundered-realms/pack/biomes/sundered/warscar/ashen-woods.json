@@ -1,0 +1,157 @@
+{
+  "name": "Ashen Woods",
+  "color": "#4A4A44",
+  "rarity": 1,
+  "derivative": "minecraft:dark_forest",
+  "vanillaDerivative": "minecraft:dark_forest",
+  "customDerivitives": [
+    {
+      "id": "sundered_ashen_woods",
+      "category": "forest",
+      "grassColor": "#5A5A48",
+      "foliageColor": "#4A4A3E",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "fogColor": "#9A948A",
+      "skyColor": "#8A8A90",
+      "temperature": 0.6,
+      "humidity": 0.3,
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 80
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 8,
+      "max": 24
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:gravel"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/darkoak/smdeadwillow1",
+        "trees/oak/dead1",
+        "trees/oak/dead2",
+        "trees/oak/dead3",
+        "trees/spruce/genericdead1",
+        "trees/spruce/genericdead2",
+        "trees/spruce/genericdead3"
+      ],
+      "chance": 0.5,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      }
+    },
+    {
+      "place": [
+        "sundered/warscar/burned-house"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/warscar-spoils",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    "snippet/decorator/plants/leaf-litter"
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "charred-oak",
+        "chance": 0.3,
+        "density": 1,
+        "variants": 10,
+        "seed": 96001,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:stripped_dark_oak_log",
+        "leaves": "minecraft:dark_oak_leaves",
+        "profile": "OAK",
+        "heightMin": 7,
+        "heightMax": 12,
+        "trunkWidth": 1,
+        "translate": {
+          "y": 0
+        },
+        "plausible": false
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/warscar-restless"
+  ]
+}

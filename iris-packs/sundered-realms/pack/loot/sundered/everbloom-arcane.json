@@ -1,0 +1,85 @@
+{
+  "name": "Conclave Reliquary",
+  "rarity": 1,
+  "minPicked": 3,
+  "maxPicked": 5,
+  "maxTries": 24,
+  "loot": [
+    {
+      "type": "lapis_lazuli",
+      "minAmount": 4,
+      "maxAmount": 16,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "amethyst_shard",
+      "minAmount": 2,
+      "maxAmount": 10,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "book",
+      "minAmount": 1,
+      "maxAmount": 4,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "experience_bottle",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "glow_berries",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "ender_eye",
+      "minAmount": 1,
+      "maxAmount": 2,
+      "rarity": 10,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "blaze_rod",
+      "minAmount": 1,
+      "maxAmount": 3,
+      "rarity": 8,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "book",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 12,
+      "slotTypes": "STORAGE",
+      "displayName": "&dTome of the First Bloom",
+      "lore": [
+        "&7Pressed petals mark every page."
+      ]
+    },
+    {
+      "type": "trident",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 60,
+      "slotTypes": "STORAGE",
+      "displayName": "&bTideweaver's Staff"
+    },
+    {
+      "type": "elytra",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 150,
+      "slotTypes": "STORAGE",
+      "displayName": "&fWings of the Sylph"
+    }
+  ]
+}

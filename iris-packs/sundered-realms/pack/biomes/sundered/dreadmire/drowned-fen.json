@@ -1,0 +1,215 @@
+{
+  "name": "Drowned Fen",
+  "color": "#56604E",
+  "rarity": 1,
+  "derivative": "minecraft:mangrove_swamp",
+  "vanillaDerivative": "minecraft:mangrove_swamp",
+  "customDerivitives": [
+    {
+      "id": "sundered_drowned_fen",
+      "category": "swamp",
+      "grassColor": "#6E7A66",
+      "foliageColor": "#6A7564",
+      "waterColor": "#3A3F22",
+      "waterFogColor": "#1E2012",
+      "downfallType": "rain",
+      "fogColor": "#8A9088",
+      "skyColor": "#8D938C",
+      "temperature": 0.7,
+      "humidity": 1.0,
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 160
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/bog",
+      "min": -5,
+      "max": 2
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:pale_moss_block"
+        },
+        {
+          "block": "minecraft:mud"
+        },
+        {
+          "block": "minecraft:moss_block"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.25
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:mud"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    "snippet/object-placer/trees/pale-oak-creaking-c0-1-d1",
+    {
+      "place": [
+        "sundered/dreadmire/sunken-crypt"
+      ],
+      "chance": 0.005,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -16
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "loot": [
+        {
+          "name": "sundered/dreadmire-crypt",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/simple_dungeon",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:chests/ancient_city",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/dreadmire/drowned-shrine"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/dreadmire-crypt",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/dreadmire/hanging-gibbet"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.12,
+      "palette": [
+        {
+          "block": "minecraft:pale_moss_carpet"
+        }
+      ]
+    },
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    },
+    {
+      "chance": 0.08,
+      "palette": [
+        {
+          "block": "minecraft:lily_pad"
+        }
+      ],
+      "partOf": "SEA_SURFACE"
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "fen-deadwood",
+        "chance": 0.3,
+        "density": 1,
+        "variants": 10,
+        "seed": 77002,
+        "mode": "CENTER_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "trunk": "minecraft:pale_oak_log",
+        "leaves": "minecraft:pale_oak_leaves",
+        "profile": "DARK_OAK",
+        "heightMin": 6,
+        "heightMax": 10,
+        "trunkWidth": 2,
+        "translate": {
+          "y": 0
+        }
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/dreadmire-haunts",
+    "swamp/passive",
+    "swamp/water"
+  ]
+}

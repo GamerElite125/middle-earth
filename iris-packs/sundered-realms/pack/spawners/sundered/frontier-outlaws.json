@@ -1,0 +1,31 @@
+{
+  "group": "NORMAL",
+  "maximumRate": {
+    "amount": 6,
+    "per": {
+      "seconds": 20
+    }
+  },
+  "maxEntitiesPerChunk": 2,
+  "weather": "ANY",
+  "spawns": [
+    {
+      "entity": "sundered/desperado",
+      "rarity": 2,
+      "minSpawns": 1,
+      "maxSpawns": 3
+    },
+    {
+      "entity": "sundered/dust-revenant",
+      "rarity": 2,
+      "minSpawns": 1,
+      "maxSpawns": 3
+    },
+    {
+      "entity": "standard/neutral/spider",
+      "rarity": 5,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    }
+  ]
+}

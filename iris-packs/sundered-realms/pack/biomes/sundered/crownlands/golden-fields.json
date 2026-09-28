@@ -1,0 +1,128 @@
+{
+  "name": "Golden Fields",
+  "color": "#E0C85A",
+  "rarity": 1,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "sundered_golden_fields",
+      "category": "plains",
+      "grassColor": "#B5D65A",
+      "foliageColor": "#6CC24A",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "temperature": 0.8,
+      "humidity": 0.5
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 6,
+      "max": 16
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/crownlands/windmill"
+      ],
+      "chance": 0.012,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/crownlands/market-crossroads"
+      ],
+      "chance": 0.006,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -3
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2
+      },
+      "loot": [
+        {
+          "name": "sundered/crownlands-market",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    "snippet/object-placer/trees/oak-generic-c0-07"
+  ],
+  "decorators": [
+    {
+      "chance": 0.25,
+      "palette": [
+        {
+          "block": "minecraft:wheat[age=7]"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.08
+      }
+    },
+    "snippet/decorator/flowers/meadow-mix-grass-c0-3",
+    "snippet/decorator/crops/carrots-c0-01",
+    "snippet/decorator/crops/potatoes-c0-01",
+    {
+      "chance": 0.001,
+      "palette": [
+        {
+          "block": "minecraft:hay_block[axis=y]"
+        }
+      ]
+    }
+  ],
+  "entitySpawners": [
+    "sundered/crownlands-roads",
+    "temperate/hostile"
+  ]
+}

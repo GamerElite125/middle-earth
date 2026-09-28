@@ -1,0 +1,66 @@
+{
+  "name": "Mudflats",
+  "color": "#5A4A3A",
+  "rarity": 1,
+  "derivative": "minecraft:swamp",
+  "vanillaDerivative": "minecraft:swamp",
+  "customDerivitives": [
+    {
+      "id": "sundered_mudflats",
+      "category": "swamp",
+      "grassColor": "#4C5A2E",
+      "foliageColor": "#3F4F26",
+      "waterColor": "#3A3F22",
+      "waterFogColor": "#1E2012",
+      "downfallType": "rain",
+      "fogColor": "#6A7060",
+      "skyColor": "#7A8078",
+      "temperature": 0.7,
+      "humidity": 1.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": -1,
+      "max": 2
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:mud"
+        },
+        {
+          "block": "minecraft:clay"
+        },
+        {
+          "block": "minecraft:gravel"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    }
+  ],
+  "entitySpawners": [
+    "sundered/dreadmire-haunts",
+    "swamp/passive",
+    "swamp/water"
+  ]
+}

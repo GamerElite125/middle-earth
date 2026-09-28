@@ -1,0 +1,53 @@
+{
+  "name": "Grey Strand",
+  "color": "#8A8A80",
+  "rarity": 1,
+  "derivative": "minecraft:stony_shore",
+  "vanillaDerivative": "minecraft:stony_shore",
+  "customDerivitives": [
+    {
+      "id": "sundered_grey_strand",
+      "category": "beach",
+      "grassColor": "#7A7A52",
+      "foliageColor": "#6A6A45",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "fogColor": "#9A948A",
+      "skyColor": "#8A8A90",
+      "temperature": 0.6,
+      "humidity": 0.3
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:cobblestone"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    }
+  ],
+  "entitySpawners": [
+    "sundered/warscar-restless"
+  ]
+}

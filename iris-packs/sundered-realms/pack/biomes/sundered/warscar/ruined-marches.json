@@ -1,0 +1,236 @@
+{
+  "name": "Ruined Marches",
+  "color": "#7A7A62",
+  "rarity": 1,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "sundered_ruined_marches",
+      "category": "plains",
+      "grassColor": "#7A7A52",
+      "foliageColor": "#6A6A45",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "rain",
+      "fogColor": "#9A948A",
+      "skyColor": "#8A8A90",
+      "temperature": 0.6,
+      "humidity": 0.3
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 8,
+      "max": 26
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.3
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/warscar/ruined-keep"
+      ],
+      "chance": 0.005,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -15
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/warscar-spoils",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/simple_dungeon",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/warscar/burned-house"
+      ],
+      "chance": 0.02,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/warscar-spoils",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/warscar/war-graves"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    "snippet/object-placer/trees/oak-dead-c0-4-d2"
+  ],
+  "decorators": [
+    "snippet/decorator/grass/short-c0-6",
+    "snippet/decorator/flowers/meadow-rubble-mix-c0-025"
+  ],
+  "proceduralObjects": {
+    "ruins": [
+      {
+        "name": "march-arch",
+        "chance": 0.03,
+        "density": 1,
+        "variants": 8,
+        "seed": 95003,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "ARCH",
+        "block": "minecraft:stone_bricks",
+        "weatheredBlock": "minecraft:cracked_stone_bricks",
+        "heightMin": 7,
+        "heightMax": 11,
+        "widthMin": 1,
+        "widthMax": 2,
+        "lengthMin": 5,
+        "lengthMax": 9,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      },
+      {
+        "name": "march-pillar",
+        "chance": 0.06,
+        "density": 1,
+        "variants": 8,
+        "seed": 95004,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "PILLAR",
+        "block": "minecraft:stone_bricks",
+        "weatheredBlock": "minecraft:mossy_stone_bricks",
+        "heightMin": 4,
+        "heightMax": 9,
+        "widthMin": 1,
+        "widthMax": 3,
+        "lengthMin": 3,
+        "lengthMax": 7,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      },
+      {
+        "name": "march-foundation",
+        "chance": 0.04,
+        "density": 1,
+        "variants": 8,
+        "seed": 95005,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "form": "FLOOR_SLAB",
+        "block": "minecraft:cobblestone",
+        "weatheredBlock": "minecraft:mossy_cobblestone",
+        "heightMin": 1,
+        "heightMax": 1,
+        "widthMin": 5,
+        "widthMax": 9,
+        "lengthMin": 6,
+        "lengthMax": 10,
+        "mossiness": 0.45,
+        "erosion": 0.3,
+        "buriedFraction": 0.2
+      }
+    ]
+  },
+  "entitySpawners": [
+    "sundered/warscar-restless"
+  ]
+}

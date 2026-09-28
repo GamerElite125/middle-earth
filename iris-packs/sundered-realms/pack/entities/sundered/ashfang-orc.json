@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:zombie",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&2Ashfang Orc",
+  "helmet": {
+    "type": "leather_helmet",
+    "leatherColor": "#3B2A1A"
+  },
+  "chestplate": {
+    "type": "leather_chestplate",
+    "leatherColor": "#4A3B22"
+  },
+  "mainHand": {
+    "type": "stone_axe"
+  }
+}

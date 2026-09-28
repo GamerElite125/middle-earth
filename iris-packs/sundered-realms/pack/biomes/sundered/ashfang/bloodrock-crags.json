@@ -1,0 +1,242 @@
+{
+  "name": "Bloodrock Crags",
+  "color": "#7A2A22",
+  "rarity": 1,
+  "derivative": "minecraft:eroded_badlands",
+  "vanillaDerivative": "minecraft:eroded_badlands",
+  "customDerivitives": [
+    {
+      "id": "sundered_bloodrock",
+      "category": "desert",
+      "grassColor": "#7A4A3A",
+      "foliageColor": "#5A4A2E",
+      "waterColor": "#4A2A2A",
+      "waterFogColor": "#1A0808",
+      "downfallType": "none",
+      "fogColor": "#8A3A2A",
+      "skyColor": "#7A3A30",
+      "temperature": 1.2,
+      "humidity": 0.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "cracked-cliffs",
+      "min": 20,
+      "max": 70
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:red_terracotta"
+        },
+        {
+          "block": "minecraft:red_nether_bricks"
+        },
+        {
+          "block": "minecraft:netherrack"
+        },
+        {
+          "block": "minecraft:terracotta"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.25
+    },
+    {
+      "minHeight": 4,
+      "maxHeight": 12,
+      "palette": [
+        {
+          "block": "minecraft:red_terracotta"
+        },
+        {
+          "block": "minecraft:brown_terracotta"
+        },
+        {
+          "block": "minecraft:terracotta"
+        }
+      ],
+      "style": {
+        "style": "STRATA"
+      },
+      "zoom": 0.5
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/ashfang/skullgate-fortress"
+      ],
+      "chance": 0.003,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -18
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/ashfang-warchest",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/pillager_outpost",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:chests/bastion_other",
+          "weight": 1
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/ashfang/blood-altar"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    "snippet/object-placer/clutter/bonespire-c0-003-d1-weathered"
+  ],
+  "decorators": [
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:crimson_roots"
+        },
+        {
+          "block": "minecraft:crimson_fungus"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "blood-spire",
+        "chance": 0.25,
+        "density": 1,
+        "variants": 12,
+        "seed": 75001,
+        "mode": "CENTER_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "surfaceSupportBuffer": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "form": "SPIRE",
+        "block": "minecraft:red_terracotta",
+        "heightMin": 12,
+        "heightMax": 30,
+        "baseWidthMin": 2,
+        "baseWidthMax": 4,
+        "topWidth": 0,
+        "translate": {
+          "y": -2
+        },
+        "roughness": 0.15,
+        "jitter": 0.03,
+        "strataPalette": {
+          "palette": [
+            {
+              "block": "minecraft:red_terracotta"
+            },
+            {
+              "block": "minecraft:red_nether_bricks"
+            },
+            {
+              "block": "minecraft:brown_terracotta"
+            }
+          ]
+        },
+        "strataThickness": 2
+      },
+      {
+        "name": "blood-hoodoo",
+        "chance": 0.15,
+        "density": 1,
+        "variants": 12,
+        "seed": 75002,
+        "mode": "CENTER_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "surfaceSupportBuffer": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "form": "HOODOO",
+        "block": "minecraft:red_terracotta",
+        "heightMin": 8,
+        "heightMax": 16,
+        "baseWidthMin": 2,
+        "baseWidthMax": 3,
+        "topWidth": 0,
+        "translate": {
+          "y": -2
+        },
+        "roughness": 0.15,
+        "jitter": 0.03,
+        "capBlock": "minecraft:nether_bricks",
+        "hoodooCapRadius": 3,
+        "hoodooCapHeight": 2
+      }
+    ]
+  },
+  "terrain3D": "snippet/terrain-3d/rugged/amp32-hexagon-crack392",
+  "entitySpawners": [
+    "sundered/ashfang-warbands"
+  ]
+}

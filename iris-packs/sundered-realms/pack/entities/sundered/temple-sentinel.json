@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:husk",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "LAND",
+  "customName": "&aJade Sentinel",
+  "helmet": {
+    "type": "golden_helmet"
+  },
+  "mainHand": {
+    "type": "golden_sword"
+  }
+}

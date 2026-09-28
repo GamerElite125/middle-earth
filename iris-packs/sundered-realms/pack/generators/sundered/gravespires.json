@@ -1,0 +1,26 @@
+{
+  "surfaceDetail": 0.7,
+  "seed": 810006,
+  "interpolator": {
+    "function": "BILINEAR_STARCAST_6",
+    "horizontalScale": 18
+  },
+  "composite": [
+    {
+      "style": {
+        "style": "CELLULAR_HEIGHT_IRIS",
+        "zoom": 1.6
+      },
+      "seed": 810061,
+      "exponent": 2.2
+    },
+    {
+      "style": {
+        "style": "FRACTAL_RM_SIMPLEX",
+        "zoom": 0.5
+      },
+      "seed": 810062,
+      "opacity": 0.3
+    }
+  ]
+}

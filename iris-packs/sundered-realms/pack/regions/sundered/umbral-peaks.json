@@ -1,0 +1,36 @@
+{
+  "name": "The Umbral Peaks",
+  "color": "#3A2A5A",
+  "rarity": 2,
+  "landBiomes": [
+    "sundered/umbral/gravespire-peaks",
+    "sundered/umbral/deadpine-vale",
+    "sundered/umbral/cathedral-heights"
+  ],
+  "shoreBiomes": [
+    "sundered/umbral/black-shingle"
+  ],
+  "seaBiomes": [
+    "ocean/dark-depth-ocean",
+    "ocean/deep"
+  ],
+  "caveBiomes": [
+    "carving/standard-deepdark",
+    "carving/dark-depths",
+    "carving/deepslate",
+    "carving/deepravine"
+  ],
+  "landBiomeZoom": 4.5,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "cold/food"
+    ]
+  }
+}

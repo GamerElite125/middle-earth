@@ -1,0 +1,215 @@
+{
+  "name": "Sunscorch Cracked Flats",
+  "color": "#C8A06A",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:desert",
+  "customDerivitives": [
+    {
+      "id": "sundered_cracked_flats",
+      "category": "desert",
+      "grassColor": "#BFB755",
+      "foliageColor": "#AEA42A",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "none",
+      "fogColor": "#E8C8A0",
+      "skyColor": "#8FC0E8",
+      "temperature": 2.0,
+      "humidity": 0.0,
+      "ambientParticle": {
+        "particle": "minecraft:white_ash",
+        "rarity": 400
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "flat",
+      "min": 4,
+      "max": 10
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:packed_mud"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:smooth_sandstone"
+        },
+        {
+          "block": "minecraft:terracotta"
+        },
+        {
+          "block": "minecraft:mud_bricks"
+        },
+        {
+          "block": "minecraft:packed_mud"
+        }
+      ],
+      "style": {
+        "style": "CELLULAR"
+      },
+      "zoom": 0.05
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:packed_mud"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 5,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        },
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "sundered/frontier/frontier-town"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2
+      },
+      "loot": [
+        {
+          "name": "sundered/frontier-strongbox",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/frontier/longhorn-marker"
+      ],
+      "chance": 0.01,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    {
+      "place": [
+        "sundered/frontier/sun-oracle"
+      ],
+      "chance": 0.003,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -15
+      },
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "loot": [
+        {
+          "name": "sundered/frontier-strongbox",
+          "weight": 3
+        }
+      ],
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/desert_pyramid",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:chests/abandoned_mineshaft",
+          "weight": 2
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/mushrooms/dead-bush-mix-c0-03",
+    {
+      "chance": 0.04,
+      "palette": [
+        {
+          "block": "minecraft:short_dry_grass"
+        },
+        {
+          "block": "minecraft:tall_dry_grass"
+        }
+      ]
+    },
+    "snippet/decorator/plants/cactus-flowering-max2-c0-0005"
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 81001,
+    "amplitude": 3,
+    "horizontalScale": 120,
+    "verticalScale": 10,
+    "densityStyle": {
+      "style": "CELLULAR"
+    },
+    "crackDepth": 6,
+    "crackWidth": 1,
+    "crackScale": 90,
+    "crackStyle": {
+      "style": "CELLULAR"
+    },
+    "minimumSlope": 0.0,
+    "slopeFade": 0.1,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  },
+  "entitySpawners": [
+    "sundered/frontier-outlaws",
+    "sundered/frontier-herds"
+  ]
+}

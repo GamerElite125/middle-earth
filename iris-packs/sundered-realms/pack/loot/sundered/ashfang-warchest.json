@@ -1,0 +1,100 @@
+{
+  "name": "Ashfang War-Chest",
+  "rarity": 1,
+  "minPicked": 3,
+  "maxPicked": 6,
+  "maxTries": 24,
+  "loot": [
+    {
+      "type": "rotten_flesh",
+      "minAmount": 3,
+      "maxAmount": 12,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "bone",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "iron_ingot",
+      "minAmount": 1,
+      "maxAmount": 6,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "iron_axe",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 4,
+      "slotTypes": "STORAGE",
+      "displayName": "&cOrc Cleaver",
+      "enchantments": [
+        {
+          "enchantment": "sharpness",
+          "minLevel": 1,
+          "maxLevel": 3,
+          "chance": 0.8
+        }
+      ]
+    },
+    {
+      "type": "crossbow",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 6,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "arrow",
+      "minAmount": 4,
+      "maxAmount": 16,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "netherite_scrap",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 30,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "goat_horn",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 12,
+      "slotTypes": "STORAGE",
+      "displayName": "&4Warhorn of the Ashfang"
+    },
+    {
+      "type": "netherite_axe",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 80,
+      "slotTypes": "STORAGE",
+      "displayName": "&4Skullsplitter",
+      "lore": [
+        "&8Wielded by Warlord Grom Bloodtusk."
+      ],
+      "enchantments": [
+        {
+          "enchantment": "sharpness",
+          "minLevel": 4,
+          "maxLevel": 5,
+          "chance": 1.0
+        },
+        {
+          "enchantment": "unbreaking",
+          "minLevel": 2,
+          "maxLevel": 3,
+          "chance": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "The Crownlands",
+  "color": "#E0C85A",
+  "rarity": 2,
+  "landBiomes": [
+    "sundered/crownlands/golden-fields",
+    "sundered/crownlands/rolling-downs",
+    "sundered/crownlands/kingswood"
+  ],
+  "shoreBiomes": [
+    "sundered/crownlands/harbor-coast"
+  ],
+  "seaBiomes": [
+    "temperate/sea/ocean",
+    "temperate/sea/ocean-deep"
+  ],
+  "caveBiomes": [
+    "carving/rocky-cavebiome",
+    "carving/drip-lite",
+    "carving/deep",
+    "carving/chalk-gardens"
+  ],
+  "landBiomeZoom": 4.5,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "temperate/food",
+      "sundered/crownlands-market"
+    ]
+  }
+}

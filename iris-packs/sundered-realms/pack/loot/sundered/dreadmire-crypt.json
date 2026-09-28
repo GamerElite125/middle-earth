@@ -1,0 +1,91 @@
+{
+  "name": "Mire-Crypt Offering",
+  "rarity": 1,
+  "minPicked": 3,
+  "maxPicked": 5,
+  "maxTries": 24,
+  "loot": [
+    {
+      "type": "bone",
+      "minAmount": 2,
+      "maxAmount": 10,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "spider_eye",
+      "minAmount": 1,
+      "maxAmount": 4,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "slime_ball",
+      "minAmount": 1,
+      "maxAmount": 5,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "glass_bottle",
+      "minAmount": 1,
+      "maxAmount": 4,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "redstone",
+      "minAmount": 2,
+      "maxAmount": 10,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "glowstone_dust",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "potion",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 6,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "ender_pearl",
+      "minAmount": 1,
+      "maxAmount": 2,
+      "rarity": 8,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "golden_hoe",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 25,
+      "slotTypes": "STORAGE",
+      "displayName": "&2Hag's Sickle",
+      "lore": [
+        "&7It hums with swamp-rot."
+      ],
+      "enchantments": [
+        {
+          "enchantment": "sharpness",
+          "minLevel": 3,
+          "maxLevel": 5,
+          "chance": 1.0
+        }
+      ]
+    },
+    {
+      "type": "echo_shard",
+      "minAmount": 1,
+      "maxAmount": 2,
+      "rarity": 30,
+      "slotTypes": "STORAGE"
+    }
+  ]
+}

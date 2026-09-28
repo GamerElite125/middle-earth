@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:allay",
+  "reason": "NATURAL",
+  "removable": true,
+  "surface": "ANIMAL",
+  "customName": "&bWill-o'-Wisp",
+  "glowing": true
+}

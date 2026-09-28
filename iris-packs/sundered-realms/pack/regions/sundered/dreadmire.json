@@ -1,0 +1,36 @@
+{
+  "name": "The Dreadmire",
+  "color": "#3A5A2A",
+  "rarity": 2,
+  "landBiomes": [
+    "sundered/dreadmire/blackwater-bog",
+    "sundered/dreadmire/murkwood",
+    "sundered/dreadmire/drowned-fen"
+  ],
+  "shoreBiomes": [
+    "sundered/dreadmire/mudflats"
+  ],
+  "seaBiomes": [
+    "swamp/sea/lake",
+    "swamp/sea/ocean"
+  ],
+  "caveBiomes": [
+    "carving/swamp",
+    "carving/moss-pillars",
+    "carving/spider-infestation",
+    "carving/lush"
+  ],
+  "landBiomeZoom": 4.0,
+  "seaBiomeZoom": 4,
+  "caveBiomeZoom": 3.2,
+  "shoreHeightMin": 2.8,
+  "shoreHeightMax": 8.5,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.6,
+    "tables": [
+      "swamp/food"
+    ]
+  }
+}

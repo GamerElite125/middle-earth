@@ -1,0 +1,80 @@
+{
+  "name": "Merchant's Coffer",
+  "rarity": 1,
+  "minPicked": 4,
+  "maxPicked": 7,
+  "maxTries": 24,
+  "loot": [
+    {
+      "type": "bread",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "wheat",
+      "minAmount": 4,
+      "maxAmount": 16,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "emerald",
+      "minAmount": 1,
+      "maxAmount": 8,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "iron_ingot",
+      "minAmount": 1,
+      "maxAmount": 4,
+      "rarity": 2,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "white_wool",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "red_dye",
+      "minAmount": 1,
+      "maxAmount": 4,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "paper",
+      "minAmount": 2,
+      "maxAmount": 8,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "apple",
+      "minAmount": 2,
+      "maxAmount": 6,
+      "rarity": 1,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "name_tag",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 12,
+      "slotTypes": "STORAGE"
+    },
+    {
+      "type": "shield",
+      "minAmount": 1,
+      "maxAmount": 1,
+      "rarity": 8,
+      "slotTypes": "STORAGE",
+      "displayName": "&9Crownguard Shield"
+    }
+  ]
+}

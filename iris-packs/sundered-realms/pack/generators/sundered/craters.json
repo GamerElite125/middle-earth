@@ -1,0 +1,26 @@
+{
+  "surfaceDetail": 0.5,
+  "seed": 810005,
+  "interpolator": {
+    "function": "BILINEAR_STARCAST_6",
+    "horizontalScale": 16
+  },
+  "composite": [
+    {
+      "style": {
+        "style": "CRATER",
+        "zoom": 0.9
+      },
+      "seed": 810051,
+      "opacity": 0.8
+    },
+    {
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1.2
+      },
+      "seed": 810052,
+      "opacity": 0.5
+    }
+  ]
+}

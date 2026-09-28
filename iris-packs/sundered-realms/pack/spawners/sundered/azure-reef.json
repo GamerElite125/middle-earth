@@ -1,0 +1,37 @@
+{
+  "group": "UNDERWATER",
+  "maximumRate": {
+    "amount": 6,
+    "per": {
+      "seconds": 20
+    }
+  },
+  "maxEntitiesPerChunk": 4,
+  "weather": "ANY",
+  "spawns": [
+    {
+      "entity": "standard/passive/tropicalfish",
+      "rarity": 1,
+      "minSpawns": 3,
+      "maxSpawns": 6
+    },
+    {
+      "entity": "standard/neutral/dolphin",
+      "rarity": 4,
+      "minSpawns": 1,
+      "maxSpawns": 3
+    },
+    {
+      "entity": "standard/passive/turtle",
+      "rarity": 5,
+      "minSpawns": 1,
+      "maxSpawns": 2
+    },
+    {
+      "entity": "standard/passive/pufferfish",
+      "rarity": 5,
+      "minSpawns": 1,
+      "maxSpawns": 1
+    }
+  ]
+}

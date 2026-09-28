@@ -1,0 +1,150 @@
+{
+  "name": "Sagebrush Prairie",
+  "color": "#A6A060",
+  "rarity": 1,
+  "derivative": "minecraft:savanna",
+  "vanillaDerivative": "minecraft:savanna",
+  "customDerivitives": [
+    {
+      "id": "sundered_sagebrush",
+      "category": "savanna",
+      "grassColor": "#B4AA5A",
+      "foliageColor": "#A09A46",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#050533",
+      "downfallType": "none",
+      "fogColor": "#E8C8A0",
+      "skyColor": "#8FC0E8",
+      "temperature": 2.0,
+      "humidity": 0.0
+    }
+  ],
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "min": 6,
+      "max": 20
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:grass_block"
+        }
+      ],
+      "style": {
+        "style": "SIMPLEX"
+      },
+      "zoom": 0.4
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    "snippet/object-placer/trees/acacia-savannad-c0-07",
+    {
+      "place": [
+        "sundered/frontier/frontier-town"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2
+      },
+      "loot": [
+        {
+          "name": "sundered/frontier-strongbox",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/frontier/bandit-fort"
+      ],
+      "chance": 0.005,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT",
+      "loot": [
+        {
+          "name": "sundered/frontier-strongbox",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    },
+    {
+      "place": [
+        "sundered/frontier/longhorn-marker"
+      ],
+      "chance": 0.015,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "mode": "CENTER_STILT"
+    },
+    "snippet/object-placer/clutter/savrock-c0-1"
+  ],
+  "decorators": [
+    "snippet/decorator/grass/arid-mix-c0-018",
+    "snippet/decorator/grass/dry-grass",
+    "snippet/decorator/shrubs/bush",
+    {
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:short_dry_grass"
+        }
+      ]
+    }
+  ],
+  "entitySpawners": [
+    "sundered/frontier-outlaws",
+    "sundered/frontier-herds"
+  ]
+}

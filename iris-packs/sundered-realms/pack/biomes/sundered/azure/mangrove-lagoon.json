@@ -1,0 +1,146 @@
+{
+  "name": "Mangrove Lagoon",
+  "color": "#4F8A3A",
+  "rarity": 1,
+  "derivative": "minecraft:mangrove_swamp",
+  "vanillaDerivative": "minecraft:mangrove_swamp",
+  "customDerivitives": [
+    {
+      "id": "sundered_mangrove_lagoon",
+      "category": "jungle",
+      "grassColor": "#5FA33B",
+      "foliageColor": "#6BB53C",
+      "waterColor": "#27D6C9",
+      "waterFogColor": "#0E6E86",
+      "downfallType": "rain",
+      "temperature": 0.95,
+      "humidity": 0.9
+    }
+  ],
+  "generators": [
+    {
+      "generator": "sundered/bog",
+      "min": -3,
+      "max": 3
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:mud"
+        },
+        {
+          "block": "minecraft:mud"
+        },
+        {
+          "block": "minecraft:muddy_mangrove_roots"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:clay"
+        },
+        {
+          "block": "minecraft:mud"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/mangrove/mangrove1",
+        "trees/mangrove/mangrove2",
+        "trees/mangrove/mangrove3",
+        "trees/mangrove/mangrove4",
+        "trees/mangrove/mangrove5",
+        "trees/mangrove/tree1",
+        "trees/mangrove/tree2",
+        "trees/mangrove/tree3"
+      ],
+      "chance": 0.6,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      }
+    },
+    {
+      "place": [
+        "sundered/azure/pirate-cove"
+      ],
+      "chance": 0.004,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -4
+      },
+      "mode": "CENTER_HEIGHT",
+      "loot": [
+        {
+          "name": "sundered/azure-pirate",
+          "weight": 3
+        }
+      ],
+      "overrideGlobalLoot": true
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.12,
+      "palette": [
+        {
+          "block": "minecraft:lily_pad"
+        }
+      ],
+      "partOf": "SEA_SURFACE"
+    },
+    {
+      "chance": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    },
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:mangrove_propagule[age=4,hanging=false,stage=0,waterlogged=false]"
+        }
+      ]
+    }
+  ],
+  "entitySpawners": [
+    "sundered/azure-wildlife",
+    "sundered/azure-night",
+    "tropical/water",
+    "tropical/beach"
+  ]
+}
